@@ -114,7 +114,8 @@ def ai_digest(material: str, today_label: str, api_key: str) -> dict:
         },
         timeout=120,
     )
-    resp.raise_for_status()
+    if resp.status_code != 200:
+        raise RuntimeError(f"API {resp.status_code}: {resp.text[:300]}")
     text = "".join(
         block.get("text", "") for block in resp.json().get("content", [])
     ).strip()
