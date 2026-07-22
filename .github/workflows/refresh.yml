@@ -1,0 +1,69 @@
+# Refreshes The Bosphorus Brief's data and deploys the site to GitHub Pages.
+#
+# Runs hourly, on manual dispatch, and on pushes to main. The
+# ANTHROPIC_API_KEY repository secret is optional — without it the digest
+# falls back to an automated headline roundup instead of the AI-written
+# edition.
+
+name: Refresh the Brief
+
+on:
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+    inputs:
+      force_digest:
+        description: "Rewrite today's digest even if one exists"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: brief-pages
+  cancel-in-progress: true
+
+jobs:
+  refresh-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch feeds, advisories, and rates
+        run: python scripts/fetch_news.py
+
+      - name: Brew the digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DIGEST_MODEL: ${{ vars.DIGEST_MODEL }}
+          FORCE_DIGEST: ${{ inputs.force_digest && '1' || '' }}
+        run: python scripts/generate_digest.py
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

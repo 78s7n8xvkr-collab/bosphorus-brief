@@ -1,0 +1,325 @@
+/* The Bosphorus Brief — client. No frameworks, no trackers, no accounts.
+   Reads the JSON the refresh pipeline writes into ./data/ and renders it. */
+
+(() => {
+  "use strict";
+
+  const CATEGORY_LABELS = {
+    turkiye: "Türkiye",
+    region: "Region",
+    migration: "Migration & Residency",
+    safety: "Safety",
+    economy: "Economy",
+  };
+  const REFRESH_MS = 15 * 60 * 1000;
+  const STALE_MS = 10 * 60 * 1000;
+
+  const $ = (sel) => document.querySelector(sel);
+  const state = {
+    news: null,
+    digest: null,
+    rates: null,
+    tab: "top",
+    query: "",
+    saved: loadSaved(),
+    lastLoad: 0,
+  };
+
+  // ---------------------------------------------------------- persistence --
+  function loadSaved() {
+    try {
+      return JSON.parse(localStorage.getItem("brief.saved") || "[]");
+    } catch {
+      return [];
+    }
+  }
+  function persistSaved() {
+    localStorage.setItem("brief.saved", JSON.stringify(state.saved.slice(0, 200)));
+  }
+
+  // ---------------------------------------------------------------- theme --
+  const themeToggle = $("#theme-toggle");
+  function applyTheme(theme) {
+    if (theme) document.documentElement.dataset.theme = theme;
+    else delete document.documentElement.dataset.theme;
+  }
+  applyTheme(localStorage.getItem("brief.theme") || "");
+  themeToggle.addEventListener("click", () => {
+    const current = document.documentElement.dataset.theme ||
+      (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    const next = current === "dark" ? "light" : "dark";
+    localStorage.setItem("brief.theme", next);
+    applyTheme(next);
+  });
+
+  // ------------------------------------------------------- masthead clock --
+  function tickMasthead() {
+    const now = new Date();
+    $("#dateline").textContent = new Intl.DateTimeFormat("en-GB", {
+      weekday: "long", day: "numeric", month: "long", year: "numeric",
+      timeZone: "Europe/Istanbul",
+    }).format(now);
+    $("#ist-clock").textContent = "İstanbul " + new Intl.DateTimeFormat("en-GB", {
+      hour: "2-digit", minute: "2-digit", timeZone: "Europe/Istanbul",
+    }).format(now);
+  }
+  tickMasthead();
+  setInterval(tickMasthead, 30 * 1000);
+
+  // ----------------------------------------------------------- formatting --
+  function timeAgo(iso) {
+    if (!iso) return null;
+    const mins = Math.round((Date.now() - Date.parse(iso)) / 60000);
+    if (!Number.isFinite(mins)) return null;
+    if (mins < 1) return "just now";
+    if (mins < 60) return mins + "m ago";
+    const hours = Math.round(mins / 60);
+    if (hours < 24) return hours + "h ago";
+    const days = Math.round(hours / 24);
+    if (days < 14) return days + "d ago";
+    return new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short" })
+      .format(new Date(iso));
+  }
+
+  function el(tag, attrs = {}, ...children) {
+    const node = document.createElement(tag);
+    for (const [key, value] of Object.entries(attrs)) {
+      if (key === "class") node.className = value;
+      else if (key.startsWith("on")) node.addEventListener(key.slice(2), value);
+      else if (value !== null && value !== undefined) node.setAttribute(key, value);
+    }
+    node.append(...children.filter((c) => c !== null && c !== undefined));
+    return node;
+  }
+
+  // ----------------------------------------------------------------- feed --
+  function visibleItems() {
+    if (!state.news) return [];
+    const items = state.news.items || [];
+    let list;
+    if (state.tab === "saved") {
+      list = state.saved;
+    } else if (state.tab === "top") {
+      const byId = new Map(items.map((i) => [i.id, i]));
+      list = (state.news.top || []).map((id) => byId.get(id)).filter(Boolean);
+      if (!list.length) list = items.slice(0, 12);
+    } else {
+      list = items.filter((i) => i.category === state.tab);
+    }
+    if (state.query) {
+      const q = state.query.toLowerCase();
+      list = list.filter((i) =>
+        (i.title + " " + (i.summary || "") + " " + i.source).toLowerCase().includes(q));
+    }
+    return list;
+  }
+
+  function isSaved(id) {
+    return state.saved.some((s) => s.id === id);
+  }
+
+  function toggleSaved(item) {
+    if (isSaved(item.id)) {
+      state.saved = state.saved.filter((s) => s.id !== item.id);
+    } else {
+      state.saved = [{ ...item, savedAt: new Date().toISOString() }, ...state.saved];
+    }
+    persistSaved();
+    renderFeed();
+    renderSavedCount();
+  }
+
+  function renderSavedCount() {
+    const badge = $("#saved-count");
+    badge.textContent = state.saved.length;
+    badge.hidden = state.saved.length === 0;
+  }
+
+  function renderFeed() {
+    const list = visibleItems();
+    const container = $("#stories");
+    container.replaceChildren(...list.map((item) => el("li", { class: "story" },
+      el("div", { class: "story-meta" },
+        el("span", { class: "story-source" }, item.source),
+        el("span", { class: "story-time" },
+          timeAgo(item.published) || "reference"),
+        state.tab === "top" || state.tab === "saved"
+          ? el("span", { class: "story-cat" }, CATEGORY_LABELS[item.category] || "")
+          : null,
+      ),
+      el("h3", {}, el("a", { href: item.url, target: "_blank", rel: "noopener" }, item.title)),
+      item.summary ? el("p", { class: "story-summary" }, item.summary) : null,
+      el("button", {
+        class: "save-btn" + (isSaved(item.id) ? " saved" : ""),
+        title: isSaved(item.id) ? "Remove from reading list" : "Save for later",
+        "aria-label": "Save story",
+        onclick: () => toggleSaved(item),
+      }, isSaved(item.id) ? "★" : "☆"),
+    )));
+
+    const empty = $("#empty-state");
+    if (!list.length) {
+      empty.textContent = state.tab === "saved"
+        ? "Nothing saved yet — tap ☆ on any story to keep it here."
+        : state.query
+          ? "No stories match that filter."
+          : "Nothing here right now — try another section, or refresh.";
+      empty.hidden = false;
+    } else {
+      empty.hidden = true;
+    }
+  }
+
+  function renderStamp() {
+    const stamp = $("#updated-stamp");
+    if (state.news && state.news.generated_at) {
+      stamp.textContent = "Feed rebuilt " + (timeAgo(state.news.generated_at) || "—");
+      stamp.title = "Data generated " + new Date(state.news.generated_at).toLocaleString();
+    } else {
+      stamp.textContent = "";
+    }
+    const notice = $("#notice");
+    const ageH = state.news && state.news.generated_at
+      ? (Date.now() - Date.parse(state.news.generated_at)) / 36e5 : 0;
+    if (state.news && state.news.seed) {
+      notice.textContent = "You're looking at the Brief's opening edition. Once "
+        + "deployed, the feed rebuilds itself every hour with the latest from "
+        + "all sources.";
+      notice.hidden = false;
+    } else if (ageH > 6) {
+      notice.textContent = "This edition is more than " + Math.floor(ageH)
+        + " hours old — the hourly refresh may be paused. The stories below "
+        + "are the most recent available.";
+      notice.hidden = false;
+    } else {
+      notice.hidden = true;
+    }
+  }
+
+  // --------------------------------------------------------------- digest --
+  function renderDigest() {
+    const digest = state.digest;
+    const card = $("#digest-card");
+    if (!digest || !digest.sections) { card.hidden = true; return; }
+    card.hidden = false;
+    $("#digest-date").textContent = digest.date_label || digest.date || "";
+    $("#digest-title").textContent = digest.title || "";
+    $("#digest-overview").textContent = digest.overview || "";
+    $("#digest-sections").replaceChildren(...digest.sections.map((s) =>
+      el("div", { class: "digest-section" },
+        el("h4", {}, s.heading), el("p", {}, s.body))));
+    $("#digest-closing").textContent = digest.closing || "";
+    $("#digest-method").textContent = digest.method === "ai"
+      ? "Written each morning by the Brief's AI editor from the sources in the feed. Verify anything critical with the original story."
+      : "Automated headline roundup. The AI-written edition appears when a digest key is configured.";
+  }
+
+  // ------------------------------------------------------- rates & levels --
+  function renderRates() {
+    const rates = state.rates;
+    const card = $("#rates-card");
+    if (!rates || !rates.pairs || !rates.pairs.length) { card.hidden = true; return; }
+    card.hidden = false;
+    $("#rates-table").replaceChildren(...rates.pairs.map((p) =>
+      el("tr", {},
+        el("td", { class: "pair" }, p.pair),
+        el("td", { class: "rate" }, "₺" + p.rate.toFixed(2)))));
+    $("#rates-updated").textContent =
+      "As of " + (timeAgo(rates.updated) || "—") + " · " + (rates.source || "");
+  }
+
+  function renderAdvisories() {
+    const card = $("#advisory-card");
+    const advisories = (state.news && state.news.advisories) || [];
+    if (!advisories.length) { card.hidden = true; return; }
+    card.hidden = false;
+    $("#advisory-list").replaceChildren(...advisories.map((a) =>
+      el("li", {},
+        a.url
+          ? el("a", { href: a.url, target: "_blank", rel: "noopener", title: a.title || "" }, a.country)
+          : el("span", {}, a.country),
+        el("span", { class: "level level-" + a.level, title: a.title || "" },
+          "Level " + a.level))));
+  }
+
+  // ------------------------------------------------------------- loading --
+  async function loadJson(path) {
+    const resp = await fetch(path + "?t=" + Date.now(), { cache: "no-store" });
+    if (!resp.ok) throw new Error(path + " → " + resp.status);
+    return resp.json();
+  }
+
+  async function loadAll(showSpinner) {
+    const btn = $("#refresh-btn");
+    if (showSpinner) btn.classList.add("spinning");
+    try {
+      const [news, digest, rates] = await Promise.allSettled([
+        loadJson("data/news.json"),
+        loadJson("data/digest.json"),
+        loadJson("data/rates.json"),
+      ]);
+      if (news.status === "fulfilled") state.news = news.value;
+      if (digest.status === "fulfilled") state.digest = digest.value;
+      if (rates.status === "fulfilled") state.rates = rates.value;
+      state.lastLoad = Date.now();
+      renderAll();
+    } finally {
+      btn.classList.remove("spinning");
+    }
+  }
+
+  function renderAll() {
+    renderFeed();
+    renderStamp();
+    renderDigest();
+    renderRates();
+    renderAdvisories();
+    renderSavedCount();
+  }
+
+  // ---------------------------------------------------------------- wires --
+  document.querySelectorAll(".tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".tab").forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+      state.tab = tab.dataset.tab;
+      history.replaceState(null, "", "#" + state.tab);
+      renderFeed();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+  const hashTab = location.hash.replace("#", "");
+  if (hashTab) {
+    const target = document.querySelector('.tab[data-tab="' + hashTab + '"]');
+    if (target) target.click();
+  }
+
+  $("#search").addEventListener("input", (event) => {
+    state.query = event.target.value.trim();
+    renderFeed();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "/" && document.activeElement !== $("#search")) {
+      event.preventDefault();
+      $("#search").focus();
+    }
+  });
+
+  $("#refresh-btn").addEventListener("click", () => loadAll(true));
+
+  const railToggle = $("#rail-toggle");
+  railToggle.addEventListener("click", () => {
+    const expanded = document.querySelector(".rail").classList.toggle("rail-expanded");
+    railToggle.setAttribute("aria-expanded", String(expanded));
+    railToggle.textContent = expanded
+      ? "Hide rates, advisories & useful doors ▴"
+      : "Rates, advisories & useful doors ▾";
+  });
+
+  setInterval(() => loadAll(false), REFRESH_MS);
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden && Date.now() - state.lastLoad > STALE_MS) loadAll(false);
+  });
+
+  loadAll(true);
+})();

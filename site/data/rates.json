@@ -1,0 +1,14 @@
+{
+ "updated": "2026-07-22T17:40:00+00:00",
+ "source": "seed edition — live mid-market rates arrive with the first hourly refresh",
+ "pairs": [
+  {
+   "pair": "USD/TRY",
+   "rate": 47.22
+  },
+  {
+   "pair": "EUR/TRY",
+   "rate": 53.55
+  }
+ ]
+}

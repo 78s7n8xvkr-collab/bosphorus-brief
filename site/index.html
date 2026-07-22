@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A daily briefing for internationals at home in Türkiye and the wider region — news, migration and residency updates, safety, and the economy.">
+<meta name="robots" content="noindex">
+<title>The Bosphorus Brief</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-top">
+    <span id="dateline">—</span>
+    <span class="masthead-top-right">
+      <span id="ist-clock" title="Time in İstanbul">—</span>
+      <button id="theme-toggle" class="ghost-btn" title="Switch light/dark" aria-label="Switch theme">◐</button>
+    </span>
+  </div>
+  <div class="masthead-center">
+    <div class="ornament" aria-hidden="true">
+      <svg viewBox="0 0 120 16" width="120" height="16"><path d="M2 6 Q17 0 32 6 T62 6 T92 6 T118 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 12 Q23 7 38 12 T68 12 T98 12 T114 12" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".55"/></svg>
+    </div>
+    <h1>The Bosphorus Brief</h1>
+    <p class="tagline">Two continents. One briefing.</p>
+  </div>
+  <div class="rule-double" aria-hidden="true"></div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <button data-tab="top" class="tab active">Top Stories</button>
+  <button data-tab="turkiye" class="tab">Türkiye</button>
+  <button data-tab="region" class="tab">Region</button>
+  <button data-tab="migration" class="tab">Migration &amp; Residency</button>
+  <button data-tab="safety" class="tab">Safety</button>
+  <button data-tab="economy" class="tab">Economy</button>
+  <button data-tab="saved" class="tab">Saved<span id="saved-count" class="count" hidden></span></button>
+</nav>
+
+<div class="layout">
+  <main>
+    <div class="feed-tools">
+      <input id="search" type="search" placeholder="Filter stories… (press /)" aria-label="Filter stories">
+      <button id="refresh-btn" class="ghost-btn" title="Refresh the feed">↻</button>
+      <span id="updated-stamp" class="updated-stamp" title="When the feed data was last rebuilt">—</span>
+    </div>
+    <div id="notice" class="notice" hidden></div>
+    <ol id="stories" class="stories" aria-live="polite"></ol>
+    <p id="empty-state" class="empty-state" hidden></p>
+  </main>
+
+  <aside class="rail">
+    <section class="card digest-card" id="digest-card" hidden>
+      <header class="card-head">
+        <span class="cay-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M7 10c1.5-4 8.5-4 10 0s1 8-5 8-6.5-4-5-8z"/><path d="M9.5 3.5c-.8 1.2.8 1.8 0 3M13.5 3.5c-.8 1.2.8 1.8 0 3"/><path d="M6.5 20.5h10"/></svg>
+        </span>
+        <div>
+          <h2>Morning Çay</h2>
+          <p class="card-sub" id="digest-date">—</p>
+        </div>
+      </header>
+      <h3 id="digest-title" class="digest-title"></h3>
+      <p id="digest-overview" class="digest-overview"></p>
+      <div id="digest-sections"></div>
+      <p id="digest-closing" class="digest-closing"></p>
+      <p class="fineprint" id="digest-method"></p>
+    </section>
+
+    <button id="rail-toggle" class="rail-toggle" aria-expanded="false">Rates, advisories &amp; useful doors ▾</button>
+
+    <section class="card" id="rates-card" hidden>
+      <header class="card-head"><h2>The Lira Today</h2></header>
+      <table class="rates" id="rates-table"></table>
+      <p class="fineprint" id="rates-updated"></p>
+    </section>
+
+    <section class="card" id="advisory-card" hidden>
+      <header class="card-head"><h2>Advisory Levels</h2></header>
+      <ul class="advisories" id="advisory-list"></ul>
+      <p class="fineprint">U.S. State Department travel advisories, refreshed with the feed. 1 = normal precautions · 4 = do not travel.</p>
+    </section>
+
+    <section class="card">
+      <header class="card-head"><h2>Useful Doors</h2></header>
+      <ul class="quick-links">
+        <li><a href="https://www.turkiye.gov.tr/" target="_blank" rel="noopener">e-Devlet <span>government services portal</span></a></li>
+        <li><a href="https://e-ikamet.goc.gov.tr/" target="_blank" rel="noopener">e-İkamet <span>residence permit applications</span></a></li>
+        <li><a href="https://en.goc.gov.tr/" target="_blank" rel="noopener">Migration Directorate <span>official announcements</span></a></li>
+        <li><a href="https://deprem.afad.gov.tr/last-earthquakes.html" target="_blank" rel="noopener">AFAD <span>live earthquake list</span></a></li>
+        <li><a href="http://www.koeri.boun.edu.tr/scripts/lst2.asp" target="_blank" rel="noopener">Kandilli <span>seismic observatory</span></a></li>
+        <li><a href="https://www.gov.uk/foreign-travel-advice/turkey" target="_blank" rel="noopener">UK travel advice <span>detailed &amp; current</span></a></li>
+        <li><a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html" target="_blank" rel="noopener">U.S. advisories <span>all countries</span></a></li>
+        <li><a href="https://www.tcmb.gov.tr/wps/wcm/connect/EN/TCMB+EN/Main+Menu/Statistics/Exchange+Rates/Indicative+Rates" target="_blank" rel="noopener">Central Bank <span>official exchange rates</span></a></li>
+      </ul>
+    </section>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="rule-double" aria-hidden="true"></div>
+  <p><strong>The Bosphorus Brief</strong> — an independent briefing for internationals at home in Türkiye &amp; the wider region.</p>
+  <p>No accounts, no analytics, no trackers. Your reading list and settings live only in your browser.</p>
+  <p><a href="about.html">About the Brief &amp; our sources</a> · Feed refreshes hourly · Digest brews each morning</p>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
