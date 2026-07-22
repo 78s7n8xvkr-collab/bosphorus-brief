@@ -1,32 +1,28 @@
 {
- "title": "Lira Pressure, a New Party, and a Tense Strait",
- "overview": "Regional tensions over the Strait of Hormuz continue to weigh on the lira and Turkish bond markets even as Türkiye stays largely on the sidelines of the conflict itself. At home, the biggest domestic story is the launch of a new opposition party, while Ankara's F-35 ambitions hit another wall in Washington.",
+ "title": "Lira Pressure, Regional Nerves, and a New Party on the Scene",
+ "overview": "The lira remains the story that touches daily life most directly today, with inflation expectations and Middle East tensions keeping the currency under pressure and rate cuts off the table. Regionally, rhetoric around the Strait of Hormuz is sharpening, though Türkiye itself remains at a steady travel-advisory level. Domestically, a new opposition party has entered the field ahead of what promises to be a busier political season.",
  "sections": [
   {
-   "heading": "Money: Lira Under Renewed Pressure",
-   "body": "The Central Bank is expected to hold rates steady as the Middle East conflict complicates the disinflation path, with USD/TRY now at 47.2. Fitch says Türkiye needs sustained reserve buildup for a rating upgrade, while Citigroup has cut its Turkish bond exposure on oil-price risk. For residents, the practical takeaway: expect continued lira softness and plan currency conversions accordingly. Separately, BKM data show Turkish credit card spending abroad hit a record 93.1 billion lira in May, up 67% year-on-year — a sign locals are increasingly hedging by spending internationally."
+   "heading": "Money: Lira Under Pressure, No Rate Relief in Sight",
+   "body": "The dollar has strengthened further against the lira (USD/TRY at 47.2), and Commerzbank and other analysts point to rising inflation expectations as the driver. Bloomberg reports Turkey's central bank will likely hold rates steady, as the Middle East conflict complicates the disinflation path. Fitch has said sustained foreign-reserve buildup remains key to any ratings upgrade, while Citigroup has cut its Turkish bond position by half, citing the oil price surge. For residents, this means continued planning around currency volatility; those with dollar or euro savings, or income from abroad, will notice the gap widening. Separately, BKM data show Turkish cardholders spent a record 93.1 billion lira abroad in May — a sign that spending power at home is pushing people to convert and travel."
   },
   {
-   "heading": "Hormuz Tensions: Steady, Not Alarming, for Türkiye",
-   "body": "Trump has warned the US will strike Iranian bridges or power plants for each attack on shipping in the Strait of Hormuz, and four US service members were killed in recent Iran-linked attacks since the ceasefire ended. Iran has warned any strike on its infrastructure will bring a 'powerful' response. Türkiye's own travel advisory remains unchanged at Level 2 — this is a regional story affecting Gulf shipping and Iranian airspace, not day-to-day life in Türkiye, though residents should expect continued market spillover and possibly fluctuating flight routings near Iranian airspace."
+   "heading": "Hormuz Tensions: Rhetoric Rises, Türkiye Stays Calm",
+   "body": "President Trump has said the US will strike an Iranian bridge or power plant for every attack on shipping in the Strait of Hormuz, a warning covered widely by AP, Axios, and the BBC. Anadolu Ajansı reports Iran's countering warning that any infrastructure strike would trigger a 'powerful' response. State-aligned Turkish coverage has also highlighted Iran's statement that Turkey helped prevent a Kurdish-group offensive from northern Iraq during the recent conflict — a claim opposition-leaning Turkish Minute reports with more caution about Iranian framing. None of this changes Türkiye's own travel-advisory level (still L2), but it underscores why regional shipping and insurance costs remain elevated, and why longer land/air routes around Hormuz are being discussed as alternatives."
   },
   {
-   "heading": "Turkish Politics: A New Opposition Party",
-   "body": "Ousted opposition figure Özgür Özel has launched a new party aimed at challenging President Erdoğan. International outlets (DW) frame this as a direct challenge to the ruling party; state-aligned coverage of the launch itself is notably thin so far. Residents watching domestic politics should expect this to dominate opposition-leaning coverage in coming weeks."
-  },
-  {
-   "heading": "F-35 and Defense Ties",
-   "body": "The US State Department has told Congress that Türkiye does not currently meet the legal conditions to rejoin the F-35 program — a reminder that defense-industry normalization remains stalled even as Washington reportedly moves toward a nuclear deal with Saudi Arabia, drawing analysis (Haaretz) on how these moves might unsettle Israel."
+   "heading": "Politics: Ozel Launches a New Party",
+   "body": "DW reports that Özgür Özel has launched a new party aimed at challenging President Erdoğan, adding a fresh player to Turkish politics. It's early days — no policy detail yet reported — but worth watching for anyone tracking the country's political direction over the coming term."
   },
   {
    "heading": "Migration Notes",
-   "body": "Two deportation cases are drawing attention this week: a Uyghur man reportedly deported from Germany to China, and a Turkish man deported from the US despite prior torture-related protections. Both stories illustrate the uneven and sometimes opaque nature of deportation decisions — worth noting for anyone navigating cross-border status issues."
+   "body": "Germany's deportation of a Uyghur man to China, reported by his mother, has drawn attention internationally, alongside a separate case of a Turkish man deported from the US despite prior torture protections. Both stories are reminders that deportation and asylum protections vary sharply by country, relevant for anyone navigating cross-border residency questions. Meanwhile, a funding call for refugee and asylum-seeker protection services inside Turkey signals continued NGO activity in this space."
   }
  ],
- "closing": "Keep an eye on the exchange rate today, and stay well — iyi günler.",
+ "closing": "Keep an eye on the exchange rate today, and safe travels wherever you're headed this week.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-07-22",
- "date_label": "Wednesday, 22 July 2026",
- "generated_at": "2026-07-22T20:59:37+00:00"
+ "date": "2026-07-23",
+ "date_label": "Thursday, 23 July 2026",
+ "generated_at": "2026-07-22T21:03:12+00:00"
 }
