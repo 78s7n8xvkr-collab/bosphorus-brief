@@ -92,6 +92,19 @@
     return node;
   }
 
+  function scrollToFeed() {
+    const main = document.querySelector(".layout main");
+    if (!main) return;
+    const top = Math.max(
+      0, main.getBoundingClientRect().top + window.pageYOffset - 56
+    );
+    try {
+      window.scrollTo({ top: top, behavior: "smooth" });
+    } catch (err) {
+      window.scrollTo(0, top);
+    }
+  }
+
   // ----------------------------------------------------------------- feed --
   function visibleItems() {
     if (!state.news) return [];
@@ -162,9 +175,12 @@
       saved: "Saved for later",
       ...CATEGORY_LABELS,
     };
-    $("#section-title").textContent =
-      (titles[state.tab] || "") + " · " + list.length +
-      (list.length === 1 ? " story" : " stories");
+    const sectionTitle = $("#section-title");
+    if (sectionTitle) {
+      sectionTitle.textContent =
+        (titles[state.tab] || "") + " · " + list.length +
+        (list.length === 1 ? " story" : " stories");
+    }
 
     const empty = $("#empty-state");
     if (!list.length) {
@@ -296,8 +312,7 @@
       renderFeed();
       // On phones the digest sits above the feed, so "top of page" hides the
       // section you just switched to — scroll to the feed itself instead.
-      document.querySelector(".layout main")
-        .scrollIntoView({ behavior: "smooth", block: "start" });
+      scrollToFeed();
     });
   });
   const hashTab = location.hash.replace("#", "");
