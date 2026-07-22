@@ -270,6 +270,48 @@ a:hover { text-decoration: underline; }
   margin: 8px 0;
 }
 
+/* --------------------------------------------------------------- legend -- */
+
+.legend { margin: 6px 0 4px; }
+
+.legend summary {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font: 600 12px var(--sans);
+  letter-spacing: .03em;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 4px 0;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.legend summary::-webkit-details-marker { display: none; }
+.legend summary:hover { color: var(--ink); }
+.legend summary .chev { font-size: 9px; transition: transform .15s; }
+.legend[open] summary .chev { transform: rotate(180deg); }
+
+.legend-body {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  padding: 12px 14px 8px;
+  margin-top: 6px;
+}
+.legend-intro { margin: 0 0 10px; font-size: 13px; color: var(--ink-soft); }
+
+.legend-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 9px 12px;
+  align-items: baseline;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.legend-grid .lens, .legend-grid .blindspot { justify-self: start; cursor: default; }
+.legend-spectrum { align-self: center; width: 62px; }
+
 .stories { list-style: none; margin: 0; padding: 0; }
 
 .story {

@@ -13,7 +13,7 @@
 <meta name="apple-mobile-web-app-title" content="The Brief">
 <meta name="theme-color" content="#f6f2e8" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#10151f" media="(prefers-color-scheme: dark)">
-<link rel="stylesheet" href="assets/style.css?v=6">
+<link rel="stylesheet" href="assets/style.css?v=7">
 </head>
 <body>
 
@@ -54,6 +54,35 @@
       <button id="refresh-btn" class="ghost-btn" title="Refresh the feed">↻</button>
       <span id="updated-stamp" class="updated-stamp" title="When the feed data was last rebuilt">—</span>
     </div>
+    <details class="legend">
+      <summary>Key — what the labels mean <span class="chev">▾</span></summary>
+      <div class="legend-body">
+        <p class="legend-intro">Sources are labelled by <strong>ownership and
+        affiliation</strong> — matters of public record, not our judgement of
+        any article:</p>
+        <div class="legend-grid">
+          <span class="lens lens-state">state</span>
+          <span>owned or funded by a government — TRT World, Anadolu, Al Jazeera</span>
+          <span class="lens lens-progov">pro-gov</span>
+          <span>privately owned, ownership close to the government — Daily Sabah, Hürriyet</span>
+          <span class="lens lens-opposition">opposition</span>
+          <span>opposition-leaning or run by journalists in exile — Turkish Minute, Sözcü</span>
+          <span class="lens lens-independent">indep</span>
+          <span>independent newsroom — Bianet, Medyascope, Al-Monitor</span>
+          <span class="lens lens-international">intl</span>
+          <span>international outlet or wire service — BBC, Reuters, AP</span>
+          <span class="lens lens-official">official</span>
+          <span>governments &amp; international bodies publishing directly — advisories, ReliefWeb</span>
+          <span class="lens lens-unrated">—</span>
+          <span>a source we haven't classified yet</span>
+          <span class="blindspot">one-lens coverage</span>
+          <span>several outlets are reporting this story — all from one side of the spectrum</span>
+          <span class="spectrum legend-spectrum" aria-hidden="true"><span class="seg seg-progov" style="flex:2"></span><span class="seg seg-opposition" style="flex:1"></span><span class="seg seg-international" style="flex:2"></span></span>
+          <span>the coverage bar — who's reporting a grouped story; tap "N sources" to see each outlet</span>
+        </div>
+        <p class="fineprint">Press and hold any label in the feed for the specific ownership note. More detail on the <a href="about.html">About page</a>.</p>
+      </div>
+    </details>
     <div id="notice" class="notice" hidden></div>
     <ol id="stories" class="stories" aria-live="polite"></ol>
     <p id="empty-state" class="empty-state" hidden></p>
@@ -123,6 +152,6 @@
   <p><a href="about.html">About the Brief &amp; our sources</a> · Feed refreshes hourly · Digest brews each morning</p>
 </footer>
 
-<script src="assets/app.js?v=6"></script>
+<script src="assets/app.js?v=7"></script>
 </body>
 </html>
