@@ -12,6 +12,14 @@ fail without breaking the run.
 
 GOOGLE_NEWS = "https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en"
 
+# Specialist feeds with global scope are kept only when a story touches the
+# region; matched case-insensitively against title + summary.
+REGION_WORDS = [
+    "turkey", "türkiye", "turkish", "syria", "iran", "iraq", "lebanon",
+    "egypt", "israel", "jordan", "middle east", "central asia", "caucasus",
+    "azerbaijan", "gulf",
+]
+
 
 def gn(query: str) -> str:
     from urllib.parse import quote
@@ -62,6 +70,35 @@ FEEDS = [
      "weight": 1, "max": 10,
      "url": gn('(Syria OR Iraq OR Iran OR Lebanon) (strike OR attack OR ceasefire OR border) when:2d')},
 
+    # ------------------------------------------------- Rights & freedoms --
+    # Legal security for foreign residents (deportations, entry bans,
+    # residency refusals), court rulings including the ECtHR, and freedom
+    # of belief and press across the region — read across mainstream,
+    # official, and specialist rights monitors.
+    {"id": "gn-rights-courts", "source": "Google News", "category": "rights",
+     "weight": 3, "max": 10,
+     "url": gn('Turkey ("European Court of Human Rights" OR ECtHR OR "Constitutional Court" OR lawsuit OR verdict) when:14d')},
+    {"id": "gn-deportations", "source": "Google News", "category": "rights",
+     "weight": 3, "max": 12,
+     "url": gn('Turkey (deported OR deportation OR "entry ban" OR "N-82" OR "G-87" OR "tahdit kodu" OR "visa denial" OR "residence permit rejected") when:30d')},
+    {"id": "gn-belief", "source": "Google News", "category": "rights",
+     "weight": 3, "max": 12,
+     "url": gn('(Turkey OR Türkiye) ("religious freedom" OR "freedom of belief" OR "religious minority" OR church OR Christians OR Alevi OR synagogue) when:14d')},
+    {"id": "gn-persecution", "source": "Google News", "category": "rights",
+     "weight": 3, "max": 10,
+     "url": gn('("religious persecution" OR "Christian persecution" OR "persecuted Christians") ("Middle East" OR Turkey OR Iran OR Syria OR Egypt) when:14d')},
+    {"id": "forum18", "source": "Forum 18", "category": "rights",
+     "weight": 3, "max": 8, "url": "https://www.forum18.org/rss.php",
+     "require": REGION_WORDS},
+    {"id": "morningstar", "source": "Morning Star News", "category": "rights",
+     "weight": 3, "max": 8, "url": "https://morningstarnews.org/feed/",
+     "require": REGION_WORDS},
+    {"id": "icc", "source": "International Christian Concern", "category": "rights",
+     "weight": 2, "max": 8, "url": "https://www.persecution.org/feed/",
+     "require": REGION_WORDS},
+    {"id": "meconcern", "source": "Middle East Concern", "category": "rights",
+     "weight": 2, "max": 8, "url": "https://meconcern.org/feed/"},
+
     # ----------------------------------------------------------- Economy --
     {"id": "gn-lira", "source": "Google News", "category": "economy",
      "weight": 3, "max": 12,
@@ -92,7 +129,8 @@ BOOST_WORDS = [
     "türkiye", "turkey", "istanbul", "ankara", "izmir", "lira", "erdoğan",
     "erdogan", "earthquake", "residence permit", "ikamet", "visa", "refugee",
     "syria", "iran", "ceasefire", "inflation", "central bank", "airport",
-    "border", "airspace",
+    "border", "airspace", "deport", "entry ban", "religious freedom",
+    "freedom of belief", "echr", "rights court",
 ]
 
 # ---------------------------------------------------------------------------
@@ -264,6 +302,24 @@ SOURCE_LENS = {
     "investing.com": ("international", "market-data service"),
     "infomigrants": ("international", "publicly funded European consortium"),
     "google news": ("international", None),
+
+    # -- rights & freedom-of-belief monitors -------------------------------
+    "forum 18": ("independent", "religious-freedom news service covering all faiths"),
+    "morning star news": ("independent", "newswire covering persecution of Christians worldwide"),
+    "international christian concern": ("independent", "religious-liberty advocacy organization"),
+    "middle east concern": ("independent", "religious-liberty advocacy group for the region"),
+    "christianity today": ("independent", "US-based Christian magazine"),
+    "christian daily international": ("independent", "religious-liberty news service"),
+    "open doors": ("independent", "religious-liberty advocacy organization"),
+    "world watch monitor": ("independent", "religious-liberty news service"),
+    "premier christian news": ("independent", None),
+    "catholic news agency": ("independent", None),
+    "crux": ("independent", None),
+    "article 18": ("independent", "documents freedom of religion or belief in Iran"),
+    "human rights watch": ("independent", "international human-rights organization"),
+    "amnesty international": ("independent", "international human-rights organization"),
+    "committee to protect journalists": ("independent", "press-freedom organization"),
+    "uscirf": ("official", "U.S. Commission on International Religious Freedom"),
 
     # -- official sources --------------------------------------------------
     "u.s. state dept": ("official", "U.S. Department of State"),

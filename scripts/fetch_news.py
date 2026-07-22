@@ -81,6 +81,14 @@ def fetch_feed(feed: dict) -> list[dict]:
             src = getattr(entry, "source", None)
             source = clean_text(getattr(src, "title", "") or "", 60) or "Google News"
             title = GN_SUFFIX_RE.sub("", title)
+        summary = clean_text(
+            getattr(entry, "summary", "") or getattr(entry, "description", "")
+        )
+        required = feed.get("require")
+        if required:
+            text = f"{title} {summary}".lower()
+            if not any(term in text for term in required):
+                continue
         items.append({
             "id": hashlib.sha1(link.encode()).hexdigest()[:12],
             "title": title,
@@ -88,9 +96,7 @@ def fetch_feed(feed: dict) -> list[dict]:
             "source": source,
             "category": feed["category"],
             "published": entry_time(entry),
-            "summary": clean_text(
-                getattr(entry, "summary", "") or getattr(entry, "description", "")
-            ),
+            "summary": summary,
             "weight": feed["weight"],
         })
     return items

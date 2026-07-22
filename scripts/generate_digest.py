@@ -32,6 +32,7 @@ CATEGORY_NAMES = {
     "turkiye": "Türkiye",
     "region": "Around the region",
     "migration": "Migration & residency",
+    "rights": "Rights & freedoms",
     "safety": "Safety",
     "economy": "Money",
 }
@@ -55,6 +56,12 @@ Voice and standards (strict):
   calm sentence ("State-aligned outlets emphasize X; international coverage
   focuses on Y"). If an important story appears in only one lens, you may
   say so plainly. Describe outlets, never speculate about motives.
+- Standing priorities, whenever the material includes them: court rulings
+  and administrative actions touching foreign residents' legal security —
+  deportations, entry bans, visa and residency refusals, cases before the
+  European Court of Human Rights — and freedom-of-belief or other
+  civil-liberty developments affecting any community in the region. Give
+  these space even on busy news days, reported plainly and without drama.
 - If safety news is included, be steady and specific, not alarming.
 - 250-400 words total. Write in English; Turkish terms (ikamet, çay) are fine
   where natural.

@@ -8,6 +8,7 @@
     turkiye: "Türkiye",
     region: "Region",
     migration: "Migration & Residency",
+    rights: "Rights & Freedoms",
     safety: "Safety",
     economy: "Economy",
   };
