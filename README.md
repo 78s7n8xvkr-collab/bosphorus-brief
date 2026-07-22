@@ -40,6 +40,17 @@ renders meaningfully before the first automated refresh replaces them.
 - **Economy** — the lira, inflation, cost of living
 - **Saved** — a private reading list, stored only in the browser
 
+## Coverage lenses
+
+Every classified source carries an ownership-based lens label (state /
+pro-gov / opposition / indep / intl / official — curated in
+`scripts/feeds.py`). The pipeline clusters the same event across outlets
+into one story with a coverage spectrum bar and an expandable source list,
+and marks multi-source stories reported from only one side of the spectrum
+as **one-lens coverage**. The daily digest reads the same lens tags and
+notes when framing diverges between them. Labels describe ownership and
+affiliation, which are public record — not article quality.
+
 ## How the refresh works
 
 `.github/workflows/refresh.yml` runs hourly (plus on manual dispatch and on

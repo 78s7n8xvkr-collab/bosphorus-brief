@@ -49,6 +49,12 @@ Voice and standards (strict):
   political labels to individuals or communities, and avoid activist framing.
 - Always ask: what does this mean for a resident's daily life — residency
   paperwork, money, safety, travel, schooling? Lead with that.
+- The material tags outlets with an ownership lens (state media,
+  pro-government, opposition-leaning, independent, international). When the
+  framing of a major story clearly diverges between lenses, note it in one
+  calm sentence ("State-aligned outlets emphasize X; international coverage
+  focuses on Y"). If an important story appears in only one lens, you may
+  say so plainly. Describe outlets, never speculate about motives.
 - If safety news is included, be steady and specific, not alarming.
 - 250-400 words total. Write in English; Turkish terms (ikamet, çay) are fine
   where natural.
@@ -68,6 +74,30 @@ def log(msg: str) -> None:
     print(f"[digest] {msg}", flush=True)
 
 
+LENS_WORDS = {
+    "state": "state media",
+    "progov": "pro-government",
+    "opposition": "opposition-leaning",
+    "independent": "independent",
+    "international": "international",
+    "official": "official",
+}
+
+
+def tagged_source(item: dict) -> str:
+    lens = LENS_WORDS.get(item.get("lens"))
+    return f"[{item['source']}{' · ' + lens if lens else ''}]"
+
+
+def coverage_note(item: dict) -> str:
+    others = [
+        f"{c['source']} ({LENS_WORDS.get(c.get('lens'), 'unlabeled')})"
+        for c in item.get("coverage", [])
+        if c["source"] != item["source"]
+    ][:5]
+    return f" | also covered by: {', '.join(others)}" if others else ""
+
+
 def build_material(news: dict, rates: dict | None) -> str:
     by_id = {i["id"]: i for i in news.get("items", [])}
     lines = ["TOP STORIES:"]
@@ -75,14 +105,19 @@ def build_material(news: dict, rates: dict | None) -> str:
         item = by_id.get(item_id)
         if item:
             lines.append(
-                f"- [{item['source']}] {item['title']} ({item.get('published') or 'n/a'})"
+                f"- {tagged_source(item)} {item['title']} "
+                f"({item.get('published') or 'n/a'})"
                 + (f" — {item['summary']}" if item.get("summary") else "")
+                + coverage_note(item)
             )
     for cat, label in CATEGORY_NAMES.items():
         picks = [i for i in news.get("items", []) if i["category"] == cat][:5]
         if picks:
             lines.append(f"\n{label.upper()}:")
-            lines.extend(f"- [{i['source']}] {i['title']}" for i in picks)
+            lines.extend(
+                f"- {tagged_source(i)} {i['title']}{coverage_note(i)}"
+                for i in picks
+            )
     advisories = news.get("advisories", [])
     if advisories:
         lines.append("\nUS TRAVEL ADVISORY LEVELS: " + ", ".join(

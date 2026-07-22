@@ -11,6 +11,24 @@
     safety: "Safety",
     economy: "Economy",
   };
+  // Ownership lenses: [chip label, default explanation]. Codes come from the
+  // pipeline's curated source map; unlabeled sources simply get no chip.
+  const LENSES = {
+    state: ["state", "State-owned or state-funded outlet"],
+    progov: ["pro-gov", "Private outlet with pro-government ownership"],
+    opposition: ["opposition", "Opposition-leaning or exile-run outlet"],
+    independent: ["indep", "Independent newsroom"],
+    international: ["intl", "International outlet or wire service"],
+    official: ["official", "Government or international body"],
+  };
+  const LENS_ORDER = [
+    "state", "progov", "opposition", "independent", "international",
+    "official", "unrated",
+  ];
+  const BLINDSPOT_NOTES = {
+    progov: "In our feed, only state-aligned outlets are covering this story.",
+    opposition: "In our feed, only opposition-leaning outlets are covering this story.",
+  };
   const REFRESH_MS = 15 * 60 * 1000;
   const STALE_MS = 10 * 60 * 1000;
 
@@ -148,20 +166,64 @@
     badge.hidden = state.saved.length === 0;
   }
 
+  function lensChip(code, note) {
+    const meta = LENSES[code];
+    if (!meta) return null;
+    return el("span", {
+      class: "lens lens-" + code,
+      title: note || meta[1],
+    }, meta[0]);
+  }
+
+  function coverageBlock(item) {
+    const cov = item.coverage || [];
+    if (cov.length < 2) return null;
+    const counts = {};
+    cov.forEach((c) => {
+      const key = c.lens || "unrated";
+      counts[key] = (counts[key] || 0) + 1;
+    });
+    const bar = el("span", { class: "spectrum", "aria-hidden": "true" },
+      ...LENS_ORDER.filter((k) => counts[k]).map((k) =>
+        el("span", { class: "seg seg-" + k, style: "flex:" + counts[k] })));
+    const list = el("ul", { class: "coverage-list", hidden: "" },
+      ...cov.map((c) => el("li", {},
+        lensChip(c.lens) || el("span", { class: "lens lens-unrated", title: "Source we haven't classified" }, "—"),
+        el("a", { href: c.url, target: "_blank", rel: "noopener" }, c.source),
+        el("span", { class: "story-time" }, timeAgo(c.published) || ""))));
+    const btn = el("button", {
+      class: "coverage-btn",
+      "aria-expanded": "false",
+      title: "See every outlet reporting this story",
+      onclick: () => {
+        list.hidden = !list.hidden;
+        btn.setAttribute("aria-expanded", String(!list.hidden));
+        btn.classList.toggle("open", !list.hidden);
+      },
+    }, bar, cov.length + " sources", el("span", { class: "chev" }, "▾"));
+    return el("div", { class: "coverage" }, btn, list);
+  }
+
   function renderFeed() {
     const list = visibleItems();
     const container = $("#stories");
     container.replaceChildren(...list.map((item) => el("li", { class: "story" },
       el("div", { class: "story-meta" },
         el("span", { class: "story-source" }, item.source),
+        lensChip(item.lens, item.lens_note),
         el("span", { class: "story-time" },
           timeAgo(item.published) || "reference"),
+        item.blindspot
+          ? el("span", { class: "blindspot", title: BLINDSPOT_NOTES[item.blindspot] || "" },
+              "one-lens coverage")
+          : null,
         state.tab === "top" || state.tab === "saved"
           ? el("span", { class: "story-cat" }, CATEGORY_LABELS[item.category] || "")
           : null,
       ),
       el("h3", {}, el("a", { href: item.url, target: "_blank", rel: "noopener" }, item.title)),
       item.summary ? el("p", { class: "story-summary" }, item.summary) : null,
+      coverageBlock(item),
       el("button", {
         class: "save-btn" + (isSaved(item.id) ? " saved" : ""),
         title: isSaved(item.id) ? "Remove from reading list" : "Save for later",

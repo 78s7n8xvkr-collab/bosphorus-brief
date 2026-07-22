@@ -28,7 +28,7 @@ import requests
 sys.path.insert(0, str(Path(__file__).parent))
 from feeds import (  # noqa: E402
     ADVISORY_COUNTRIES, ADVISORY_FEED, ADVISORY_LABELS, BOOST_WORDS, FEEDS,
-    RATES_URL,
+    RATES_URL, source_lens,
 )
 
 UA = "BosphorusBrief/1.0 (+static news briefing; contact via repository)"
@@ -96,17 +96,78 @@ def fetch_feed(feed: dict) -> list[dict]:
     return items
 
 
-def dedupe(items: list[dict]) -> list[dict]:
+CLUSTER_STOPWORDS = {
+    "the", "a", "an", "of", "in", "on", "for", "to", "and", "as", "at", "by",
+    "with", "after", "amid", "over", "from", "into", "says", "say", "said",
+    "new", "his", "her", "its", "their", "this", "that", "will", "has", "have",
+    "was", "are", "turkey", "turkiye", "turkish",
+}
+
+
+def title_tokens(title: str) -> set[str]:
+    words = re.findall(r"[a-z0-9çğıöşü]+", title.lower())
+    return {w for w in words if len(w) > 2 and w not in CLUSTER_STOPWORDS}
+
+
+def cluster(items: list[dict]) -> list[dict]:
+    """Group the same event reported by different outlets into one story.
+
+    Returns one item per cluster (the strongest member becomes the face of
+    the story) with `coverage` listing every outlet that reported it, a
+    `lens` for the primary source, and a `blindspot` marker when an event
+    with multiple reports appears in only one ownership lens.
+    """
+    ordered = sorted(
+        items, key=lambda i: (i["weight"], i["published"] or ""), reverse=True
+    )
+    clusters: list[dict] = []
     seen_urls: set[str] = set()
-    seen_titles: set[str] = set()
-    out = []
-    for item in items:
+    for item in ordered:
         url_key = item["url"].split("?")[0].rstrip("/").lower()
-        title_key = re.sub(r"[^a-z0-9]+", "", item["title"].lower())[:80]
-        if url_key in seen_urls or (title_key and title_key in seen_titles):
+        if url_key in seen_urls:
             continue
         seen_urls.add(url_key)
-        seen_titles.add(title_key)
+        tokens = title_tokens(item["title"])
+        target = None
+        for c in clusters:
+            base = min(len(tokens), len(c["tokens"]))
+            if base >= 4 and len(tokens & c["tokens"]) / base >= 0.6:
+                target = c
+                break
+        if target is None:
+            clusters.append({"tokens": tokens, "members": [item]})
+        else:
+            target["members"].append(item)
+
+    out = []
+    for c in clusters:
+        by_source: dict[str, dict] = {}
+        for member in c["members"]:  # first hit per outlet wins (syndication)
+            by_source.setdefault(member["source"], member)
+        members = list(by_source.values())
+        item = dict(members[0])
+        lens = source_lens(item["source"])
+        if lens:
+            item["lens"] = lens["code"]
+            item["lens_note"] = lens["note"]
+        if len(members) > 1:
+            coverage = []
+            for member in sorted(
+                members, key=lambda m: m["published"] or "", reverse=True
+            ):
+                member_lens = source_lens(member["source"])
+                coverage.append({
+                    "source": member["source"],
+                    "url": member["url"],
+                    "published": member["published"],
+                    "lens": member_lens["code"] if member_lens else None,
+                })
+            item["coverage"] = coverage
+            lenses = {m["lens"] for m in coverage} - {None, "official"}
+            if lenses and lenses <= {"state", "progov"}:
+                item["blindspot"] = "progov"
+            elif lenses == {"opposition"}:
+                item["blindspot"] = "opposition"
         out.append(item)
     return out
 
@@ -118,6 +179,7 @@ def score(item: dict, now: datetime) -> float:
         pts += max(0.0, 48 - age_h) / 12  # up to +4 for freshness
     text = f"{item['title']} {item['summary']}".lower()
     pts += sum(0.5 for word in BOOST_WORDS if word in text)
+    pts += 0.6 * min(len(item.get("coverage", [])), 6)  # widely covered = bigger
     return pts
 
 
@@ -218,7 +280,7 @@ def main() -> int:
             failed.append(feed["id"])
             log(f"{feed['id']}: FAILED ({exc})")
 
-    items = dedupe(items)
+    items = cluster(items)
     items.sort(key=lambda i: i["published"] or "", reverse=True)
 
     news_path = out_dir / "news.json"

@@ -94,3 +94,220 @@ BOOST_WORDS = [
     "syria", "iran", "ceasefire", "inflation", "central bank", "airport",
     "border", "airspace",
 ]
+
+# ---------------------------------------------------------------------------
+# Source lenses — ownership-based reading aids.
+#
+# Labels describe ownership and affiliation (matters of public record), not
+# the quality of any article. For this region the meaningful spectrum is not
+# left/right but state ↔ pro-government ↔ opposition ↔ independent ↔
+# international. Sources not listed simply go unlabeled.
+
+LENS_NOTES = {
+    "state": "state-owned or state-funded outlet",
+    "progov": "private outlet with pro-government ownership",
+    "opposition": "opposition-leaning or exile-run outlet",
+    "independent": "independent newsroom",
+    "international": "international outlet or wire service",
+    "official": "government or international body",
+}
+
+SOURCE_LENS = {
+    # -- state-owned / state-funded ---------------------------------------
+    "trt world": ("state", "Türkiye's public broadcaster"),
+    "trt": ("state", "Türkiye's public broadcaster"),
+    "trt haber": ("state", "Türkiye's public broadcaster"),
+    "anadolu agency": ("state", "Türkiye's state news agency"),
+    "anadolu ajansi": ("state", "Türkiye's state news agency"),
+    "aa": ("state", "Türkiye's state news agency"),
+    "al jazeera": ("state", "funded by the government of Qatar"),
+    "aljazeera": ("state", "funded by the government of Qatar"),
+    "al jazeera english": ("state", "funded by the government of Qatar"),
+    "the new arab": ("state", "owned by Qatari media group Fadaat"),
+    "new arab": ("state", "owned by Qatari media group Fadaat"),
+    "al arabiya": ("state", "Saudi-owned broadcaster"),
+    "arab news": ("state", "Saudi royal-linked SRMG media group"),
+    "the national": ("state", "owned by an Abu Dhabi state-linked group"),
+    "xinhua": ("state", "China's state news agency"),
+    "cgtn": ("state", "China's state broadcaster"),
+    "voice of america": ("state", "funded by the U.S. government"),
+    "voa": ("state", "funded by the U.S. government"),
+    "press tv": ("state", "Iran's state broadcaster"),
+    "irna": ("state", "Iran's state news agency"),
+    "tass": ("state", "Russia's state news agency"),
+    "rt": ("state", "Russian state-funded broadcaster"),
+    "sputnik": ("state", "Russian state-funded outlet"),
+    "sana": ("state", "Syria's state news agency"),
+    "wafa": ("state", "Palestinian Authority news agency"),
+    "petra": ("state", "Jordan's state news agency"),
+    "kuna": ("state", "Kuwait's state news agency"),
+    "qna": ("state", "Qatar's state news agency"),
+    "saudi press agency": ("state", None),
+    "mena": ("state", "Egypt's state news agency"),
+
+    # -- private, pro-government ownership (Türkiye) ----------------------
+    "daily sabah": ("progov", "owned by the pro-government Turkuvaz group"),
+    "sabah": ("progov", "owned by the pro-government Turkuvaz group"),
+    "yeni safak": ("progov", "owned by the pro-government Albayrak group"),
+    "hurriyet daily news": ("progov", "owned by the Demirören group"),
+    "hurriyet": ("progov", "owned by the Demirören group"),
+    "milliyet": ("progov", "owned by the Demirören group"),
+    "cnn turk": ("progov", "owned by the Demirören group"),
+    "demiroren news agency": ("progov", "owned by the Demirören group"),
+    "dha": ("progov", "owned by the Demirören group"),
+    "haberturk": ("progov", "owned by the Ciner group"),
+    "ntv": ("progov", "owned by the Doğuş group"),
+    "a news": ("progov", "owned by the pro-government Turkuvaz group"),
+    "anews": ("progov", "owned by the pro-government Turkuvaz group"),
+    "takvim": ("progov", "owned by the pro-government Turkuvaz group"),
+    "aksam": ("progov", None),
+    "star": ("progov", None),
+    "turkiye today": ("progov", "part of the Albayrak media group"),
+    "türkiye today": ("progov", "part of the Albayrak media group"),
+    "ihlas news agency": ("progov", None),
+    "iha": ("progov", None),
+    "tgrt": ("progov", None),
+    "yeni akit": ("progov", None),
+
+    # -- opposition-leaning / exile-run -----------------------------------
+    "turkish minute": ("opposition", "run by Turkish journalists in exile"),
+    "nordic monitor": ("opposition", "run by Turkish journalists in exile"),
+    "stockholm center for freedom": ("opposition", "run by Turkish journalists in exile"),
+    "bold medya": ("opposition", None),
+    "kronos": ("opposition", None),
+    "tr724": ("opposition", None),
+    "cumhuriyet": ("opposition", "Türkiye's oldest opposition daily"),
+    "sozcu": ("opposition", "opposition-leaning daily"),
+    "sözcü": ("opposition", "opposition-leaning daily"),
+    "birgun": ("opposition", "left-leaning opposition daily"),
+    "halk tv": ("opposition", "opposition-aligned broadcaster"),
+    "tele1": ("opposition", "opposition-aligned broadcaster"),
+    "duvar english": ("opposition", None),
+    "gazete duvar": ("opposition", None),
+    "medya news": ("opposition", "pro-Kurdish outlet"),
+    "evrensel": ("opposition", "left-leaning daily"),
+
+    # -- independent newsrooms --------------------------------------------
+    "bianet": ("independent", "independent Turkish newsroom"),
+    "t24": ("independent", "independent Turkish news site"),
+    "medyascope": ("independent", "independent Turkish web broadcaster"),
+    "diken": ("independent", None),
+    "gazete oksijen": ("independent", None),
+    "al-monitor": ("independent", "regional news site based in Washington"),
+    "al monitor": ("independent", "regional news site based in Washington"),
+    "middle east eye": ("independent", "independent; widely reported Qatari funding links"),
+    "middle east monitor": ("independent", "pro-Palestinian advocacy outlet"),
+    "bne intellinews": ("independent", "emerging-markets news service"),
+    "turkey recap": ("independent", "independent newsletter by Türkiye-based journalists"),
+    "yetkin report": ("independent", None),
+    "times of israel": ("independent", "independent Israeli news site"),
+    "haaretz": ("independent", "independent Israeli daily"),
+    "jerusalem post": ("independent", "independent Israeli daily"),
+    "ekathimerini": ("independent", "independent Greek daily"),
+    "kathimerini": ("independent", "independent Greek daily"),
+    "l'orient today": ("independent", "independent Lebanese daily"),
+    "new lines magazine": ("independent", None),
+    "syria direct": ("independent", None),
+    "the syrian observer": ("independent", None),
+    "enab baladi": ("independent", None),
+    "rudaw": ("independent", "based in Iraqi Kurdistan, KDP-linked"),
+    "levant24": ("independent", None),
+
+    # -- international outlets & wires ------------------------------------
+    "bbc": ("international", "publicly funded under UK royal charter"),
+    "bbc news": ("international", "publicly funded under UK royal charter"),
+    "reuters": ("international", "international wire service"),
+    "associated press": ("international", "international wire service"),
+    "ap": ("international", "international wire service"),
+    "ap news": ("international", "international wire service"),
+    "afp": ("international", "international wire service"),
+    "agence france-presse": ("international", "international wire service"),
+    "cnn": ("international", None),
+    "bloomberg": ("international", None),
+    "financial times": ("international", None),
+    "the guardian": ("international", None),
+    "guardian": ("international", None),
+    "new york times": ("international", None),
+    "the new york times": ("international", None),
+    "washington post": ("international", None),
+    "the washington post": ("international", None),
+    "wall street journal": ("international", None),
+    "the wall street journal": ("international", None),
+    "the economist": ("international", None),
+    "economist": ("international", None),
+    "deutsche welle": ("international", "Germany's publicly funded international broadcaster"),
+    "dw": ("international", "Germany's publicly funded international broadcaster"),
+    "france 24": ("international", "France's publicly funded international broadcaster"),
+    "euronews": ("international", None),
+    "sky news": ("international", None),
+    "npr": ("international", "U.S. public radio"),
+    "abc news": ("international", None),
+    "nbc news": ("international", None),
+    "cbs news": ("international", None),
+    "fox news": ("international", None),
+    "politico": ("international", None),
+    "axios": ("international", None),
+    "newsweek": ("international", None),
+    "time": ("international", None),
+    "forbes": ("international", None),
+    "business insider": ("international", None),
+    "the independent": ("international", None),
+    "independent": ("international", None),
+    "the telegraph": ("international", None),
+    "telegraph": ("international", None),
+    "the times": ("international", None),
+    "cnbc": ("international", None),
+    "marketwatch": ("international", None),
+    "trading economics": ("international", "market-data service"),
+    "tradingpedia": ("international", "market-analysis site"),
+    "fxstreet": ("international", "market-analysis site"),
+    "investing.com": ("international", "market-data service"),
+    "infomigrants": ("international", "publicly funded European consortium"),
+    "google news": ("international", None),
+
+    # -- official sources --------------------------------------------------
+    "u.s. state dept": ("official", "U.S. Department of State"),
+    "us state department": ("official", "U.S. Department of State"),
+    "uk fcdo": ("official", "UK Foreign, Commonwealth & Development Office"),
+    "gov.uk": ("official", "UK government"),
+    "reliefweb": ("official", "UN humanitarian information service"),
+    "un news": ("official", "United Nations"),
+    "unhcr": ("official", "UN refugee agency"),
+    "iom": ("official", "UN migration agency"),
+    "afad": ("official", "Türkiye's disaster management authority"),
+}
+
+# Prefix fallbacks, checked longest-first, for feed-name variants like
+# "Reuters.com" or "BBC News Türkçe". Order matters: more specific first.
+LENS_PREFIXES = [
+    ("cnn turk", "progov"), ("al jazeera", "state"), ("trt", "state"),
+    ("anadolu", "state"), ("hurriyet", "progov"), ("daily sabah", "progov"),
+    ("yeni safak", "progov"), ("bbc", "international"),
+    ("reuters", "international"), ("bloomberg", "international"),
+    ("deutsche welle", "international"), ("middle east eye", "independent"),
+    ("turkish minute", "opposition"), ("al-monitor", "independent"),
+]
+
+import unicodedata
+
+
+def _normalize_source(name: str) -> str:
+    text = unicodedata.normalize("NFKD", (name or "").lower())
+    text = "".join(ch for ch in text if not unicodedata.combining(ch))
+    text = text.replace(".com", "").replace(".net", "").replace(".org", "")
+    text = " ".join(t for t in text.replace("-", " ").split())
+    return text
+
+
+def source_lens(name: str):
+    """Return {'code', 'note'} for a source display name, or None."""
+    key = _normalize_source(name)
+    if not key:
+        return None
+    hit = SOURCE_LENS.get(key) or SOURCE_LENS.get(key.removeprefix("the "))
+    if hit:
+        return {"code": hit[0], "note": hit[1] or LENS_NOTES[hit[0]]}
+    for prefix, code in LENS_PREFIXES:
+        if key.startswith(prefix):
+            return {"code": code, "note": LENS_NOTES[code]}
+    return None
