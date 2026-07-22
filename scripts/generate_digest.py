@@ -139,7 +139,7 @@ def ai_digest(material: str, today_label: str, api_key: str) -> dict:
         },
         json={
             "model": model,
-            "max_tokens": 1500,
+            "max_tokens": 3000,
             "system": EDITOR_PROMPT,
             "messages": [{
                 "role": "user",
@@ -151,11 +151,13 @@ def ai_digest(material: str, today_label: str, api_key: str) -> dict:
     )
     if resp.status_code != 200:
         raise RuntimeError(f"API {resp.status_code}: {resp.text[:300]}")
+    body = resp.json()
+    if body.get("stop_reason") == "max_tokens":
+        raise ValueError("model response truncated at max_tokens")
     text = "".join(
-        block.get("text", "") for block in resp.json().get("content", [])
+        block.get("text", "") for block in body.get("content", [])
     ).strip()
-    if text.startswith("```"):
-        text = text.strip("`")
+    if "{" in text:  # tolerate markdown fences or stray prose around the JSON
         text = text[text.index("{"):text.rindex("}") + 1]
     digest = json.loads(text)
     for key in ("title", "overview", "sections"):
