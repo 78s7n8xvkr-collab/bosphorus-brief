@@ -396,6 +396,30 @@
 
   $("#refresh-btn").addEventListener("click", () => loadAll(true));
 
+  $("#cay-tab").addEventListener("click", () => {
+    const card = $("#digest-card");
+    if (!card || card.hidden) return;
+    const top = Math.max(
+      0, card.getBoundingClientRect().top + window.pageYOffset - 56
+    );
+    try {
+      window.scrollTo({ top: top, behavior: "smooth" });
+    } catch (err) {
+      window.scrollTo(0, top);
+    }
+    card.classList.remove("glow");
+    void card.offsetWidth; // restart the highlight animation
+    card.classList.add("glow");
+  });
+
+  const infoBtn = $("#digest-info-btn");
+  infoBtn.addEventListener("click", () => {
+    const about = $("#digest-about");
+    about.hidden = !about.hidden;
+    infoBtn.setAttribute("aria-expanded", String(!about.hidden));
+    infoBtn.classList.toggle("open", !about.hidden);
+  });
+
   const railToggle = $("#rail-toggle");
   railToggle.addEventListener("click", () => {
     const expanded = document.querySelector(".rail").classList.toggle("rail-expanded");

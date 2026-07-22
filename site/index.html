@@ -13,7 +13,7 @@
 <meta name="apple-mobile-web-app-title" content="The Brief">
 <meta name="theme-color" content="#f6f2e8" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#10151f" media="(prefers-color-scheme: dark)">
-<link rel="stylesheet" href="assets/style.css?v=5">
+<link rel="stylesheet" href="assets/style.css?v=6">
 </head>
 <body>
 
@@ -36,6 +36,7 @@
 </header>
 
 <nav class="tabs" aria-label="Sections">
+  <button id="cay-tab" class="cay-tab" title="Jump to today's Morning Çay — the Brief's daily digest">☕ Morning Çay</button>
   <button data-tab="top" class="tab active">Top Stories</button>
   <button data-tab="turkiye" class="tab">Türkiye</button>
   <button data-tab="region" class="tab">Region</button>
@@ -68,7 +69,16 @@
           <h2>Morning Çay</h2>
           <p class="card-sub" id="digest-date">—</p>
         </div>
+        <button id="digest-info-btn" class="info-btn" title="What is Morning Çay?" aria-expanded="false" aria-label="What is Morning Çay?">ⓘ</button>
       </header>
+      <p id="digest-about" class="digest-about" hidden>Morning Çay is the
+      Brief's daily briefing-within-the-briefing. Once a day, on İstanbul
+      time, an AI editor reads the entire feed — every outlet, every lens —
+      and brews it down to a few hundred words on what actually matters for
+      life here: money, paperwork, safety, and the day's big picture. When
+      state-aligned, opposition, and international outlets tell the same
+      story differently, it says so. It's a starting point, not a verdict —
+      verify anything critical with the original reporting.</p>
       <h3 id="digest-title" class="digest-title"></h3>
       <p id="digest-overview" class="digest-overview"></p>
       <div id="digest-sections"></div>
@@ -113,6 +123,6 @@
   <p><a href="about.html">About the Brief &amp; our sources</a> · Feed refreshes hourly · Digest brews each morning</p>
 </footer>
 
-<script src="assets/app.js?v=5"></script>
+<script src="assets/app.js?v=6"></script>
 </body>
 </html>
