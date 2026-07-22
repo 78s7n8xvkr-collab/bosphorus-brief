@@ -202,6 +202,15 @@ a:hover { text-decoration: underline; }
 
 /* ----------------------------------------------------------------- feed -- */
 
+.layout main { scroll-margin-top: 56px; }
+
+.section-title {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 600;
+  margin: 2px 0 10px;
+}
+
 .feed-tools { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
 
 #search {

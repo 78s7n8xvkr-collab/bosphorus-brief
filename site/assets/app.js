@@ -157,6 +157,15 @@
       }, isSaved(item.id) ? "★" : "☆"),
     )));
 
+    const titles = {
+      top: "Top Stories",
+      saved: "Saved for later",
+      ...CATEGORY_LABELS,
+    };
+    $("#section-title").textContent =
+      (titles[state.tab] || "") + " · " + list.length +
+      (list.length === 1 ? " story" : " stories");
+
     const empty = $("#empty-state");
     if (!list.length) {
       empty.textContent = state.tab === "saved"
@@ -285,7 +294,10 @@
       state.tab = tab.dataset.tab;
       history.replaceState(null, "", "#" + state.tab);
       renderFeed();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      // On phones the digest sits above the feed, so "top of page" hides the
+      // section you just switched to — scroll to the feed itself instead.
+      document.querySelector(".layout main")
+        .scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
   const hashTab = location.hash.replace("#", "");
