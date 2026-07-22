@@ -73,8 +73,12 @@
   // ------------------------------------------------------- masthead clock --
   function tickMasthead() {
     const now = new Date();
-    $("#dateline").textContent = new Intl.DateTimeFormat("en-GB", {
-      weekday: "long", day: "numeric", month: "long", year: "numeric",
+    const compact = matchMedia("(max-width: 600px)").matches;
+    $("#dateline").textContent = "Daily edition · " + new Intl.DateTimeFormat("en-GB", {
+      weekday: compact ? "short" : "long",
+      day: "numeric",
+      month: compact ? "short" : "long",
+      year: "numeric",
       timeZone: "Europe/Istanbul",
     }).format(now);
     $("#ist-clock").textContent = "İstanbul " + new Intl.DateTimeFormat("en-GB", {

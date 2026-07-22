@@ -108,6 +108,14 @@ a:hover { text-decoration: underline; }
   color: var(--ink-soft);
 }
 
+.standfirst {
+  margin: 7px auto 0;
+  max-width: 560px;
+  font-size: 12.5px;
+  letter-spacing: .03em;
+  color: var(--muted);
+}
+
 .rule-double {
   max-width: 1100px;
   margin: 0 auto;
