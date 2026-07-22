@@ -94,7 +94,7 @@ def build_material(news: dict, rates: dict | None) -> str:
 
 
 def ai_digest(material: str, today_label: str, api_key: str) -> dict:
-    model = os.environ.get("DIGEST_MODEL", DEFAULT_MODEL)
+    model = os.environ.get("DIGEST_MODEL", "").strip() or DEFAULT_MODEL
     resp = requests.post(
         API_URL,
         headers={
