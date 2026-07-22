@@ -1,31 +1,32 @@
 {
- "title": "This morning's headlines",
- "overview": "An automated roundup of the most recent stories across the Brief's sources. Add an ANTHROPIC_API_KEY secret and tomorrow's çay comes with a written briefing.",
+ "title": "Lira Pressure, a New Party, and a Tense Strait",
+ "overview": "Regional tensions over the Strait of Hormuz continue to weigh on the lira and Turkish bond markets even as Türkiye stays largely on the sidelines of the conflict itself. At home, the biggest domestic story is the launch of a new opposition party, while Ankara's F-35 ambitions hit another wall in Washington.",
  "sections": [
   {
-   "heading": "Türkiye",
-   "body": "Turkey’s overseas credit card spending hit record in May (Turkish Minute) · Turkey's Ozel launches new party to challenge Erdogan (DW.com) · Ousted Turkey opposition leader plans to create a new party (DW.com)"
+   "heading": "Money: Lira Under Renewed Pressure",
+   "body": "The Central Bank is expected to hold rates steady as the Middle East conflict complicates the disinflation path, with USD/TRY now at 47.2. Fitch says Türkiye needs sustained reserve buildup for a rating upgrade, while Citigroup has cut its Turkish bond exposure on oil-price risk. For residents, the practical takeaway: expect continued lira softness and plan currency conversions accordingly. Separately, BKM data show Turkish credit card spending abroad hit a record 93.1 billion lira in May, up 67% year-on-year — a sign locals are increasingly hedging by spending internationally."
   },
   {
-   "heading": "Around the region",
-   "body": "US to announce deal allowing Saudi Arabia a nuclear programme (BBC) · Trump threatens to target Iran's bridges and power plants if Hormuz attacks persist (BBC)"
+   "heading": "Hormuz Tensions: Steady, Not Alarming, for Türkiye",
+   "body": "Trump has warned the US will strike Iranian bridges or power plants for each attack on shipping in the Strait of Hormuz, and four US service members were killed in recent Iran-linked attacks since the ceasefire ended. Iran has warned any strike on its infrastructure will bring a 'powerful' response. Türkiye's own travel advisory remains unchanged at Level 2 — this is a regional story affecting Gulf shipping and Iranian airspace, not day-to-day life in Türkiye, though residents should expect continued market spillover and possibly fluctuating flight routings near Iranian airspace."
   },
   {
-   "heading": "Migration & residency",
-   "body": "Germany has deported a Uyghur man to China, his mother says (myMotherLode.com)"
+   "heading": "Turkish Politics: A New Opposition Party",
+   "body": "Ousted opposition figure Özgür Özel has launched a new party aimed at challenging President Erdoğan. International outlets (DW) frame this as a direct challenge to the ruling party; state-aligned coverage of the launch itself is notably thin so far. Residents watching domestic politics should expect this to dominate opposition-leaning coverage in coming weeks."
   },
   {
-   "heading": "Safety",
-   "body": "Trump says US will destroy a bridge or power plant for each Iranian attack in the Strait of Hormuz (AP News)"
+   "heading": "F-35 and Defense Ties",
+   "body": "The US State Department has told Congress that Türkiye does not currently meet the legal conditions to rejoin the F-35 program — a reminder that defense-industry normalization remains stalled even as Washington reportedly moves toward a nuclear deal with Saudi Arabia, drawing analysis (Haaretz) on how these moves might unsettle Israel."
   },
   {
-   "heading": "Money",
-   "body": "Turkey Rates to Stay Put as Middle East War Impedes Disinflation (Bloomberg.com) · Rising Inflation Expectations Threaten Turkish Lira Outlook (TradingPedia)"
+   "heading": "Migration Notes",
+   "body": "Two deportation cases are drawing attention this week: a Uyghur man reportedly deported from Germany to China, and a Turkish man deported from the US despite prior torture-related protections. Both stories illustrate the uneven and sometimes opaque nature of deportation decisions — worth noting for anyone navigating cross-border status issues."
   }
  ],
- "closing": "Full stories in the feed below.",
- "method": "headlines",
+ "closing": "Keep an eye on the exchange rate today, and stay well — iyi günler.",
+ "method": "ai",
+ "model": "claude-sonnet-5",
  "date": "2026-07-22",
  "date_label": "Wednesday, 22 July 2026",
- "generated_at": "2026-07-22T20:57:31+00:00"
+ "generated_at": "2026-07-22T20:59:37+00:00"
 }
