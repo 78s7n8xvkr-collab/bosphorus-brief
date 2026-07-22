@@ -1,28 +1,31 @@
 {
- "title": "Steady Hands, Watchful Eyes",
- "overview": "The US-Iran standoff over the Strait of Hormuz continues to dominate headlines, with knock-on effects for Turkish monetary policy and the lira rather than any direct security threat to residents here. Domestically, migration enforcement and a new opposition party launch are the stories worth tracking.",
+ "title": "This morning's headlines",
+ "overview": "An automated roundup of the most recent stories across the Brief's sources. Add an ANTHROPIC_API_KEY secret and tomorrow's çay comes with a written briefing.",
  "sections": [
   {
-   "heading": "Regional Tensions: Watch, Don't Worry",
-   "body": "Washington has warned it will strike Iranian infrastructure in response to any attack on shipping in the Strait of Hormuz, and Tehran has promised a 'powerful' reply to any hit on its own territory. Turkey is not a party to this exchange, and Iran's foreign minister publicly credited Ankara with helping prevent a separate Kurdish-group offensive from Iraqi territory during the earlier phase of the conflict. The US travel advisory for Türkiye remains unchanged at Level 2 — exercise increased caution, nothing more. Iran, Iraq, Syria and Lebanon sit at Level 4; if you're transiting through the region, check current guidance before booking."
+   "heading": "Türkiye",
+   "body": "Turkey’s overseas credit card spending hit record in May (Turkish Minute) · Turkey's Ozel launches new party to challenge Erdogan (DW.com) · Ousted Turkey opposition leader plans to create a new party (DW.com)"
   },
   {
-   "heading": "Lira and Your Wallet",
-   "body": "The Central Bank is expected to hold rates steady again, with the Gulf conflict complicating the disinflation path Bloomberg and others had been tracking. USD/TRY sits at 47.2, EUR/TRY at 53.84. Analysts at Commerzbank and elsewhere flag rising inflation expectations as the near-term risk to watch; Citigroup has already trimmed its Turkish bond exposure given oil price moves. On a lighter note, Turkish credit card spending abroad hit a record 93.1 billion lira in May — a reminder that outbound travel and cross-border shopping remain strong despite the exchange rate."
+   "heading": "Around the region",
+   "body": "US to announce deal allowing Saudi Arabia a nuclear programme (BBC) · Trump threatens to target Iran's bridges and power plants if Hormuz attacks persist (BBC)"
   },
   {
-   "heading": "Migration Enforcement Continues",
-   "body": "Authorities conducted nationwide raids resulting in 355 detentions this week, part of ongoing enforcement rather than a new policy shift. If your ikamet or work permit paperwork is current, this shouldn't affect you directly, but it's a useful nudge to keep documents up to date and accessible."
+   "heading": "Migration & residency",
+   "body": "Germany has deported a Uyghur man to China, his mother says (myMotherLode.com)"
   },
   {
-   "heading": "Politics: A New Party, an Old Question",
-   "body": "Former CHP figure Özgür Özel has launched a new party positioning itself against the current government — one more data point in Turkey's shifting opposition landscape, worth noting but not yet consequential for daily administration or services."
+   "heading": "Safety",
+   "body": "Trump says US will destroy a bridge or power plant for each Iranian attack in the Strait of Hormuz (AP News)"
+  },
+  {
+   "heading": "Money",
+   "body": "Turkey Rates to Stay Put as Middle East War Impedes Disinflation (Bloomberg.com) · Rising Inflation Expectations Threaten Turkish Lira Outlook (TradingPedia)"
   }
  ],
- "closing": "Nothing here requires you to change your plans today — just keep half an eye on the news and your paperwork in order.",
- "method": "ai",
- "model": "claude-sonnet-5",
+ "closing": "Full stories in the feed below.",
+ "method": "headlines",
  "date": "2026-07-22",
  "date_label": "Wednesday, 22 July 2026",
- "generated_at": "2026-07-22T20:27:47+00:00"
+ "generated_at": "2026-07-22T20:57:31+00:00"
 }
