@@ -1,32 +1,31 @@
 {
- "title": "Steady çay for a tense week",
- "overview": "A week of hard headlines — but for residents the practical picture is steadier: the lira is drifting rather than diving, Thursday's central-bank decision is expected to hold, and the rules that govern daily life are shifting slowly, not suddenly.",
+ "title": "This morning's headlines",
+ "overview": "An automated roundup of the most recent stories across the Brief's sources. Add an ANTHROPIC_API_KEY secret and tomorrow's çay comes with a written briefing.",
  "sections": [
   {
-   "heading": "The big picture",
-   "body": "The US–Iran ceasefire has broken down and strikes have resumed across the region. Shipping continues through the Strait of Hormuz, but tension is high — if you're flying east or south, check your airline's alerts, as occasional reroutes are likely."
-  },
-  {
    "heading": "Türkiye",
-   "body": "An intense political season: Özgür Özel, removed as CHP leader by court order in May, told parliament he will found a new party. Expect large announced rallies in big cities — easy to plan around, worth planning around."
+   "body": "Turkey’s overseas credit card spending hit record in May (Turkish Minute) · Turkey's Ozel launches new party to challenge Erdogan (DW.com) · Iran says Turkey helped thwart planned offensive by Iraq-based Kurdish groups (Turkish Minute)"
   },
   {
-   "heading": "Money",
-   "body": "The lira sits near ₺47.2 to the dollar and above ₺53.5 to the euro. June inflation eased to 32.1%, the lowest since March, and the central bank is widely expected to hold its 37% rate on Thursday. Foreign-currency earners: an ordinary month. Lira earners: keep an eye on rent-renewal caps."
+   "heading": "Around the region",
+   "body": "Trump threatens to target Iran's bridges and power plants if Hormuz attacks persist (BBC) · US to announce deal allowing Saudi Arabia a nuclear programme (BBC) · Trump: Iran will ‘pay a big price’ for US troop deaths (Al Jazeera)"
   },
   {
    "heading": "Migration & residency",
-   "body": "Roughly 700,000 Syrians have returned home since December 2024; about 2.2 million remain, and UNHCR expects up to a million returns this year. Housekeeping for everyone else: the residence-permit card fee rose to ₺964 in April, and financial thresholds now track 1.5× the net minimum wage."
+   "body": "Germany has deported a Uyghur man to China, his mother says (myMotherLode.com)"
   },
   {
    "heading": "Safety",
-   "body": "A magnitude-5.0 quake near Malatya on 18 July caused no reported major damage. Türkiye stays at U.S. advisory Level 2 overall, with border provinces in the southeast at Level 4. A good week to check the water and batteries in your quake kit."
+   "body": "Trump says US will destroy a bridge or power plant for each Iranian attack in the Strait of Hormuz (AP News) · Latest combat deaths show risk has shifted to troops far from Iran’s borders (The Washington Post) · Trump vows to hit an Iranian bridge or power plant for every ship Iran attacks (Axios)"
+  },
+  {
+   "heading": "Money",
+   "body": "Turkey Rates to Stay Put as Middle East War Impedes Disinflation (Bloomberg.com)"
   }
  ],
- "closing": "Çay's ready — read well, and check on a neighbour.",
- "method": "ai",
- "model": "seed-edition",
+ "closing": "Full stories in the feed below.",
+ "method": "headlines",
  "date": "2026-07-22",
  "date_label": "Wednesday, 22 July 2026",
- "generated_at": "2026-07-22T17:40:00+00:00"
+ "generated_at": "2026-07-22T20:25:52+00:00"
 }
