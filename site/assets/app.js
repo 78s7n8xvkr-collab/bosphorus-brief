@@ -421,6 +421,10 @@
     if (target) target.click();
   }
 
+  // The "/" shortcut only means something with a physical keyboard.
+  if (!matchMedia("(pointer: coarse)").matches) {
+    $("#search").placeholder = "Search this section… (press /)";
+  }
   $("#search").addEventListener("input", (event) => {
     state.query = event.target.value.trim();
     renderFeed();
