@@ -427,10 +427,30 @@ a:hover { text-decoration: underline; }
 .coverage-list a { color: var(--ink); font-weight: 600; }
 .coverage-list a:hover { color: var(--cobalt); }
 
-.save-btn {
+.story-actions {
   grid-column: 2;
-  grid-row: 2 / span 2;
+  grid-row: 2 / span 3;
   align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.share-btn {
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  padding: 2px 4px;
+  line-height: 1;
+}
+.share-btn:hover { color: var(--turquoise); }
+.share-btn.done, .ghost-btn.done { color: var(--turquoise); font-weight: 700; }
+.share-glyph { display: inline-flex; }
+
+.save-btn {
   appearance: none;
   background: none;
   border: none;

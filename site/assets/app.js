@@ -166,6 +166,35 @@
     badge.hidden = state.saved.length === 0;
   }
 
+  async function shareLink(payload, btn) {
+    if (navigator.share) {
+      try {
+        await navigator.share(payload);
+      } catch (err) { /* user closed the share sheet — fine */ }
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(payload.url);
+      if (btn) {
+        const prev = btn.innerHTML;
+        btn.classList.add("done");
+        btn.innerHTML = "✓";
+        setTimeout(() => {
+          btn.classList.remove("done");
+          btn.innerHTML = prev;
+        }, 1300);
+      }
+    } catch (err) {
+      window.prompt("Copy this link:", payload.url);
+    }
+  }
+
+  function shareIcon() {
+    const span = el("span", { class: "share-glyph", "aria-hidden": "true" });
+    span.innerHTML = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M8 6.5 12 3l4 3.5"/><path d="M6 11H5a1.5 1.5 0 0 0-1.5 1.5v7A1.5 1.5 0 0 0 5 21h14a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 19 11h-1"/></svg>';
+    return span;
+  }
+
   function lensChip(code, note) {
     const meta = LENSES[code];
     if (!meta) return null;
@@ -224,12 +253,21 @@
       el("h3", {}, el("a", { href: item.url, target: "_blank", rel: "noopener" }, item.title)),
       item.summary ? el("p", { class: "story-summary" }, item.summary) : null,
       coverageBlock(item),
-      el("button", {
-        class: "save-btn" + (isSaved(item.id) ? " saved" : ""),
-        title: isSaved(item.id) ? "Remove from reading list" : "Save for later",
-        "aria-label": "Save story",
-        onclick: () => toggleSaved(item),
-      }, isSaved(item.id) ? "★" : "☆"),
+      el("div", { class: "story-actions" },
+        el("button", {
+          class: "save-btn" + (isSaved(item.id) ? " saved" : ""),
+          title: isSaved(item.id) ? "Remove from reading list" : "Save for later",
+          "aria-label": "Save story",
+          onclick: () => toggleSaved(item),
+        }, isSaved(item.id) ? "★" : "☆"),
+        el("button", {
+          class: "share-btn",
+          title: "Share this story",
+          "aria-label": "Share story",
+          onclick: (ev) => shareLink(
+            { title: item.title, url: item.url }, ev.currentTarget),
+        }, shareIcon()),
+      ),
     )));
 
     const titles = {
@@ -395,6 +433,12 @@
   });
 
   $("#refresh-btn").addEventListener("click", () => loadAll(true));
+
+  $("#share-btn").addEventListener("click", (ev) => shareLink({
+    title: "The Bosphorus Brief",
+    text: "Two continents. One briefing.",
+    url: location.origin + location.pathname,
+  }, ev.currentTarget));
 
   $("#cay-tab").addEventListener("click", () => {
     const card = $("#digest-card");
