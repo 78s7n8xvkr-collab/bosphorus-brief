@@ -1,28 +1,35 @@
 {
- "title": "Lira Pressure, Regional Nerves, and a New Party on the Scene",
- "overview": "The lira remains the story that touches daily life most directly today, with inflation expectations and Middle East tensions keeping the currency under pressure and rate cuts off the table. Regionally, rhetoric around the Strait of Hormuz is sharpening, though Türkiye itself remains at a steady travel-advisory level. Domestically, a new opposition party has entered the field ahead of what promises to be a busier political season.",
+ "title": "This morning's headlines",
+ "overview": "An automated roundup of the most recent stories across the Brief's sources. Add an ANTHROPIC_API_KEY secret and tomorrow's çay comes with a written briefing.",
  "sections": [
   {
-   "heading": "Money: Lira Under Pressure, No Rate Relief in Sight",
-   "body": "The dollar has strengthened further against the lira (USD/TRY at 47.2), and Commerzbank and other analysts point to rising inflation expectations as the driver. Bloomberg reports Turkey's central bank will likely hold rates steady, as the Middle East conflict complicates the disinflation path. Fitch has said sustained foreign-reserve buildup remains key to any ratings upgrade, while Citigroup has cut its Turkish bond position by half, citing the oil price surge. For residents, this means continued planning around currency volatility; those with dollar or euro savings, or income from abroad, will notice the gap widening. Separately, BKM data show Turkish cardholders spent a record 93.1 billion lira abroad in May — a sign that spending power at home is pushing people to convert and travel."
+   "heading": "Türkiye",
+   "body": "Turkey Valley breaks in new concession stand/press box this summer (New Hampton Tribune)"
   },
   {
-   "heading": "Hormuz Tensions: Rhetoric Rises, Türkiye Stays Calm",
-   "body": "President Trump has said the US will strike an Iranian bridge or power plant for every attack on shipping in the Strait of Hormuz, a warning covered widely by AP, Axios, and the BBC. Anadolu Ajansı reports Iran's countering warning that any infrastructure strike would trigger a 'powerful' response. State-aligned Turkish coverage has also highlighted Iran's statement that Turkey helped prevent a Kurdish-group offensive from northern Iraq during the recent conflict — a claim opposition-leaning Turkish Minute reports with more caution about Iranian framing. None of this changes Türkiye's own travel-advisory level (still L2), but it underscores why regional shipping and insurance costs remain elevated, and why longer land/air routes around Hormuz are being discussed as alternatives."
+   "heading": "Around the region",
+   "body": "US-Saudi nuclear deal hinges on normalisation with Israel (Al Jazeera) · Houthi attacks raise fears of wider Middle East conflict and more global economic damage (BBC) · Yemen's Houthis attack Saudi tanker as US launches more Iran strikes (BBC)"
   },
   {
-   "heading": "Politics: Ozel Launches a New Party",
-   "body": "DW reports that Özgür Özel has launched a new party aimed at challenging President Erdoğan, adding a fresh player to Turkish politics. It's early days — no policy detail yet reported — but worth watching for anyone tracking the country's political direction over the coming term."
+   "heading": "Migration & residency",
+   "body": "Türkiye, Syria sign deal to open cultural centers in both countries | Daily Sabah (Daily Sabah)"
   },
   {
-   "heading": "Migration Notes",
-   "body": "Germany's deportation of a Uyghur man to China, reported by his mother, has drawn attention internationally, alongside a separate case of a Turkish man deported from the US despite prior torture protections. Both stories are reminders that deportation and asylum protections vary sharply by country, relevant for anyone navigating cross-border residency questions. Meanwhile, a funding call for refugee and asylum-seeker protection services inside Turkey signals continued NGO activity in this space."
+   "heading": "Rights & freedoms",
+   "body": "Prestage Farms offers settlement in turkey antitrust case (WATTPoultry.com) · Prestage Reaches Settlement in Turkey Price-Fixing Antitrust Litigation (Meatingplace) · Obituary for Raymond Lawson (Hall Funeral Home)"
+  },
+  {
+   "heading": "Safety",
+   "body": "Donald Trump says decision on ‘massive attack’ against Iran is close (The Guardian)"
+  },
+  {
+   "heading": "Money",
+   "body": "Turkey’s central bank keeps policy rate at 37 percent (Turkish Minute) · Türkiye holds benchmark rate as analysts warn of inflation, external risks (Xinhua) · Turkey’s Central Bank Keeps Rates At 37% For A Fourth Meeting (Finimize)"
   }
  ],
- "closing": "Keep an eye on the exchange rate today, and safe travels wherever you're headed this week.",
- "method": "ai",
- "model": "claude-sonnet-5",
- "date": "2026-07-23",
- "date_label": "Thursday, 23 July 2026",
- "generated_at": "2026-07-22T21:03:12+00:00"
+ "closing": "Full stories in the feed below.",
+ "method": "headlines",
+ "date": "2026-07-24",
+ "date_label": "Friday, 24 July 2026",
+ "generated_at": "2026-07-23T21:58:28+00:00"
 }
