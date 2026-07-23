@@ -1,35 +1,28 @@
 {
- "title": "This morning's headlines",
- "overview": "An automated roundup of the most recent stories across the Brief's sources. Add an ANTHROPIC_API_KEY secret and tomorrow's çay comes with a written briefing.",
+ "title": "The Bosphorus Brief — 24 July 2026",
+ "overview": "A quiet week for domestic Turkish policy contrasts with a tense regional backdrop, as the central bank holds steady while Yemen's Houthi attacks and US-Iran tensions stir shipping and market jitters. For residents, the practical story remains money and mobility: the lira, rates, and travel risk levels around the region.",
  "sections": [
   {
-   "heading": "Türkiye",
-   "body": "Turkey Valley breaks in new concession stand/press box this summer (New Hampton Tribune)"
+   "heading": "Central Bank Holds at 37% — Fourth Meeting Running",
+   "body": "Türkiye's central bank kept its policy rate at 37 percent for a fourth consecutive meeting, a move covered across the spectrum from Turkish Minute to state-run Xinhua and pro-government Türkiye Today. Analysts cited by Xinhua flagged continued inflation risk and external pressures, including energy prices per the WSJ. For residents, this means borrowing costs remain steep and lira savings continue to face real-rate pressure, though the currency held relatively steady — USD/TRY at 47.24, EUR/TRY at 53.91. No signal yet of near-term cuts; budget and rent planning should assume current conditions persist through the next review cycle."
   },
   {
-   "heading": "Around the region",
-   "body": "US-Saudi nuclear deal hinges on normalisation with Israel (Al Jazeera) · Houthi attacks raise fears of wider Middle East conflict and more global economic damage (BBC) · Yemen's Houthis attack Saudi tanker as US launches more Iran strikes (BBC)"
+   "heading": "Regional Tensions: Houthi Attacks and Iran Strikes",
+   "body": "Houthi forces in Yemen attacked Saudi-linked tankers in the Red Sea this week, part of a declared 'maritime embargo,' while US strikes on Iran continued and Congress debated war-powers resolutions on the conflict, per The New Arab and Middle East Eye. The BBC and AP note growing concern over wider Gulf disruption and shipping costs. None of this directly touches Turkish territory, but residents with Gulf travel plans, remittances, or shipping-dependent work should watch fuel and freight costs, which could filter into Turkish import prices. Iran, Iraq, Syria, and Lebanon remain US Level 4 advisories; Türkiye itself stays at Level 2, unchanged."
   },
   {
-   "heading": "Migration & residency",
-   "body": "Türkiye, Syria sign deal to open cultural centers in both countries | Daily Sabah (Daily Sabah)"
+   "heading": "Migration and Residency Notes",
+   "body": "Türkiye and Syria signed a deal to open reciprocal cultural centers, a modest people-to-people gesture amid ongoing Syrian displacement questions (CFR's tracker notes the conflict remains unresolved). Separately, Germany's deportation of a Uyghur man to China, reported by his mother, has drawn attention as a case study in deportation risk for vulnerable communities — worth noting for any foreign resident tracking how European states handle sensitive removals, even though it did not occur in Türkiye. On Lesvos, The New Humanitarian describes deterrence-focused migration infrastructure, a reminder that Aegean crossing routes remain tightly controlled."
   },
   {
-   "heading": "Rights & freedoms",
-   "body": "Prestage Farms offers settlement in turkey antitrust case (WATTPoultry.com) · Prestage Reaches Settlement in Turkey Price-Fixing Antitrust Litigation (Meatingplace) · Obituary for Raymond Lawson (Hall Funeral Home)"
-  },
-  {
-   "heading": "Safety",
-   "body": "Donald Trump says decision on ‘massive attack’ against Iran is close (The Guardian)"
-  },
-  {
-   "heading": "Money",
-   "body": "Turkey’s central bank keeps policy rate at 37 percent (Turkish Minute) · Türkiye holds benchmark rate as analysts warn of inflation, external risks (Xinhua) · Turkey’s Central Bank Keeps Rates At 37% For A Fourth Meeting (Finimize)"
+   "heading": "Practical Notes: Rates, Travel, Seismic Activity",
+   "body": "Exchange rates are steady this week (GBP/TRY 63.18). Minor earthquake activity continues in the wider Aegean-Anatolian zone: a M5.0 near Malatya and several M4+ quakes in Greece over the past two weeks — none reported as damaging, but a routine reminder to know your building's earthquake plan. Akkuyu Nuclear Plant's tax exemptions through 2045, reported by opposition-leaning Nordic Monitor, drew some scrutiny over long-term fiscal terms with Russia's state operator; no immediate resident impact expected."
   }
  ],
- "closing": "Full stories in the feed below.",
- "method": "headlines",
+ "closing": "Stay grounded, keep an eye on fuel prices if the Red Sea situation escalates, and have a calm weekend.",
+ "method": "ai",
+ "model": "claude-sonnet-5",
  "date": "2026-07-24",
  "date_label": "Friday, 24 July 2026",
- "generated_at": "2026-07-23T21:58:28+00:00"
+ "generated_at": "2026-07-23T22:14:00+00:00"
 }
