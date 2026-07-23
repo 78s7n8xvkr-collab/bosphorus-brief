@@ -33,7 +33,7 @@ from feeds import (  # noqa: E402
 
 UA = "BosphorusBrief/1.0 (+static news briefing; contact via repository)"
 TIMEOUT = 20
-TOP_COUNT = 10
+TOP_COUNT = 14
 MAX_PER_SOURCE_IN_TOP = 2
 
 TAG_RE = re.compile(r"<[^>]+>")

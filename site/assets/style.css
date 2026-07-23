@@ -243,6 +243,27 @@ a:hover { text-decoration: underline; }
 
 .rail-toggle { display: none; }
 
+/* On wide screens the rail pins below the tabs and scrolls inside itself,
+   so page length is set by the story feed — not the sidebar. */
+@media (min-width: 901px) {
+  .rail {
+    position: sticky;
+    top: 60px;
+    align-self: start;
+    max-height: calc(100vh - 74px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--hairline) transparent;
+    padding: 4px 4px 0;
+    margin: -4px -4px 0;
+  }
+  .rail::-webkit-scrollbar { width: 5px; }
+  .rail::-webkit-scrollbar-thumb { background: var(--hairline); }
+  .rail::-webkit-scrollbar-track { background: transparent; }
+  .rail > :last-child { margin-bottom: 4px; }
+}
+
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; }
   .rail { order: -1; }

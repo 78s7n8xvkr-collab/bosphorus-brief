@@ -422,7 +422,8 @@
     const data = state.quakes;
     if (!data || !data.quakes || !data.quakes.length) { card.hidden = true; return; }
     card.hidden = false;
-    $("#quake-list").replaceChildren(...data.quakes.slice(0, 8).map((q) =>
+    const shown = data.quakes.slice(0, 6);
+    $("#quake-list").replaceChildren(...shown.map((q) =>
       el("li", {},
         el("span", { class: "qmag " + magClass(q.mag) }, q.mag.toFixed(1)),
         q.url
@@ -430,8 +431,10 @@
           : el("span", {}, q.place),
         el("span", { class: "story-time" }, timeAgo(q.time) || ""))));
     $("#quake-updated").textContent =
-      "M4.0+ in and around Türkiye · USGS · updated "
-      + (timeAgo(data.updated) || "—")
+      "M4.0+ in and around Türkiye"
+      + (data.quakes.length > shown.length
+        ? " · latest " + shown.length + " of " + data.quakes.length : "")
+      + " · USGS · updated " + (timeAgo(data.updated) || "—")
       + " · live lists: AFAD & Kandilli in Useful Doors";
   }
 
