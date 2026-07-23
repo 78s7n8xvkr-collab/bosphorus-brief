@@ -66,15 +66,43 @@ Voice and standards (strict):
 - 250-400 words total. Write in English; Turkish terms (ikamet, çay) are fine
   where natural.
 
-Return ONLY a JSON object, no markdown fences, with exactly these keys:
-{
-  "title": "a short, warm title for today's digest",
-  "overview": "2-3 sentence read on the day",
-  "sections": [{"heading": "...", "body": "one tight paragraph"}, ...],
-  "closing": "one short, human sign-off sentence"
+Submit the digest with the publish_digest tool. Use 3-5 sections drawn from
+what actually matters today, not one per category by obligation."""
+
+DIGEST_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string",
+            "description": "a short, warm title for today's digest",
+        },
+        "overview": {
+            "type": "string",
+            "description": "2-3 sentence read on the day",
+        },
+        "sections": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 5,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "heading": {"type": "string"},
+                    "body": {
+                        "type": "string",
+                        "description": "one tight paragraph",
+                    },
+                },
+                "required": ["heading", "body"],
+            },
+        },
+        "closing": {
+            "type": "string",
+            "description": "one short, human sign-off sentence",
+        },
+    },
+    "required": ["title", "overview", "sections", "closing"],
 }
-Use 3-5 sections drawn from what actually matters today, not one per category
-by obligation."""
 
 
 def log(msg: str) -> None:
@@ -141,45 +169,64 @@ def build_material(news: dict, rates: dict | None, quakes: dict | None = None) -
 
 def ai_digest(material: str, today_label: str, api_key: str) -> dict:
     model = os.environ.get("DIGEST_MODEL", "").strip() or DEFAULT_MODEL
-    resp = requests.post(
-        API_URL,
-        headers={
-            "x-api-key": api_key,
-            "anthropic-version": "2023-06-01",
-            "content-type": "application/json",
-        },
-        json={
-            "model": model,
-            "max_tokens": 3000,
-            "system": EDITOR_PROMPT,
-            "messages": [{
-                "role": "user",
-                "content": f"Today is {today_label}. Write today's digest "
-                           f"from this material:\n\n{material}",
-            }],
-        },
-        timeout=120,
-    )
-    if resp.status_code != 200:
-        raise RuntimeError(f"API {resp.status_code}: {resp.text[:300]}")
-    body = resp.json()
-    if body.get("stop_reason") == "max_tokens":
-        raise ValueError("model response truncated at max_tokens")
-    text = "".join(
-        block.get("text", "") for block in body.get("content", [])
-    ).strip()
-    if "{" in text:  # tolerate markdown fences or stray prose around the JSON
-        text = text[text.index("{"):text.rindex("}") + 1]
-    digest = json.loads(text)
-    for key in ("title", "overview", "sections"):
-        if key not in digest:
-            raise ValueError(f"model response missing '{key}'")
-    digest["method"] = "ai"
-    digest["model"] = model
-    return digest
+    # A forced tool call makes the API deliver the digest as structured JSON,
+    # so a stray quote in the prose can't break parsing.
+    payload = {
+        "model": model,
+        "max_tokens": 3000,
+        "system": EDITOR_PROMPT,
+        "tools": [{
+            "name": "publish_digest",
+            "description": "Publish today's digest to the site.",
+            "input_schema": DIGEST_SCHEMA,
+        }],
+        "tool_choice": {"type": "tool", "name": "publish_digest"},
+        "messages": [{
+            "role": "user",
+            "content": f"Today is {today_label}. Write today's digest "
+                       f"from this material:\n\n{material}",
+        }],
+    }
+    last_error: Exception = RuntimeError("no attempts made")
+    for attempt in (1, 2):
+        try:
+            resp = requests.post(
+                API_URL,
+                headers={
+                    "x-api-key": api_key,
+                    "anthropic-version": "2023-06-01",
+                    "content-type": "application/json",
+                },
+                json=payload,
+                timeout=120,
+            )
+            if resp.status_code != 200:
+                raise RuntimeError(f"API {resp.status_code}: {resp.text[:300]}")
+            body = resp.json()
+            if body.get("stop_reason") == "max_tokens":
+                raise ValueError("model response truncated at max_tokens")
+            digest = next(
+                (block.get("input") for block in body.get("content", [])
+                 if block.get("type") == "tool_use"
+                 and block.get("name") == "publish_digest"),
+                None,
+            )
+            if not isinstance(digest, dict):
+                raise ValueError("no publish_digest call in model response")
+            for key in ("title", "overview", "sections"):
+                if key not in digest:
+                    raise ValueError(f"model response missing '{key}'")
+            digest["method"] = "ai"
+            digest["model"] = model
+            return digest
+        except Exception as exc:  # noqa: BLE001 — retry once, then re-raise
+            last_error = exc
+            if attempt == 1:
+                log(f"attempt {attempt} failed ({exc}) — retrying")
+    raise last_error
 
 
-def headline_digest(news: dict) -> dict:
+def headline_digest(news: dict, reason: str = "no-key") -> dict:
     by_id = {i["id"]: i for i in news.get("items", [])}
     sections = []
     for cat, label in CATEGORY_NAMES.items():
@@ -193,11 +240,18 @@ def headline_digest(news: dict) -> dict:
                     f"{i['title']} ({i['source']})" for i in picks[:3]
                 ),
             })
+    if reason == "error":
+        overview = ("An automated roundup of the most recent stories across "
+                    "the Brief's sources. The çay didn't quite brew this "
+                    "time — the AI editor hit a temporary snag and will try "
+                    "again on the next hourly refresh. Nothing for you to do.")
+    else:
+        overview = ("An automated roundup of the most recent stories across "
+                    "the Brief's sources. Add an ANTHROPIC_API_KEY secret and "
+                    "tomorrow's çay comes with a written briefing.")
     return {
         "title": "This morning's headlines",
-        "overview": "An automated roundup of the most recent stories across "
-                    "the Brief's sources. Add an ANTHROPIC_API_KEY secret and "
-                    "tomorrow's çay comes with a written briefing.",
+        "overview": overview,
         "sections": sections,
         "closing": "Full stories in the feed below.",
         "method": "headlines",
@@ -241,6 +295,7 @@ def main() -> int:
     today_label = now_ist.strftime("%A, %d %B %Y")
     api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
     digest = None
+    fallback_reason = "no-key"
     if api_key:
         try:
             digest = ai_digest(
@@ -248,8 +303,9 @@ def main() -> int:
             log(f"AI digest written ({digest['model']})")
         except Exception as exc:  # noqa: BLE001 — fall back rather than fail
             log(f"AI digest failed ({exc}) — falling back to headlines")
+            fallback_reason = "error"
     if digest is None:
-        digest = headline_digest(news)
+        digest = headline_digest(news, fallback_reason)
         log("headline digest written")
 
     digest["date"] = today
