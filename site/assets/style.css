@@ -200,6 +200,9 @@ a:hover { text-decoration: underline; }
   appearance: none;
   background: none;
   border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: var(--ink);
   font: 700 12.5px/1.2 var(--mono);
   text-transform: lowercase;
