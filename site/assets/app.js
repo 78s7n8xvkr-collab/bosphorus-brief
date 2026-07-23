@@ -224,6 +224,19 @@
     toastTimer = setTimeout(() => { toast.hidden = true; }, 4000);
   }
 
+  function unratedChip(sourceName) {
+    return el("span", {
+      class: "lens lens-unrated",
+      title: "Source we haven't classified yet",
+      role: "button",
+      tabindex: "0",
+      onclick: (ev) => {
+        ev.stopPropagation();
+        showNote(sourceName + " — a source we haven't classified yet");
+      },
+    }, "—");
+  }
+
   function lensChip(code, note, sourceName) {
     const meta = LENSES[code];
     if (!meta) return null;
@@ -253,14 +266,7 @@
         el("span", { class: "seg seg-" + k, style: "flex:" + counts[k] })));
     const list = el("ul", { class: "coverage-list", hidden: "" },
       ...cov.map((c) => el("li", {},
-        lensChip(c.lens, null, c.source) || el("span", {
-          class: "lens lens-unrated",
-          title: "Source we haven't classified",
-          onclick: (ev) => {
-            ev.stopPropagation();
-            showNote(c.source + " — a source we haven't classified yet");
-          },
-        }, "—"),
+        lensChip(c.lens, null, c.source) || unratedChip(c.source),
         el("a", { href: c.url, target: "_blank", rel: "noopener" }, c.source),
         el("span", { class: "story-time" }, timeAgo(c.published) || ""))));
     const btn = el("button", {
@@ -282,7 +288,7 @@
     container.replaceChildren(...list.map((item) => el("li", { class: "story" },
       el("div", { class: "story-meta" },
         el("span", { class: "story-source" }, item.source),
-        lensChip(item.lens, item.lens_note, item.source),
+        lensChip(item.lens, item.lens_note, item.source) || unratedChip(item.source),
         el("span", { class: "story-time" },
           timeAgo(item.published) || "reference"),
         item.blindspot

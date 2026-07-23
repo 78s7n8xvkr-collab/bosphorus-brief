@@ -322,6 +322,58 @@ SOURCE_LENS = {
     "committee to protect journalists": ("independent", "press-freedom organization"),
     "uscirf": ("official", "U.S. Commission on International Religious Freedom"),
 
+    # -- wider financial & general press ----------------------------------
+    "yahoo finance": ("international", None),
+    "yahoo news": ("international", None),
+    "msn": ("international", "syndication platform"),
+    "fortune": ("international", None),
+    "the hill": ("international", None),
+    "foreign policy": ("international", None),
+    "the atlantic": ("international", None),
+    "semafor": ("international", None),
+    "vox": ("international", None),
+    "quartz": ("international", None),
+    "barrons": ("international", None),
+    "s&p global": ("international", "ratings and market intelligence"),
+    "fitch ratings": ("international", "credit-rating agency"),
+    "moodys": ("international", "credit-rating agency"),
+    "seeking alpha": ("international", "investor commentary platform"),
+    "benzinga": ("international", "market-news site"),
+    "coindesk": ("international", "crypto-market news"),
+    "cointelegraph": ("international", "crypto-market news"),
+    "the conversation": ("international", "academic commentary network"),
+    "daily mail": ("international", None),
+    "the mirror": ("international", None),
+    "the sun": ("international", None),
+    "metro": ("international", None),
+    "express": ("international", None),
+    "evening standard": ("international", None),
+    "inews": ("international", None),
+    "greek reporter": ("independent", "Greek diaspora news site"),
+    "balkan insight": ("independent", "investigative network BIRN"),
+    "occrp": ("independent", "investigative journalism network"),
+    "dunya": ("independent", "Turkish business daily"),
+    "bloomberght": ("progov", "owned by the Doğuş group"),
+    "turkiye gazetesi": ("progov", "part of the İhlas group"),
+
+    # -- more regional outlets --------------------------------------------
+    "gulf news": ("state", "UAE-aligned daily"),
+    "khaleej times": ("state", "UAE-aligned daily"),
+    "al mayadeen": ("state", "aligned with the Iran–Hezbollah axis"),
+    "ahram online": ("state", "Egyptian state-owned"),
+    "al ahram": ("state", "Egyptian state-owned"),
+    "egypt today": ("state", "Egyptian pro-government"),
+    "daily news egypt": ("independent", None),
+    "jordan times": ("independent", "semi-official Jordanian daily"),
+    "the jordan times": ("independent", "semi-official Jordanian daily"),
+    "naharnet": ("independent", "Lebanese news site"),
+    "kurdistan24": ("independent", "based in Iraqi Kurdistan, KDP-linked"),
+    "shafaq news": ("independent", "Iraq-based news agency"),
+    "amwaj media": ("independent", "covers Iran, Iraq and the Gulf"),
+    "i24news": ("independent", "Israeli broadcaster"),
+    "ynetnews": ("independent", "Israeli news site"),
+    "ynet": ("independent", "Israeli news site"),
+
     # -- official sources --------------------------------------------------
     "u.s. state dept": ("official", "U.S. Department of State"),
     "us state department": ("official", "U.S. Department of State"),
@@ -333,6 +385,20 @@ SOURCE_LENS = {
     "iom": ("official", "UN migration agency"),
     "afad": ("official", "Türkiye's disaster management authority"),
 }
+
+# Sources that aren't news: broker chart pages, property listings, crypto
+# promo blogs, metals tickers. Items from these are dropped outright.
+SOURCE_BLOCKLIST = {
+    "realtor", "zillow", "redfin", "forex", "tradingview", "bitget",
+    "binance", "coinpedia", "watcher guru", "newsbtc", "coingape",
+    "cryptopolitan", "ambcrypto", "shanghai metals market", "inshorts",
+    "opera news", "xe", "wise", "exchange rates", "currency converter",
+}
+
+
+def blocked_source(name: str) -> bool:
+    return _normalize_source(name) in SOURCE_BLOCKLIST
+
 
 # Prefix fallbacks, checked longest-first, for feed-name variants like
 # "Reuters.com" or "BBC News Türkçe". Order matters: more specific first.

@@ -27,8 +27,8 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
 from feeds import (  # noqa: E402
-    ADVISORY_COUNTRIES, ADVISORY_FEED, ADVISORY_LABELS, BOOST_WORDS, FEEDS,
-    QUAKES_URL, RATES_URL, source_lens,
+    ADVISORY_COUNTRIES, ADVISORY_FEED, ADVISORY_LABELS, BOOST_WORDS,
+    FEEDS, QUAKES_URL, RATES_URL, blocked_source, source_lens,
 )
 
 UA = "BosphorusBrief/1.0 (+static news briefing; contact via repository)"
@@ -40,6 +40,8 @@ TAG_RE = re.compile(r"<[^>]+>")
 WS_RE = re.compile(r"\s+")
 # Google News appends " - Publisher" to titles.
 GN_SUFFIX_RE = re.compile(r"\s+-\s+[^-]{2,60}$")
+# Arabic/Hebrew, CJK, Hangul, Kana — the Brief is an English-language feed.
+NON_LATIN_RE = re.compile(r"[֐-ࣿ一-鿿가-힯぀-ヿ]")
 
 
 def log(msg: str) -> None:
@@ -81,9 +83,20 @@ def fetch_feed(feed: dict) -> list[dict]:
             src = getattr(entry, "source", None)
             source = clean_text(getattr(src, "title", "") or "", 60) or "Google News"
             title = GN_SUFFIX_RE.sub("", title)
+        if blocked_source(source):
+            continue
+        if len(NON_LATIN_RE.findall(f"{title} {source}")) >= 3:
+            continue
         summary = clean_text(
             getattr(entry, "summary", "") or getattr(entry, "description", "")
         )
+        # Google News often echoes "title + publisher" as the description —
+        # noise, not a summary.
+        title_key = re.sub(r"[^a-z0-9]+", "", title.lower())
+        summary_key = re.sub(r"[^a-z0-9]+", "", summary.lower())
+        if summary_key.startswith(title_key) and \
+                len(summary_key) - len(title_key) <= 40:
+            summary = ""
         required = feed.get("require")
         if required:
             text = f"{title} {summary}".lower()
