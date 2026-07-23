@@ -504,9 +504,10 @@
 
   $("#refresh-btn").addEventListener("click", () => loadAll(true));
 
+  // No `text` field: iOS share targets (Copy especially) keep the text and
+  // drop the url when both are present. Title + url shares the link itself.
   $("#share-btn").addEventListener("click", (ev) => shareLink({
     title: "The Bosphorus Brief",
-    text: "Two continents. One briefing.",
     url: location.origin + location.pathname,
   }, ev.currentTarget));
 
