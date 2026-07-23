@@ -208,12 +208,35 @@
     return span;
   }
 
-  function lensChip(code, note) {
+  // Tooltips are hover-only, which phones don't have — chips show their
+  // ownership note in a small toast on tap instead.
+  let toastTimer = null;
+  function showNote(text) {
+    let toast = $("#lens-toast");
+    if (!toast) {
+      toast = el("div", { id: "lens-toast", role: "status", hidden: "" });
+      toast.addEventListener("click", () => { toast.hidden = true; });
+      document.body.append(toast);
+    }
+    toast.textContent = text;
+    toast.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => { toast.hidden = true; }, 4000);
+  }
+
+  function lensChip(code, note, sourceName) {
     const meta = LENSES[code];
     if (!meta) return null;
+    const detail = note || meta[1];
     return el("span", {
       class: "lens lens-" + code,
-      title: note || meta[1],
+      title: detail,
+      role: "button",
+      tabindex: "0",
+      onclick: (ev) => {
+        ev.stopPropagation();
+        showNote((sourceName ? sourceName + " — " : "") + detail);
+      },
     }, meta[0]);
   }
 
@@ -230,7 +253,14 @@
         el("span", { class: "seg seg-" + k, style: "flex:" + counts[k] })));
     const list = el("ul", { class: "coverage-list", hidden: "" },
       ...cov.map((c) => el("li", {},
-        lensChip(c.lens) || el("span", { class: "lens lens-unrated", title: "Source we haven't classified" }, "—"),
+        lensChip(c.lens, null, c.source) || el("span", {
+          class: "lens lens-unrated",
+          title: "Source we haven't classified",
+          onclick: (ev) => {
+            ev.stopPropagation();
+            showNote(c.source + " — a source we haven't classified yet");
+          },
+        }, "—"),
         el("a", { href: c.url, target: "_blank", rel: "noopener" }, c.source),
         el("span", { class: "story-time" }, timeAgo(c.published) || ""))));
     const btn = el("button", {
@@ -252,12 +282,20 @@
     container.replaceChildren(...list.map((item) => el("li", { class: "story" },
       el("div", { class: "story-meta" },
         el("span", { class: "story-source" }, item.source),
-        lensChip(item.lens, item.lens_note),
+        lensChip(item.lens, item.lens_note, item.source),
         el("span", { class: "story-time" },
           timeAgo(item.published) || "reference"),
         item.blindspot
-          ? el("span", { class: "blindspot", title: BLINDSPOT_NOTES[item.blindspot] || "" },
-              "one-lens coverage")
+          ? el("span", {
+              class: "blindspot",
+              title: BLINDSPOT_NOTES[item.blindspot] || "",
+              role: "button",
+              tabindex: "0",
+              onclick: (ev) => {
+                ev.stopPropagation();
+                showNote(BLINDSPOT_NOTES[item.blindspot] || "");
+              },
+            }, "one-lens coverage")
           : null,
         state.tab === "top" || state.tab === "saved"
           ? el("span", { class: "story-cat" }, CATEGORY_LABELS[item.category] || "")

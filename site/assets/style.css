@@ -669,3 +669,21 @@ a:hover { text-decoration: underline; }
 .back-link { display: inline-block; margin-bottom: 8px; font-size: 13.5px; }
 
 .unit-line { letter-spacing: .06em; opacity: .75; }
+
+#lens-toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  max-width: min(92vw, 480px);
+  background: var(--ink);
+  color: var(--paper);
+  font: 500 11.5px/1.5 var(--mono);
+  padding: 10px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+#lens-toast[hidden] { display: none; }
+
+.lens, .blindspot { cursor: pointer; }
