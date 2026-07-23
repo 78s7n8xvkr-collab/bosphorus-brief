@@ -368,3 +368,13 @@ def source_lens(name: str):
         if key.startswith(prefix):
             return {"code": code, "note": LENS_NOTES[code]}
     return None
+
+
+# Recent seismic activity in and around Türkiye (Aegean to the Caucasus and
+# northern Levant), M4.0+, newest first. USGS allows keyless, CORS-open
+# access, so the client can also refresh this live.
+QUAKES_URL = (
+    "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson"
+    "&minmagnitude=4&orderby=time&limit=12"
+    "&minlatitude=34&maxlatitude=43&minlongitude=24&maxlongitude=46"
+)

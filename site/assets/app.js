@@ -33,11 +33,19 @@
   const REFRESH_MS = 15 * 60 * 1000;
   const STALE_MS = 10 * 60 * 1000;
 
+  // Same query the pipeline uses hourly; USGS allows CORS, so the browser
+  // can refresh it live between deploys.
+  const QUAKES_LIVE_URL =
+    "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson" +
+    "&minmagnitude=4&orderby=time&limit=12" +
+    "&minlatitude=34&maxlatitude=43&minlongitude=24&maxlongitude=46";
+
   const $ = (sel) => document.querySelector(sel);
   const state = {
     news: null,
     digest: null,
     rates: null,
+    quakes: null,
     tab: "top",
     query: "",
     saved: loadSaved(),
@@ -358,6 +366,55 @@
       "As of " + (timeAgo(rates.updated) || "—") + " · " + (rates.source || "");
   }
 
+  function magClass(mag) {
+    if (mag >= 6) return "qmag-severe";
+    if (mag >= 5.5) return "qmag-high";
+    if (mag >= 4.8) return "qmag-mid";
+    return "qmag-low";
+  }
+
+  function renderQuakes() {
+    const card = $("#quake-card");
+    const data = state.quakes;
+    if (!data || !data.quakes || !data.quakes.length) { card.hidden = true; return; }
+    card.hidden = false;
+    $("#quake-list").replaceChildren(...data.quakes.slice(0, 8).map((q) =>
+      el("li", {},
+        el("span", { class: "qmag " + magClass(q.mag) }, q.mag.toFixed(1)),
+        q.url
+          ? el("a", { href: q.url, target: "_blank", rel: "noopener" }, q.place)
+          : el("span", {}, q.place),
+        el("span", { class: "story-time" }, timeAgo(q.time) || ""))));
+    $("#quake-updated").textContent =
+      "M4.0+ in and around Türkiye · USGS · updated "
+      + (timeAgo(data.updated) || "—")
+      + " · live lists: AFAD & Kandilli in Useful Doors";
+  }
+
+  async function refreshQuakesLive() {
+    try {
+      const resp = await fetch(QUAKES_LIVE_URL);
+      if (!resp.ok) return;
+      const geo = await resp.json();
+      const quakes = (geo.features || [])
+        .filter((f) => f.properties && f.properties.mag != null && f.properties.time)
+        .map((f) => ({
+          mag: Math.round(f.properties.mag * 10) / 10,
+          place: f.properties.place || "—",
+          time: new Date(f.properties.time).toISOString(),
+          url: f.properties.url || "",
+        }));
+      if (quakes.length) {
+        state.quakes = {
+          updated: new Date().toISOString(),
+          source: "USGS",
+          quakes: quakes,
+        };
+        renderQuakes();
+      }
+    } catch (err) { /* offline or blocked — the hourly snapshot stands */ }
+  }
+
   function renderAdvisories() {
     const card = $("#advisory-card");
     const advisories = (state.news && state.news.advisories) || [];
@@ -383,16 +440,19 @@
     const btn = $("#refresh-btn");
     if (showSpinner) btn.classList.add("spinning");
     try {
-      const [news, digest, rates] = await Promise.allSettled([
+      const [news, digest, rates, quakes] = await Promise.allSettled([
         loadJson("data/news.json"),
         loadJson("data/digest.json"),
         loadJson("data/rates.json"),
+        loadJson("data/quakes.json"),
       ]);
       if (news.status === "fulfilled") state.news = news.value;
       if (digest.status === "fulfilled") state.digest = digest.value;
       if (rates.status === "fulfilled") state.rates = rates.value;
+      if (quakes.status === "fulfilled") state.quakes = quakes.value;
       state.lastLoad = Date.now();
       renderAll();
+      refreshQuakesLive();
     } finally {
       btn.classList.remove("spinning");
     }
@@ -403,6 +463,7 @@
     renderStamp();
     renderDigest();
     renderRates();
+    renderQuakes();
     renderAdvisories();
     renderSavedCount();
   }
@@ -478,8 +539,8 @@
     const expanded = document.querySelector(".rail").classList.toggle("rail-expanded");
     railToggle.setAttribute("aria-expanded", String(expanded));
     railToggle.textContent = expanded
-      ? "Hide rates, advisories & useful doors ▴"
-      : "Rates, advisories & useful doors ▾";
+      ? "Hide rates, quakes, advisories & useful doors ▴"
+      : "Rates, quakes, advisories & useful doors ▾";
   });
 
   setInterval(() => loadAll(false), REFRESH_MS);

@@ -13,7 +13,7 @@
 <meta name="apple-mobile-web-app-title" content="The Brief">
 <meta name="theme-color" content="#f6f2e8" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#10151f" media="(prefers-color-scheme: dark)">
-<link rel="stylesheet" href="assets/style.css?v=11">
+<link rel="stylesheet" href="assets/style.css?v=12">
 </head>
 <body>
 
@@ -118,12 +118,18 @@
       <p class="fineprint" id="digest-method"></p>
     </section>
 
-    <button id="rail-toggle" class="rail-toggle" aria-expanded="false">Rates, advisories &amp; useful doors ▾</button>
+    <button id="rail-toggle" class="rail-toggle" aria-expanded="false">Rates, quakes, advisories &amp; useful doors ▾</button>
 
     <section class="card" id="rates-card" hidden>
       <header class="card-head"><h2>The Lira Today</h2></header>
       <table class="rates" id="rates-table"></table>
       <p class="fineprint" id="rates-updated"></p>
+    </section>
+
+    <section class="card" id="quake-card" hidden>
+      <header class="card-head"><h2>Seismic Watch</h2></header>
+      <ul class="quakes" id="quake-list"></ul>
+      <p class="fineprint" id="quake-updated"></p>
     </section>
 
     <section class="card" id="advisory-card" hidden>
@@ -155,6 +161,6 @@
   <p><a href="about.html">About the Brief &amp; our sources</a> · Feed refreshes hourly · Digest brews each morning</p>
 </footer>
 
-<script src="assets/app.js?v=11"></script>
+<script src="assets/app.js?v=12"></script>
 </body>
 </html>

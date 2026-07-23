@@ -28,7 +28,7 @@ import requests
 sys.path.insert(0, str(Path(__file__).parent))
 from feeds import (  # noqa: E402
     ADVISORY_COUNTRIES, ADVISORY_FEED, ADVISORY_LABELS, BOOST_WORDS, FEEDS,
-    RATES_URL, source_lens,
+    QUAKES_URL, RATES_URL, source_lens,
 )
 
 UA = "BosphorusBrief/1.0 (+static news briefing; contact via repository)"
@@ -256,6 +256,31 @@ def fetch_rates() -> dict | None:
     }
 
 
+def fetch_quakes() -> dict | None:
+    resp = requests.get(QUAKES_URL, headers={"User-Agent": UA}, timeout=TIMEOUT)
+    resp.raise_for_status()
+    quakes = []
+    for feature in resp.json().get("features", []):
+        props = feature.get("properties", {})
+        if props.get("mag") is None or not props.get("time"):
+            continue
+        quakes.append({
+            "mag": round(float(props["mag"]), 1),
+            "place": clean_text(props.get("place") or "", 90) or "—",
+            "time": datetime.fromtimestamp(
+                props["time"] / 1000, tz=timezone.utc
+            ).isoformat(timespec="seconds"),
+            "url": props.get("url") or "",
+        })
+    if not quakes:
+        return None
+    return {
+        "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "source": "USGS",
+        "quakes": quakes,
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -327,6 +352,16 @@ def main() -> int:
                 log("wrote rates.json")
         except Exception as exc:  # noqa: BLE001
             log(f"rates: FAILED ({exc}) — keeping existing rates.json")
+
+    try:
+        quakes = fetch_quakes()
+        if quakes:
+            (out_dir / "quakes.json").write_text(
+                json.dumps(quakes, ensure_ascii=False, indent=1)
+            )
+            log(f"quakes: {len(quakes['quakes'])} events")
+    except Exception as exc:  # noqa: BLE001
+        log(f"quakes: FAILED ({exc}) — keeping existing quakes.json")
 
     return 0
 

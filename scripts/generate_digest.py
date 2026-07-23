@@ -105,7 +105,7 @@ def coverage_note(item: dict) -> str:
     return f" | also covered by: {', '.join(others)}" if others else ""
 
 
-def build_material(news: dict, rates: dict | None) -> str:
+def build_material(news: dict, rates: dict | None, quakes: dict | None = None) -> str:
     by_id = {i["id"]: i for i in news.get("items", [])}
     lines = ["TOP STORIES:"]
     for item_id in news.get("top", [])[:10]:
@@ -132,6 +132,10 @@ def build_material(news: dict, rates: dict | None) -> str:
     if rates and rates.get("pairs"):
         lines.append("EXCHANGE RATES: " + ", ".join(
             f"{p['pair']} {p['rate']}" for p in rates["pairs"]))
+    if quakes and quakes.get("quakes"):
+        lines.append("RECENT EARTHQUAKES M4+ IN/NEAR TÜRKIYE (USGS): " + "; ".join(
+            f"M{q['mag']} {q['place']} ({q['time'][:10]})"
+            for q in quakes["quakes"][:5]))
     return "\n".join(lines)
 
 
@@ -214,6 +218,13 @@ def main() -> int:
             rates = json.loads(rates_path.read_text())
         except json.JSONDecodeError:
             rates = None
+    quakes = None
+    quakes_path = DATA_DIR / "quakes.json"
+    if quakes_path.exists():
+        try:
+            quakes = json.loads(quakes_path.read_text())
+        except json.JSONDecodeError:
+            quakes = None
 
     now_ist = datetime.now(ISTANBUL)
     today = now_ist.date().isoformat()
@@ -232,7 +243,8 @@ def main() -> int:
     digest = None
     if api_key:
         try:
-            digest = ai_digest(build_material(news, rates), today_label, api_key)
+            digest = ai_digest(
+                build_material(news, rates, quakes), today_label, api_key)
             log(f"AI digest written ({digest['model']})")
         except Exception as exc:  # noqa: BLE001 — fall back rather than fail
             log(f"AI digest failed ({exc}) — falling back to headlines")
