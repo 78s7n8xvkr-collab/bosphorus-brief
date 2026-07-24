@@ -92,6 +92,12 @@ FEEDS = [
     {"id": "gn-persecution", "source": "Google News", "category": "rights",
      "weight": 3, "max": 10,
      "url": gn('("religious persecution" OR "Christian persecution" OR "persecuted Christians") ("Middle East" OR Turkey OR Iran OR Syria OR Egypt) when:14d')},
+    # Civil liberties beyond belief — LGBT-related bans, event restrictions,
+    # and court cases (e.g. the July 2026 cruise turned away from Kuşadası
+    # and İstanbul) were invisible to every query above.
+    {"id": "gn-lgbt", "source": "Google News", "category": "rights",
+     "weight": 2, "max": 8,
+     "url": gn('(Turkey OR Türkiye OR Istanbul) (LGBT OR LGBTI OR LGBTQ OR gay OR lesbian OR transgender OR "pride march") when:14d')},
     {"id": "forum18", "source": "Google News", "category": "rights",
      "weight": 2, "max": 6,
      "url": gn('site:forum18.org OR "Forum 18" when:30d'),
@@ -143,7 +149,7 @@ BOOST_WORDS = [
     "erdogan", "earthquake", "residence permit", "ikamet", "visa", "refugee",
     "syria", "iran", "ceasefire", "inflation", "central bank", "airport",
     "border", "airspace", "deport", "entry ban", "religious freedom",
-    "freedom of belief", "echr", "rights court",
+    "freedom of belief", "echr", "rights court", "lgbt",
 ]
 
 # ---------------------------------------------------------------------------
