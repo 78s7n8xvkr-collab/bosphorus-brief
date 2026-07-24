@@ -1,28 +1,28 @@
 {
- "title": "The Bosphorus Brief — 24 July 2026",
- "overview": "A quiet week for domestic Turkish policy contrasts with a tense regional backdrop, as the central bank holds steady while Yemen's Houthi attacks and US-Iran tensions stir shipping and market jitters. For residents, the practical story remains money and mobility: the lira, rates, and travel risk levels around the region.",
+ "title": "The Bosphorus Brief — Saturday, 25 July 2026",
+ "overview": "Regional tensions are running high this weekend, with the Iran standoff widening to include Gulf states and a deadly West Bank shooting drawing sharply divergent accounts. In Türkiye, two media-related actions are worth noting for anyone following press freedom and speech law, alongside routine but useful items on mining and sanctions. Nothing today changes the practical picture for residents' paperwork, banking, or safety.",
  "sections": [
   {
-   "heading": "Central Bank Holds at 37% — Fourth Meeting Running",
-   "body": "Türkiye's central bank kept its policy rate at 37 percent for a fourth consecutive meeting, a move covered across the spectrum from Turkish Minute to state-run Xinhua and pro-government Türkiye Today. Analysts cited by Xinhua flagged continued inflation risk and external pressures, including energy prices per the WSJ. For residents, this means borrowing costs remain steep and lira savings continue to face real-rate pressure, though the currency held relatively steady — USD/TRY at 47.24, EUR/TRY at 53.91. No signal yet of near-term cuts; budget and rent planning should assume current conditions persist through the next review cycle."
+   "heading": "Iran standoff widens, Hormuz traffic in focus",
+   "body": "The US-Iran confrontation continued to escalate this week. Middle East Eye reports Kuwait and Bahrain launched air strikes on Iran in retaliation for earlier attacks on their territory, with UAE support, according to the Wall Street Journal. Separately, Oman is mediating with Tehran over safe passage through the Strait of Hormuz, a key route for regional shipping and fuel supplies. Trump told reporters Iran was 'getting very serious' in talks but said he had not decided on further strikes. For residents in Türkiye, there is no direct disruption reported, but those with Gulf travel plans or business ties should watch for shipping and flight advisories in the coming days."
   },
   {
-   "heading": "Regional Tensions: Houthi Attacks and Iran Strikes",
-   "body": "Houthi forces in Yemen attacked Saudi-linked tankers in the Red Sea this week, part of a declared 'maritime embargo,' while US strikes on Iran continued and Congress debated war-powers resolutions on the conflict, per The New Arab and Middle East Eye. The BBC and AP note growing concern over wider Gulf disruption and shipping costs. None of this directly touches Turkish territory, but residents with Gulf travel plans, remittances, or shipping-dependent work should watch fuel and freight costs, which could filter into Turkish import prices. Iran, Iraq, Syria, and Lebanon remain US Level 4 advisories; Türkiye itself stays at Level 2, unchanged."
+   "heading": "West Bank shooting: accounts diverge sharply",
+   "body": "Four Palestinians and two Israelis were killed in a West Bank shooting on Thursday. Palestinian accounts describe a settler attack on villagers; the Israeli military says a Palestinian stole a weapon and fired on hikers. International coverage (BBC) presents both versions without adjudicating between them. We note this here per our standing practice of flagging cases where framing diverges by source, without further comment."
   },
   {
-   "heading": "Migration and Residency Notes",
-   "body": "Türkiye and Syria signed a deal to open reciprocal cultural centers, a modest people-to-people gesture amid ongoing Syrian displacement questions (CFR's tracker notes the conflict remains unresolved). Separately, Germany's deportation of a Uyghur man to China, reported by his mother, has drawn attention as a case study in deportation risk for vulnerable communities — worth noting for any foreign resident tracking how European states handle sensitive removals, even though it did not occur in Türkiye. On Lesvos, The New Humanitarian describes deterrence-focused migration infrastructure, a reminder that Aegean crossing routes remain tightly controlled."
+   "heading": "Turkish media and speech cases",
+   "body": "Türkiye's broadcast regulator (RTÜK) opened an investigation into opposition-leaning Sözcü TV after an anchor called Syria's President Ahmed al-Sharaa a 'killer' and 'terrorist,' citing potential harm to bilateral relations. Separately, an Ankara court jailed social media influencer Fatma Soydaş pending trial on an obscenity charge, after prosecutors said her posts insulted religious values. Both cases are worth watching for residents tracking Türkiye's media and speech environment, though neither directly affects foreign residency status at this stage."
   },
   {
-   "heading": "Practical Notes: Rates, Travel, Seismic Activity",
-   "body": "Exchange rates are steady this week (GBP/TRY 63.18). Minor earthquake activity continues in the wider Aegean-Anatolian zone: a M5.0 near Malatya and several M4+ quakes in Greece over the past two weeks — none reported as damaging, but a routine reminder to know your building's earthquake plan. Akkuyu Nuclear Plant's tax exemptions through 2045, reported by opposition-leaning Nordic Monitor, drew some scrutiny over long-term fiscal terms with Russia's state operator; no immediate resident impact expected."
+   "heading": "Practical notes",
+   "body": "The lira sits at roughly 47.3 to the dollar, 53.9 to the euro, and 63 to the pound today — a useful checkpoint for budgeting or remittances. On seismic activity, a M5.0 struck near Malatya on 18 July and several M4+ quakes hit the Greek islands this month; routine reminders to know your building's earthquake plan remain sensible, not alarming. Türkiye stays at US Travel Advisory Level 2, unchanged, with neighboring Syria, Iraq, Iran, and Lebanon all at Level 4."
   }
  ],
- "closing": "Stay grounded, keep an eye on fuel prices if the Red Sea situation escalates, and have a calm weekend.",
+ "closing": "Stay steady, keep an eye on official advisories, and enjoy your Saturday — more tomorrow.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-07-24",
- "date_label": "Friday, 24 July 2026",
- "generated_at": "2026-07-23T22:14:00+00:00"
+ "date": "2026-07-25",
+ "date_label": "Saturday, 25 July 2026",
+ "generated_at": "2026-07-24T21:35:51+00:00"
 }
