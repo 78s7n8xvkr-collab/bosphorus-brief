@@ -49,6 +49,11 @@ FEEDS = [
      "weight": 1, "max": 10, "url": "https://www.newarab.com/rss"},
     {"id": "mee", "source": "Middle East Eye", "category": "region",
      "weight": 1, "max": 10, "url": "https://www.middleeasteye.net/rss"},
+    # Sky's world feed is global; keep only stories touching the region.
+    {"id": "sky-world", "source": "Sky News", "category": "region",
+     "weight": 1, "max": 10,
+     "url": "https://feeds.skynews.com/feeds/rss/world.xml",
+     "require": REGION_WORDS},
 
     # ------------------------------------------- Migration & residency ----
     # infomigrants.net's RSS endpoint 404s; reach it through Google News.
