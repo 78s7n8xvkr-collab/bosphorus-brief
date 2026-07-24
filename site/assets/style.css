@@ -451,6 +451,14 @@ a:hover { text-decoration: underline; }
 .lens-international { border: 1px dashed var(--muted); color: var(--muted); }
 .lens-official { border: 3px double var(--muted); padding: 1.5px 5px; color: var(--muted); }
 .lens-unrated { border: 1px dotted var(--muted); color: var(--muted); opacity: .7; }
+.lens-satire {
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  background: repeating-linear-gradient(45deg,
+    transparent 0 4px,
+    color-mix(in srgb, var(--ink) 14%, transparent) 4px 8px);
+}
+.lens-translated { border: 1px solid var(--muted); color: var(--muted); }
 
 .blindspot {
   font: 700 9px/1 var(--mono);
@@ -501,6 +509,7 @@ a:hover { text-decoration: underline; }
 .seg-independent { background: var(--g-lo); }
 .seg-international { background: var(--g-faint); }
 .seg-official { background: var(--g-ghost); }
+.seg-satire { background: var(--g-faint); }
 .seg-unrated { background: var(--hairline); }
 
 .coverage-list { list-style: none; margin: 8px 0 0; padding: 0 0 0 2px; }
@@ -550,6 +559,15 @@ a:hover { text-decoration: underline; }
 .save-btn.saved { color: var(--ink); }
 
 .empty-state { color: var(--muted); font-style: italic; padding: 30px 4px; }
+
+.satire-note {
+  margin: 0 0 8px;
+  padding: 8px 12px;
+  border: 1px dashed var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+}
 
 /* ----------------------------------------------------------------- rail -- */
 

@@ -11,7 +11,9 @@
     rights: "Rights & Freedoms",
     safety: "Safety",
     economy: "Economy",
+    satire: "Satire",
   };
+  const LANG_NAMES = { tr: "Turkish", ar: "Arabic" };
   // Ownership lenses: [chip label, default explanation]. Codes come from the
   // pipeline's curated source map; unlabeled sources simply get no chip.
   const LENSES = {
@@ -21,10 +23,11 @@
     independent: ["indep", "Independent newsroom"],
     international: ["intl", "International outlet or wire service"],
     official: ["official", "Government or international body"],
+    satire: ["satire", "Satire — invented stories, not news"],
   };
   const LENS_ORDER = [
     "state", "progov", "opposition", "independent", "international",
-    "official", "unrated",
+    "official", "satire", "unrated",
   ];
   const BLINDSPOT_NOTES = {
     progov: "In our feed, only state-aligned outlets are covering this story.",
@@ -276,6 +279,27 @@
     }, meta[0]);
   }
 
+  function langChip(item) {
+    if (!item.lang || item.lang === "en") return null;
+    const name = LANG_NAMES[item.lang] || item.lang;
+    const note = item.translated
+      ? "Machine-translated from " + name
+        + " by the Brief's AI editor. The headline links to the original article."
+      : "This item is in " + name
+        + " — translation arrives with the next refresh.";
+    return el("span", {
+      class: "lens lens-translated",
+      title: note,
+      role: "button",
+      tabindex: "0",
+      onkeydown: keyActivate,
+      onclick: (ev) => {
+        ev.stopPropagation();
+        showNote(note);
+      },
+    }, item.translated ? item.lang + "→en" : item.lang);
+  }
+
   function coverageBlock(item) {
     const cov = item.coverage || [];
     if (cov.length < 2) return null;
@@ -312,6 +336,7 @@
       el("div", { class: "story-meta" },
         el("span", { class: "story-source" }, item.source),
         lensChip(item.lens, item.lens_note, item.source) || unratedChip(item.source),
+        langChip(item),
         el("span", { class: "story-time" },
           timeAgo(item.published) || "reference"),
         item.blindspot
@@ -362,6 +387,8 @@
         (titles[state.tab] || "") + " · " + list.length +
         (list.length === 1 ? " story" : " stories");
     }
+    const satireNote = $("#satire-note");
+    if (satireNote) satireNote.hidden = state.tab !== "satire";
 
     const empty = $("#empty-state");
     if (!list.length) {

@@ -18,7 +18,7 @@
 <meta name="apple-mobile-web-app-title" content="The Brief">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: dark)">
-<link rel="stylesheet" href="assets/style.css?v=19">
+<link rel="stylesheet" href="assets/style.css?v=20">
 </head>
 <body>
 
@@ -51,12 +51,16 @@
   <button data-tab="rights" class="tab">Rights &amp; Freedoms</button>
   <button data-tab="safety" class="tab">Safety</button>
   <button data-tab="economy" class="tab">Economy</button>
+  <button data-tab="satire" class="tab">Satire</button>
   <button data-tab="saved" class="tab">Saved<span id="saved-count" class="count" hidden></span></button>
 </nav>
 
 <div class="layout">
   <main>
     <h2 id="section-title" class="section-title">Top Stories</h2>
+    <p id="satire-note" class="satire-note" hidden>Everything in this section
+    is invented — The Onion, and Zaytung translated from Turkish. It's here
+    for your çay break, kept far away from the news.</p>
     <div class="feed-tools">
       <input id="search" type="search" placeholder="Search this section…" aria-label="Search stories in this section">
       <button id="refresh-btn" class="ghost-btn" title="Refresh the feed">↻</button>
@@ -83,6 +87,10 @@
           <span>governments &amp; international bodies publishing directly — advisories, ReliefWeb</span>
           <span class="lens lens-unrated">—</span>
           <span>a source we haven't classified yet</span>
+          <span class="lens lens-satire">satire</span>
+          <span>invented stories — The Onion, Zaytung — never mixed into the news sections</span>
+          <span class="lens lens-translated">tr→en</span>
+          <span>translated from Turkish or Arabic by the Brief's AI editor; the headline links to the original</span>
           <span class="blindspot">one-lens coverage</span>
           <span>several outlets are reporting this story — all from one side of the spectrum</span>
           <span class="spectrum legend-spectrum" aria-hidden="true"><span class="seg seg-progov" style="flex:2"></span><span class="seg seg-opposition" style="flex:1"></span><span class="seg seg-international" style="flex:2"></span></span>
@@ -167,6 +175,6 @@
   <p class="unit-line">the bosphorus brief · unit bb·01 · two continents, one briefing</p>
 </footer>
 
-<script src="assets/app.js?v=19"></script>
+<script src="assets/app.js?v=20"></script>
 </body>
 </html>

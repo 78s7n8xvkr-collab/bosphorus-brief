@@ -11,6 +11,8 @@ fail without breaking the run.
 """
 
 GOOGLE_NEWS = "https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en"
+GOOGLE_NEWS_TR = "https://news.google.com/rss/search?q={q}&hl=tr&gl=TR&ceid=TR:tr"
+GOOGLE_NEWS_AR = "https://news.google.com/rss/search?q={q}&hl=ar&gl=EG&ceid=EG:ar"
 
 # Specialist feeds with global scope are kept only when a story touches the
 # region; matched case-insensitively against title + summary.
@@ -26,6 +28,16 @@ def gn(query: str) -> str:
     return GOOGLE_NEWS.format(q=quote(query))
 
 
+def gn_tr(query: str) -> str:
+    from urllib.parse import quote
+    return GOOGLE_NEWS_TR.format(q=quote(query))
+
+
+def gn_ar(query: str) -> str:
+    from urllib.parse import quote
+    return GOOGLE_NEWS_AR.format(q=quote(query))
+
+
 FEEDS = [
     # ------------------------------------------------------------- Türkiye --
     # hurriyetdailynews.com and dailysabah.com serve empty RSS, so both come
@@ -39,6 +51,10 @@ FEEDS = [
      "weight": 1, "max": 10, "url": gn('site:dailysabah.com when:2d')},
     {"id": "gn-turkiye", "source": "Google News", "category": "turkiye",
      "weight": 2, "max": 15, "url": gn('Türkiye OR Turkey when:2d')},
+    # Turkish-language press, read directly and machine-translated. Local
+    # outlets report much of daily life long before the English press does.
+    {"id": "gn-tr-gundem", "source": "Google News", "category": "turkiye",
+     "weight": 2, "max": 12, "lang": "tr", "url": gn_tr('Türkiye when:1d')},
 
     # ------------------------------------------------------- Wider region --
     {"id": "bbc-me", "source": "BBC", "category": "region",
@@ -68,6 +84,10 @@ FEEDS = [
     {"id": "gn-refugees", "source": "Google News", "category": "migration",
      "weight": 2, "max": 10,
      "url": gn('Turkey (refugees OR "temporary protection" OR Syrians OR migration) when:7d')},
+    # Residency news in the language the paperwork actually happens in.
+    {"id": "gn-tr-ikamet", "source": "Google News", "category": "migration",
+     "weight": 3, "max": 10, "lang": "tr",
+     "url": gn_tr('"ikamet izni" OR "oturma izni" OR "çalışma izni" OR "vatandaşlık başvurusu" when:14d')},
     {"id": "reliefweb-tur", "source": "ReliefWeb", "category": "migration",
      "weight": 1, "max": 8,
      "url": "https://reliefweb.int/updates/rss.xml?search=primary_country.iso3%3A%22tur%22"},
@@ -105,6 +125,11 @@ FEEDS = [
     {"id": "gn-lgbt", "source": "Google News", "category": "rights",
      "weight": 2, "max": 8,
      "url": gn('(Turkey OR Türkiye OR Istanbul) (LGBT OR LGBTI OR LGBTQ OR gay OR lesbian OR transgender OR "pride march") when:14d')},
+    # The entry-ban and deportation vocabulary in Turkish — these stories
+    # usually break in the local press first, if they reach English at all.
+    {"id": "gn-tr-rights", "source": "Google News", "category": "rights",
+     "weight": 3, "max": 10, "lang": "tr",
+     "url": gn_tr('"tahdit kodu" OR "giriş yasağı" OR "sınır dışı" OR AİHM OR "din özgürlüğü" when:30d')},
     {"id": "forum18", "source": "Google News", "category": "rights",
      "weight": 2, "max": 6,
      "url": gn('site:forum18.org OR "Forum 18" when:30d'),
@@ -132,6 +157,26 @@ FEEDS = [
     {"id": "gn-cost", "source": "Google News", "category": "economy",
      "weight": 1, "max": 8,
      "url": gn('Turkey (rent OR "minimum wage" OR prices OR "interest rate") when:7d')},
+
+    # ---------------------------------------------------- Arabic press ----
+    # How Turkey reads from the Arabic-language neighbourhood, translated.
+    {"id": "gn-ar-turkiye", "source": "Google News", "category": "region",
+     "weight": 1, "max": 8, "lang": "ar",
+     "url": gn_ar('تركيا OR أنقرة OR إسطنبول when:2d')},
+
+    # ------------------------------------------------------------ Satire --
+    # Clearly labeled, never clustered with news, never in Top Stories or
+    # the digest. Zaytung is Türkiye's Onion; both wear the satire chip.
+    {"id": "onion", "source": "The Onion", "category": "satire",
+     "weight": 1, "max": 8, "url": "https://theonion.com/feed/"},
+    {"id": "gn-onion", "source": "Google News", "category": "satire",
+     "weight": 1, "max": 6, "url": gn('site:theonion.com when:7d')},
+    {"id": "zaytung", "source": "Zaytung", "category": "satire",
+     "weight": 1, "max": 8, "lang": "tr",
+     "url": "https://www.zaytung.com/rss.php"},
+    {"id": "gn-zaytung", "source": "Google News", "category": "satire",
+     "weight": 1, "max": 6, "lang": "tr",
+     "url": gn_tr('site:zaytung.com when:14d')},
 ]
 
 # U.S. State Department travel advisories (all countries, one feed).
@@ -174,6 +219,7 @@ LENS_NOTES = {
     "independent": "independent newsroom",
     "international": "international outlet or wire service",
     "official": "government or international body",
+    "satire": "satire — invented stories, not news",
 }
 
 SOURCE_LENS = {
@@ -346,6 +392,11 @@ SOURCE_LENS = {
     "amnesty international": ("independent", "international human-rights organization"),
     "committee to protect journalists": ("independent", "press-freedom organization"),
     "uscirf": ("official", "U.S. Commission on International Religious Freedom"),
+
+    # -- satire -------------------------------------------------------------
+    "the onion": ("satire", "American satirical paper — every word is invented"),
+    "onion": ("satire", "American satirical paper — every word is invented"),
+    "zaytung": ("satire", "Türkiye's satirical news site — every word is invented"),
 
     # -- wider financial & general press ----------------------------------
     "yahoo finance": ("international", None),

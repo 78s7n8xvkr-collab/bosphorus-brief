@@ -16,6 +16,7 @@ import argparse
 import hashlib
 import html
 import json
+import os
 import re
 import sys
 import time
@@ -35,6 +36,43 @@ UA = "BosphorusBrief/1.0 (+static news briefing; contact via repository)"
 TIMEOUT = 20
 TOP_COUNT = 14
 MAX_PER_SOURCE_IN_TOP = 2
+
+# Headline translation for Turkish/Arabic feeds. Results are cached in
+# site/data/translations.json (committed back by the workflow) so each
+# headline is translated exactly once.
+API_URL = "https://api.anthropic.com/v1/messages"
+DEFAULT_TRANSLATE_MODEL = "claude-haiku-4-5-20251001"
+TRANSLATE_BATCH = 40
+CACHE_KEEP_DAYS = 21
+LANG_NAMES = {"tr": "Turkish", "ar": "Arabic"}
+
+TRANSLATE_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "items": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {"type": "string"},
+                    "title": {"type": "string"},
+                    "summary": {"type": "string"},
+                },
+                "required": ["id", "title"],
+            },
+        },
+    },
+    "required": ["items"],
+}
+
+TRANSLATE_PROMPT = (
+    "You translate news headlines and summaries into natural English for a "
+    "daily briefing. Keep proper names, institutions, and Turkish terms that "
+    "residents use (ikamet, tahdit kodu) with a short gloss if needed. Stay "
+    "strictly faithful to the original — never add, soften, or editorialize. "
+    "Write headlines in plain headline style. If a summary is empty, return "
+    "an empty summary. Submit every item via the publish_translations tool."
+)
 
 TAG_RE = re.compile(r"<[^>]+>")
 WS_RE = re.compile(r"\s+")
@@ -105,7 +143,10 @@ def fetch_feed(feed: dict) -> list[dict]:
             title = GN_SUFFIX_RE.sub("", title)
         if blocked_source(source):
             continue
-        if len(NON_LATIN_RE.findall(f"{title} {source}")) >= 3:
+        # The stray-language filter guards keyword feeds; feeds that declare
+        # a language are foreign on purpose and get translated instead.
+        if not feed.get("lang") and \
+                len(NON_LATIN_RE.findall(f"{title} {source}")) >= 3:
             continue
         if JUNK_TITLE_RE.search(title) or US_LOCALITY_RE.search(title):
             continue
@@ -124,7 +165,7 @@ def fetch_feed(feed: dict) -> list[dict]:
             text = f"{title} {summary}".lower()
             if not any(term in text for term in required):
                 continue
-        items.append({
+        item = {
             "id": hashlib.sha1(link.encode()).hexdigest()[:12],
             "title": title,
             "url": link,
@@ -133,8 +174,106 @@ def fetch_feed(feed: dict) -> list[dict]:
             "published": entry_time(entry),
             "summary": summary,
             "weight": feed["weight"],
-        })
+        }
+        if feed.get("lang"):
+            item["lang"] = feed["lang"]
+        items.append(item)
     return items
+
+
+def translate_items(items: list[dict], out_dir: Path, now: datetime) -> None:
+    """Translate foreign-language items to English, caching by item id."""
+    foreign = [i for i in items if i.get("lang") and i["lang"] != "en"]
+    if not foreign:
+        return
+    cache_path = out_dir / "translations.json"
+    try:
+        cache = json.loads(cache_path.read_text())
+    except (OSError, json.JSONDecodeError):
+        cache = {}
+
+    def apply(item: dict, entry: dict) -> None:
+        item["orig_title"] = item["title"]
+        item["title"] = entry["title"]
+        item["summary"] = entry.get("summary") or ""
+        item["translated"] = True
+
+    pending = []
+    for item in foreign:
+        hit = cache.get(item["id"])
+        if hit:
+            apply(item, hit)
+        else:
+            pending.append(item)
+
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    translated_now = 0
+    if pending and api_key:
+        batch = pending[:TRANSLATE_BATCH]
+        model = os.environ.get("TRANSLATE_MODEL", "").strip() \
+            or DEFAULT_TRANSLATE_MODEL
+        material = json.dumps(
+            [{"id": i["id"], "lang": LANG_NAMES.get(i["lang"], i["lang"]),
+              "title": i["title"], "summary": i["summary"]} for i in batch],
+            ensure_ascii=False,
+        )
+        resp = requests.post(
+            API_URL,
+            headers={
+                "x-api-key": api_key,
+                "anthropic-version": "2023-06-01",
+                "content-type": "application/json",
+            },
+            json={
+                "model": model,
+                "max_tokens": 8000,
+                "system": TRANSLATE_PROMPT,
+                "tools": [{
+                    "name": "publish_translations",
+                    "description": "Publish the English translations.",
+                    "input_schema": TRANSLATE_SCHEMA,
+                }],
+                "tool_choice": {"type": "tool", "name": "publish_translations"},
+                "messages": [{
+                    "role": "user",
+                    "content": "Translate these items to English:\n" + material,
+                }],
+            },
+            timeout=120,
+        )
+        if resp.status_code != 200:
+            raise RuntimeError(f"API {resp.status_code}: {resp.text[:300]}")
+        body = resp.json()
+        result = next(
+            (b.get("input") for b in body.get("content", [])
+             if b.get("type") == "tool_use"
+             and b.get("name") == "publish_translations"),
+            None,
+        )
+        if not isinstance(result, dict):
+            raise ValueError("no publish_translations call in model response")
+        by_id = {i["id"]: i for i in batch}
+        stamp = now.isoformat(timespec="seconds")
+        for t in result.get("items", []):
+            item = by_id.get(t.get("id"))
+            if not item or not t.get("title"):
+                continue
+            entry = {"title": t["title"].strip(),
+                     "summary": (t.get("summary") or "").strip(),
+                     "ts": stamp}
+            cache[item["id"]] = entry
+            apply(item, entry)
+            translated_now += 1
+
+    # Keep the cache small: current items plus a short trailing window.
+    keep_after = (now - timedelta(days=CACHE_KEEP_DAYS)).isoformat()
+    current = {i["id"] for i in foreign}
+    cache = {k: v for k, v in cache.items()
+             if k in current or v.get("ts", "") >= keep_after}
+    cache_path.write_text(json.dumps(cache, ensure_ascii=False, indent=1))
+    log(f"translated: {translated_now} new, "
+        f"{len(foreign) - len(pending)} cached, "
+        f"{max(0, len(pending) - translated_now)} left original")
 
 
 CLUSTER_STOPWORDS = {
@@ -346,7 +485,16 @@ def main() -> int:
             failed.append(feed["id"])
             log(f"{feed['id']}: FAILED ({exc})")
 
-    items = cluster(items)
+    try:
+        translate_items(items, out_dir, now)
+    except Exception as exc:  # noqa: BLE001 — foreign items stay readable as-is
+        log(f"translation: FAILED ({exc}) — foreign items shown untranslated")
+
+    # Satire clusters only against itself: a parody must never merge with —
+    # or lend coverage weight to — the story it is parodying.
+    news_items = [i for i in items if i["category"] != "satire"]
+    satire_items = [i for i in items if i["category"] == "satire"]
+    items = cluster(news_items) + cluster(satire_items)
     items.sort(key=lambda i: i["published"] or "", reverse=True)
 
     news_path = out_dir / "news.json"
@@ -364,7 +512,8 @@ def main() -> int:
                     advisories = json.loads(news_path.read_text()).get("advisories", [])
                 except (json.JSONDecodeError, OSError):
                     advisories = []
-        top_ids = pick_top(items, now)
+        top_ids = pick_top(
+            [i for i in items if i["category"] != "satire"], now)
         for item in items:
             item.pop("weight", None)
         payload = {

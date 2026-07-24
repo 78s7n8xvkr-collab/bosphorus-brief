@@ -45,6 +45,9 @@ jobs:
         run: pip install -r scripts/requirements.txt
 
       - name: Fetch feeds, advisories, and rates
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TRANSLATE_MODEL: ${{ vars.TRANSLATE_MODEL }}
         run: python scripts/fetch_news.py
 
       - name: Brew the digest
@@ -54,15 +57,15 @@ jobs:
           FORCE_DIGEST: ${{ inputs.force_digest && '1' || '' }}
         run: python scripts/generate_digest.py
 
-      # Persist the digest so the once-per-day check survives across runs
+      # Persist the digest and translation cache so both survive across runs
       # (each run checks out the repo fresh). Pushes made with GITHUB_TOKEN
-      # do not retrigger this workflow, and the daily commit doubles as repo
+      # do not retrigger this workflow, and the regular commit doubles as repo
       # activity that keeps the schedule from being auto-disabled.
-      - name: Persist today's digest
+      - name: Persist digest and translations
         run: |
-          if ! git diff --quiet -- site/data/digest.json; then
+          if ! git diff --quiet -- site/data/digest.json site/data/translations.json; then
             git -c user.name="brief-bot" -c user.email="brief-bot@users.noreply.github.com" \
-              commit -m "Morning Çay: $(date -u +%F)" -- site/data/digest.json
+              commit -m "Edition data: $(date -u +%FT%H)" -- site/data/digest.json site/data/translations.json
             # A push landing mid-run must not fail the deploy — rebase and retry.
             git push || { git pull --rebase origin main && git push; }
           fi
