@@ -49,17 +49,19 @@ FEEDS = [
      "weight": 1, "max": 10, "url": "https://www.newarab.com/rss"},
     {"id": "mee", "source": "Middle East Eye", "category": "region",
      "weight": 1, "max": 10, "url": "https://www.middleeasteye.net/rss"},
-    # Sky's own RSS server turns away automated readers, so Sky's region
-    # reporting comes in through a Google News site: query instead.
+    # Sky's own RSS server turns away automated readers, and a bare site:
+    # query surfaces mostly UK domestic news — so ask Google News for Sky's
+    # region reporting specifically.
     {"id": "gn-sky", "source": "Google News", "category": "region",
-     "weight": 1, "max": 10, "url": gn('site:news.sky.com when:2d'),
-     "require": REGION_WORDS},
+     "weight": 1, "max": 10,
+     "url": gn('site:news.sky.com (Turkey OR Türkiye OR Iran OR Syria OR Israel OR Lebanon OR "Middle East") when:3d')},
 
     # ------------------------------------------- Migration & residency ----
-    # infomigrants.net's RSS endpoint 404s; reach it through Google News.
+    # infomigrants.net's RSS endpoint 404s; reach it through Google News,
+    # asking for its region reporting directly.
     {"id": "gn-infomigrants", "source": "Google News", "category": "migration",
-     "weight": 2, "max": 8, "url": gn('site:infomigrants.net when:14d'),
-     "require": REGION_WORDS},
+     "weight": 2, "max": 8,
+     "url": gn('site:infomigrants.net (Turkey OR Türkiye OR Syria OR Syrian OR Greece OR Aegean OR Mediterranean) when:14d')},
     {"id": "gn-residency", "source": "Google News", "category": "migration",
      "weight": 3, "max": 12,
      "url": gn('Turkey ("residence permit" OR ikamet OR visa OR "work permit" OR citizenship OR deportation) when:14d')},
