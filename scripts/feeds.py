@@ -49,10 +49,10 @@ FEEDS = [
      "weight": 1, "max": 10, "url": "https://www.newarab.com/rss"},
     {"id": "mee", "source": "Middle East Eye", "category": "region",
      "weight": 1, "max": 10, "url": "https://www.middleeasteye.net/rss"},
-    # Sky's world feed is global; keep only stories touching the region.
-    {"id": "sky-world", "source": "Sky News", "category": "region",
-     "weight": 1, "max": 10,
-     "url": "https://feeds.skynews.com/feeds/rss/world.xml",
+    # Sky's own RSS server turns away automated readers, so Sky's region
+    # reporting comes in through a Google News site: query instead.
+    {"id": "gn-sky", "source": "Google News", "category": "region",
+     "weight": 1, "max": 10, "url": gn('site:news.sky.com when:2d'),
      "require": REGION_WORDS},
 
     # ------------------------------------------- Migration & residency ----
