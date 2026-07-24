@@ -166,11 +166,14 @@ FEEDS = [
 
     # ------------------------------------------------------------ Satire --
     # Clearly labeled, never clustered with news, never in Top Stories or
-    # the digest. Zaytung is Türkiye's Onion; both wear the satire chip.
+    # the digest. Zaytung is Türkiye's Onion and all of it belongs; The
+    # Onion only makes the cut when it writes about the region.
     {"id": "onion", "source": "The Onion", "category": "satire",
-     "weight": 1, "max": 8, "url": "https://theonion.com/feed/"},
+     "weight": 1, "max": 8, "url": "https://theonion.com/feed/",
+     "require": REGION_WORDS},
     {"id": "gn-onion", "source": "Google News", "category": "satire",
-     "weight": 1, "max": 6, "url": gn('site:theonion.com when:7d')},
+     "weight": 1, "max": 6,
+     "url": gn('site:theonion.com (Turkey OR Türkiye OR Iran OR Syria OR Israel OR "Middle East") when:30d')},
     {"id": "zaytung", "source": "Zaytung", "category": "satire",
      "weight": 1, "max": 8, "lang": "tr",
      "url": "https://www.zaytung.com/rss.php"},
