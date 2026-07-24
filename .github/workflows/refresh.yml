@@ -63,7 +63,8 @@ jobs:
           if ! git diff --quiet -- site/data/digest.json; then
             git -c user.name="brief-bot" -c user.email="brief-bot@users.noreply.github.com" \
               commit -m "Morning Çay: $(date -u +%F)" -- site/data/digest.json
-            git push
+            # A push landing mid-run must not fail the deploy — rebase and retry.
+            git push || { git pull --rebase origin main && git push; }
           fi
 
       - name: Configure Pages

@@ -53,15 +53,23 @@
   };
 
   // ---------------------------------------------------------- persistence --
+  // localStorage throws in some private-browsing modes — reading and writing
+  // both need to fail soft or the save/theme buttons die with them.
+  function storageGet(key) {
+    try { return localStorage.getItem(key); } catch { return null; }
+  }
+  function storageSet(key, value) {
+    try { localStorage.setItem(key, value); } catch { /* session-only then */ }
+  }
   function loadSaved() {
     try {
-      return JSON.parse(localStorage.getItem("brief.saved") || "[]");
+      return JSON.parse(storageGet("brief.saved") || "[]");
     } catch {
       return [];
     }
   }
   function persistSaved() {
-    localStorage.setItem("brief.saved", JSON.stringify(state.saved.slice(0, 200)));
+    storageSet("brief.saved", JSON.stringify(state.saved.slice(0, 200)));
   }
 
   // ---------------------------------------------------------------- theme --
@@ -70,12 +78,12 @@
     if (theme) document.documentElement.dataset.theme = theme;
     else delete document.documentElement.dataset.theme;
   }
-  applyTheme(localStorage.getItem("brief.theme") || "");
+  applyTheme(storageGet("brief.theme") || "");
   themeToggle.addEventListener("click", () => {
     const current = document.documentElement.dataset.theme ||
       (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     const next = current === "dark" ? "light" : "dark";
-    localStorage.setItem("brief.theme", next);
+    storageSet("brief.theme", next);
     applyTheme(next);
   });
 
@@ -123,6 +131,11 @@
     return node;
   }
 
+  function scrollBehavior() {
+    return matchMedia("(prefers-reduced-motion: reduce)").matches
+      ? "auto" : "smooth";
+  }
+
   function scrollToFeed() {
     const main = document.querySelector(".layout main");
     if (!main) return;
@@ -130,9 +143,17 @@
       0, main.getBoundingClientRect().top + window.pageYOffset - 56
     );
     try {
-      window.scrollTo({ top: top, behavior: "smooth" });
+      window.scrollTo({ top: top, behavior: scrollBehavior() });
     } catch (err) {
       window.scrollTo(0, top);
+    }
+  }
+
+  // role="button" spans need Enter/Space to work like the click they promise.
+  function keyActivate(ev) {
+    if (ev.key === "Enter" || ev.key === " ") {
+      ev.preventDefault();
+      ev.currentTarget.click();
     }
   }
 
@@ -230,6 +251,7 @@
       title: "Source we haven't classified yet",
       role: "button",
       tabindex: "0",
+      onkeydown: keyActivate,
       onclick: (ev) => {
         ev.stopPropagation();
         showNote(sourceName + " — a source we haven't classified yet");
@@ -246,6 +268,7 @@
       title: detail,
       role: "button",
       tabindex: "0",
+      onkeydown: keyActivate,
       onclick: (ev) => {
         ev.stopPropagation();
         showNote((sourceName ? sourceName + " — " : "") + detail);
@@ -297,6 +320,7 @@
               title: BLINDSPOT_NOTES[item.blindspot] || "",
               role: "button",
               tabindex: "0",
+              onkeydown: keyActivate,
               onclick: (ev) => {
                 ev.stopPropagation();
                 showNote(BLINDSPOT_NOTES[item.blindspot] || "");
@@ -363,7 +387,11 @@
     const notice = $("#notice");
     const ageH = state.news && state.news.generated_at
       ? (Date.now() - Date.parse(state.news.generated_at)) / 36e5 : 0;
-    if (state.news && state.news.seed) {
+    if (!state.news && state.loadFailed) {
+      notice.textContent = "Can't reach the Brief's data right now — check "
+        + "your connection, then tap ↻ to retry.";
+      notice.hidden = false;
+    } else if (state.news && state.news.seed) {
       notice.textContent = "You're looking at the Brief's opening edition. Once "
         + "deployed, the feed rebuilds itself every hour with the latest from "
         + "all sources.";
@@ -393,7 +421,9 @@
     $("#digest-closing").textContent = digest.closing || "";
     $("#digest-method").textContent = digest.method === "ai"
       ? "Written each morning by the Brief's AI editor from the sources in the feed. Verify anything critical with the original story."
-      : "Automated headline roundup. The AI-written edition appears when a digest key is configured.";
+      : digest.reason === "error"
+        ? "Automated headline roundup — the AI editor hit a temporary snag and retries with the next hourly refresh."
+        : "Automated headline roundup. The AI-written edition appears when a digest key is configured.";
   }
 
   // ------------------------------------------------------- rates & levels --
@@ -497,6 +527,7 @@
       if (digest.status === "fulfilled") state.digest = digest.value;
       if (rates.status === "fulfilled") state.rates = rates.value;
       if (quakes.status === "fulfilled") state.quakes = quakes.value;
+      state.loadFailed = news.status === "rejected";
       state.lastLoad = Date.now();
       renderAll();
       refreshQuakesLive();
@@ -561,13 +592,16 @@
   $("#cay-tab").addEventListener("click", () => {
     const card = $("#digest-card");
     if (!card || card.hidden) return;
-    const top = Math.max(
-      0, card.getBoundingClientRect().top + window.pageYOffset - 56
-    );
+    // scrollIntoView also scrolls the rail's own scrollbox on desktop, where
+    // the sidebar is sticky with internal overflow; window math alone would
+    // leave the card hidden inside the scrolled rail.
     try {
-      window.scrollTo({ top: top, behavior: "smooth" });
+      card.scrollIntoView({ behavior: scrollBehavior(), block: "start" });
     } catch (err) {
-      window.scrollTo(0, top);
+      const rail = document.querySelector(".rail");
+      if (rail) rail.scrollTop = 0;
+      window.scrollTo(0, Math.max(
+        0, card.getBoundingClientRect().top + window.pageYOffset - 56));
     }
     card.classList.remove("glow");
     void card.offsetWidth; // restart the highlight animation

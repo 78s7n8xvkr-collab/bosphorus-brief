@@ -42,6 +42,26 @@ WS_RE = re.compile(r"\s+")
 GN_SUFFIX_RE = re.compile(r"\s+-\s+[^-]{2,60}$")
 # Arabic/Hebrew, CJK, Hangul, Kana — the Brief is an English-language feed.
 NON_LATIN_RE = re.compile(r"[֐-ࣿ一-鿿가-힯぀-ヿ]")
+# "Turkey" the bird and "Turkey" the American place name are the price of
+# keyword feeds. Stories about poultry, holidays, hunting, and small-town
+# US life are never Brief material.
+JUNK_TITLE_RE = re.compile(
+    r"\b(?:poultry|thanksgiving|butterball|obituar\w*|funeral home"
+    r"|turkey (?:trot|hunt\w*|season|call\w*|vulture|breast|burger|bacon"
+    r"|sandwich|dinner|recipe\w*|drive|bowl|leg|farm\w*|prices? per pound"
+    r"|giveaway|shoot|decoy)"
+    r"|wild turkey|roast(?:ed)? turkey|fried turkey|smoked turkey"
+    r"|turkey (?:creek|foot|valley|point|run) (?:rd|road|high school|school"
+    r"|nuclear|park)"
+    r"|concession stand|varsity)\b",
+    re.IGNORECASE,
+)
+# A title datelined "Somewhere, KY" is a US local story, not regional news.
+US_LOCALITY_RE = re.compile(
+    r",\s(?:AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|IA|ID|IL|IN|KS|KY|LA|MA|MD|ME"
+    r"|MI|MN|MO|MS|MT|NC|ND|NE|NH|NJ|NM|NV|NY|OH|OK|OR|PA|RI|SC|SD|TN|TX"
+    r"|UT|VA|VT|WA|WI|WV|WY)\b"
+)
 
 
 def log(msg: str) -> None:
@@ -86,6 +106,8 @@ def fetch_feed(feed: dict) -> list[dict]:
         if blocked_source(source):
             continue
         if len(NON_LATIN_RE.findall(f"{title} {source}")) >= 3:
+            continue
+        if JUNK_TITLE_RE.search(title) or US_LOCALITY_RE.search(title):
             continue
         summary = clean_text(
             getattr(entry, "summary", "") or getattr(entry, "description", "")

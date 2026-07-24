@@ -28,12 +28,15 @@ def gn(query: str) -> str:
 
 FEEDS = [
     # ------------------------------------------------------------- Türkiye --
-    {"id": "hdn", "source": "Hürriyet Daily News", "category": "turkiye",
-     "weight": 2, "max": 12, "url": "https://www.hurriyetdailynews.com/rss"},
+    # hurriyetdailynews.com and dailysabah.com serve empty RSS, so both come
+    # in through Google News site: queries instead — keeping the
+    # pro-government side of the spectrum represented in the feed.
+    {"id": "gn-hdn", "source": "Google News", "category": "turkiye",
+     "weight": 2, "max": 10, "url": gn('site:hurriyetdailynews.com when:3d')},
     {"id": "turkishminute", "source": "Turkish Minute", "category": "turkiye",
      "weight": 2, "max": 12, "url": "https://www.turkishminute.com/feed/"},
-    {"id": "dailysabah", "source": "Daily Sabah", "category": "turkiye",
-     "weight": 1, "max": 10, "url": "https://www.dailysabah.com/rss"},
+    {"id": "gn-sabah", "source": "Google News", "category": "turkiye",
+     "weight": 1, "max": 10, "url": gn('site:dailysabah.com when:2d')},
     {"id": "gn-turkiye", "source": "Google News", "category": "turkiye",
      "weight": 2, "max": 15, "url": gn('Türkiye OR Turkey when:2d')},
 
@@ -48,8 +51,10 @@ FEEDS = [
      "weight": 1, "max": 10, "url": "https://www.middleeasteye.net/rss"},
 
     # ------------------------------------------- Migration & residency ----
-    {"id": "infomigrants", "source": "InfoMigrants", "category": "migration",
-     "weight": 2, "max": 10, "url": "https://www.infomigrants.net/en/rss"},
+    # infomigrants.net's RSS endpoint 404s; reach it through Google News.
+    {"id": "gn-infomigrants", "source": "Google News", "category": "migration",
+     "weight": 2, "max": 8, "url": gn('site:infomigrants.net when:14d'),
+     "require": REGION_WORDS},
     {"id": "gn-residency", "source": "Google News", "category": "migration",
      "weight": 3, "max": 12,
      "url": gn('Turkey ("residence permit" OR ikamet OR visa OR "work permit" OR citizenship OR deportation) when:14d')},
@@ -94,11 +99,18 @@ FEEDS = [
     {"id": "morningstar", "source": "Morning Star News", "category": "rights",
      "weight": 3, "max": 8, "url": "https://morningstarnews.org/feed/",
      "require": REGION_WORDS},
+    # Google News backstop for the same outlet — the direct feed often has
+    # no region items in the window.
+    {"id": "gn-morningstar", "source": "Google News", "category": "rights",
+     "weight": 3, "max": 6, "url": gn('site:morningstarnews.org when:30d'),
+     "require": REGION_WORDS},
     {"id": "icc", "source": "International Christian Concern", "category": "rights",
      "weight": 2, "max": 8, "url": "https://www.persecution.org/feed/",
      "require": REGION_WORDS},
-    {"id": "meconcern", "source": "Middle East Concern", "category": "rights",
-     "weight": 2, "max": 8, "url": "https://meconcern.org/feed/"},
+    # meconcern.org does not resolve from the build runner; go via Google News.
+    {"id": "gn-meconcern", "source": "Google News", "category": "rights",
+     "weight": 2, "max": 6,
+     "url": gn('site:meconcern.org OR "Middle East Concern" when:30d')},
 
     # ----------------------------------------------------------- Economy --
     {"id": "gn-lira", "source": "Google News", "category": "economy",
@@ -395,9 +407,18 @@ SOURCE_BLOCKLIST = {
     "opera news", "xe", "wise", "exchange rates", "currency converter",
 }
 
+# Whole classes of source that only ever reach us through the word "turkey":
+# poultry trade press, funeral notices, hunting magazines.
+SOURCE_BLOCK_SUBSTRINGS = (
+    "poultry", "funeral", "obituar", "memorial home", "meatingplace",
+    "agweb", "drovers", "field & stream", "field and stream", "outdoor life",
+)
+
 
 def blocked_source(name: str) -> bool:
-    return _normalize_source(name) in SOURCE_BLOCKLIST
+    key = _normalize_source(name)
+    return key in SOURCE_BLOCKLIST or any(
+        s in key for s in SOURCE_BLOCK_SUBSTRINGS)
 
 
 # Prefix fallbacks, checked longest-first, for feed-name variants like

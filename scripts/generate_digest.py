@@ -255,6 +255,7 @@ def headline_digest(news: dict, reason: str = "no-key") -> dict:
         "sections": sections,
         "closing": "Full stories in the feed below.",
         "method": "headlines",
+        "reason": reason,
     }
 
 
