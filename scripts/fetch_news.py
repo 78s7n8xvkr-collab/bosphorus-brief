@@ -91,15 +91,22 @@ JUNK_TITLE_RE = re.compile(
     r"|wild turkey|roast(?:ed)? turkey|fried turkey|smoked turkey"
     r"|turkey (?:creek|foot|valley|point|run) (?:rd|road|high school|school"
     r"|nuclear|park)"
-    r"|concession stand|varsity)\b",
+    r"|concession stand|varsity"
+    r"|(?:bird|butterfly|monarch|salmon|whale|songbird|waterfowl|wildlife"
+    r"|animal) migration"
+    r"|migratory (?:birds?|species|fish|animals?))\b",
     re.IGNORECASE,
 )
-# A title datelined "Somewhere, KY" is a US local story, not regional news.
+# A title datelined "Somewhere, KY" is a US local story, not regional news —
+# except in Migration & Asylum, where US border coverage is on-beat.
 US_LOCALITY_RE = re.compile(
     r",\s(?:AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|IA|ID|IL|IN|KS|KY|LA|MA|MD|ME"
     r"|MI|MN|MO|MS|MT|NC|ND|NE|NH|NJ|NM|NV|NY|OH|OK|OR|PA|RI|SC|SD|TN|TX"
     r"|UT|VA|VT|WA|WI|WV|WY)\b"
 )
+# Google News sometimes returns author or profile pages whose "headline" is
+# just a person's name. Real headlines have at least this many words.
+MIN_TITLE_WORDS = 4
 
 
 def log(msg: str) -> None:
@@ -148,7 +155,11 @@ def fetch_feed(feed: dict) -> list[dict]:
         if not feed.get("lang") and \
                 len(NON_LATIN_RE.findall(f"{title} {source}")) >= 3:
             continue
-        if JUNK_TITLE_RE.search(title) or US_LOCALITY_RE.search(title):
+        if JUNK_TITLE_RE.search(title):
+            continue
+        if feed["category"] != "migration" and US_LOCALITY_RE.search(title):
+            continue
+        if len(title.split()) < MIN_TITLE_WORDS:
             continue
         summary = clean_text(
             getattr(entry, "summary", "") or getattr(entry, "description", "")

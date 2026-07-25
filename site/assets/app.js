@@ -7,7 +7,8 @@
   const CATEGORY_LABELS = {
     turkiye: "Türkiye",
     region: "Region",
-    migration: "Migration & Residency",
+    residency: "Visas & Residency",
+    migration: "Migration & Asylum",
     rights: "Rights & Freedoms",
     safety: "Safety",
     economy: "Economy",

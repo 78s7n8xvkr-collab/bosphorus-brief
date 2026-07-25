@@ -31,7 +31,8 @@ DEFAULT_MODEL = "claude-sonnet-5"
 CATEGORY_NAMES = {
     "turkiye": "Türkiye",
     "region": "Around the region",
-    "migration": "Migration & residency",
+    "residency": "Visas & residency",
+    "migration": "Migration & asylum",
     "rights": "Rights & freedoms",
     "safety": "Safety",
     "economy": "Money",

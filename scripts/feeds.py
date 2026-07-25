@@ -72,22 +72,35 @@ FEEDS = [
      "weight": 1, "max": 10,
      "url": gn('site:news.sky.com (Turkey OR Türkiye OR Iran OR Syria OR Israel OR Lebanon OR "Middle East") when:3d')},
 
-    # ------------------------------------------- Migration & residency ----
-    # infomigrants.net's RSS endpoint 404s; reach it through Google News,
-    # asking for its region reporting directly.
-    {"id": "gn-infomigrants", "source": "Google News", "category": "migration",
-     "weight": 2, "max": 8,
-     "url": gn('site:infomigrants.net (Turkey OR Türkiye OR Syria OR Syrian OR Greece OR Aegean OR Mediterranean) when:14d')},
-    {"id": "gn-residency", "source": "Google News", "category": "migration",
+    # --------------------------------------------- Visas & residency ------
+    # The personal-process beat: permits, visas, citizenship for foreigners
+    # living in Türkiye.
+    {"id": "gn-residency", "source": "Google News", "category": "residency",
      "weight": 3, "max": 12,
-     "url": gn('Turkey ("residence permit" OR ikamet OR visa OR "work permit" OR citizenship OR deportation) when:14d')},
+     "url": gn('Turkey ("residence permit" OR ikamet OR visa OR "work permit" OR citizenship) when:14d')},
+    # Residency news in the language the paperwork actually happens in —
+    # scoped to Türkiye so Kosovo's Turkish-language press stays out.
+    {"id": "gn-tr-ikamet", "source": "Google News", "category": "residency",
+     "weight": 3, "max": 10, "lang": "tr",
+     "url": gn_tr('("ikamet izni" OR "oturma izni" OR "çalışma izni" OR "vatandaşlık başvurusu") (Türkiye OR yabancılar OR "Göç İdaresi") when:14d')},
+
+    # --------------------------------------------- Migration & asylum -----
+    # The wider story: doors opening and closing for people fleeing —
+    # asylum policy, borders, deportation programs, refugee movements.
+    # Global by design, so the US-locality junk filter is waived here.
+    {"id": "gn-asylum", "source": "Google News", "category": "migration",
+     "weight": 2, "max": 12,
+     "url": gn('(asylum OR refugees OR migrants) (policy OR border OR ban OR deportation OR resettlement OR "safe third country") when:3d')},
+    {"id": "gn-afghan-syrian", "source": "Google News", "category": "migration",
+     "weight": 3, "max": 10,
+     "url": gn('(Afghan OR Afghans OR Syrian OR Syrians) (refugees OR asylum OR deport OR deported OR return OR resettlement) when:7d')},
+    # infomigrants.net's RSS endpoint 404s; reach it through Google News.
+    # Its whole beat is this section, so no region scoping.
+    {"id": "gn-infomigrants", "source": "Google News", "category": "migration",
+     "weight": 2, "max": 10, "url": gn('site:infomigrants.net when:7d')},
     {"id": "gn-refugees", "source": "Google News", "category": "migration",
      "weight": 2, "max": 10,
      "url": gn('Turkey (refugees OR "temporary protection" OR Syrians OR migration) when:7d')},
-    # Residency news in the language the paperwork actually happens in.
-    {"id": "gn-tr-ikamet", "source": "Google News", "category": "migration",
-     "weight": 3, "max": 10, "lang": "tr",
-     "url": gn_tr('"ikamet izni" OR "oturma izni" OR "çalışma izni" OR "vatandaşlık başvurusu" when:14d')},
     {"id": "reliefweb-tur", "source": "ReliefWeb", "category": "migration",
      "weight": 1, "max": 8,
      "url": "https://reliefweb.int/updates/rss.xml?search=primary_country.iso3%3A%22tur%22"},
@@ -479,6 +492,7 @@ SOURCE_BLOCKLIST = {
 SOURCE_BLOCK_SUBSTRINGS = (
     "poultry", "funeral", "obituar", "memorial home", "meatingplace",
     "agweb", "drovers", "field & stream", "field and stream", "outdoor life",
+    "agriculture and natural resources", "audubon", "birdwatching",
 )
 
 
