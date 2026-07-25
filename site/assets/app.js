@@ -429,6 +429,13 @@
         + " hours old — the hourly refresh may be paused. The stories below "
         + "are the most recent available.";
       notice.hidden = false;
+    } else if (state.news && state.news.stats
+        && (state.news.stats.sources_failed || []).length
+           > (state.news.stats.sources_ok || []).length) {
+      notice.textContent = "This edition is running on fewer sources than "
+        + "usual — most feeds were unreachable at the last rebuild. The next "
+        + "hourly refresh normally restores them.";
+      notice.hidden = false;
     } else {
       notice.hidden = true;
     }

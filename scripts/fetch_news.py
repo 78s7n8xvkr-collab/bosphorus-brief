@@ -17,6 +17,7 @@ import hashlib
 import html
 import json
 import os
+import random
 import re
 import sys
 import time
@@ -36,6 +37,26 @@ UA = "BosphorusBrief/1.0 (+static news briefing; contact via repository)"
 TIMEOUT = 20
 TOP_COUNT = 14
 MAX_PER_SOURCE_IN_TOP = 2
+
+# Google News throttles bursts of requests from shared runner IPs with 503s.
+# Space the requests out and retry throttled fetches with backoff.
+RETRY_STATUSES = {429, 500, 502, 503, 504}
+RETRY_DELAY = 3.0
+GN_DELAY = 1.2
+
+
+def fetch_url(url: str, attempts: int = 3):
+    delay = RETRY_DELAY
+    for attempt in range(attempts):
+        resp = requests.get(url, headers={"User-Agent": UA}, timeout=TIMEOUT)
+        if resp.status_code in RETRY_STATUSES and attempt < attempts - 1:
+            time.sleep(delay + random.uniform(0, 1.5))
+            delay *= 2.5
+            continue
+        resp.raise_for_status()
+        return resp
+    resp.raise_for_status()
+    return resp
 
 # Headline translation for Turkish/Arabic feeds. Results are cached in
 # site/data/translations.json (committed back by the workflow) so each
@@ -134,8 +155,7 @@ def entry_time(entry) -> str | None:
 
 
 def fetch_feed(feed: dict) -> list[dict]:
-    resp = requests.get(feed["url"], headers={"User-Agent": UA}, timeout=TIMEOUT)
-    resp.raise_for_status()
+    resp = fetch_url(feed["url"])
     parsed = feedparser.parse(resp.content)
     items = []
     for entry in parsed.entries[: feed["max"]]:
@@ -394,8 +414,7 @@ ADVISORY_TITLE_RE = re.compile(
 
 
 def fetch_advisories() -> list[dict]:
-    resp = requests.get(ADVISORY_FEED, headers={"User-Agent": UA}, timeout=TIMEOUT)
-    resp.raise_for_status()
+    resp = fetch_url(ADVISORY_FEED)
     parsed = feedparser.parse(resp.content)
     wanted = {c.lower(): c for c in ADVISORY_COUNTRIES}
     found: dict[str, dict] = {}
@@ -483,6 +502,8 @@ def main() -> int:
     items: list[dict] = []
     ok, failed = [], []
     for feed in FEEDS:
+        if "news.google.com" in feed["url"]:
+            time.sleep(GN_DELAY)
         try:
             fetched = fetch_feed(feed)
             fresh = [
