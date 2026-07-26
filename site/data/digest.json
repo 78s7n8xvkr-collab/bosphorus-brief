@@ -1,11 +1,11 @@
 {
- "title": "The Bosphorus Brief — Sunday, 26 July 2026",
- "overview": "A quiet-ish Sunday for Türkiye itself — sport and summer travel dominate local headlines — while the wider region stays tense with the Iran-linked conflict spilling into the Red Sea and Gaza violence continuing. On the practical front: the lira held steady near 47.3/USD, the central bank left rates unchanged, and a top court decision on a decades-old case underscores how slowly some justice questions move here.",
- "sections": "\n<parameter name=\"heading\">Money: Rates on hold, inflation forecasts creeping up",
- "body": "Türkiye's central bank held its policy rate at 37% for a fourth straight meeting, a move covered across pro-government and independent outlets alike with little disagreement on the facts. Separately, Deutsche Bank raised its Turkish inflation forecast to 30% for the year — a reminder for anyone budgeting in lira that price pressures remain a live issue. The exchange rate was steady this morning: USD/TRY 47.33, EUR/TRY 53.84, GBP/TRY 63.06. For residents paid in foreign currency, the rate itself is calm; the inflation trend is the number worth watching over rent and grocery costs.",
+ "title": "The Bosphorus Brief — Monday, 27 July 2026",
+ "overview": "A quieter regional day: the US-Iran strike pause held for a second straight day, easing some of the anxiety that had gripped markets last week. At home, the central bank's rate decision and a national sporting title dominate headlines, while court and residency news carries the usual mix for foreign residents.",
+ "sections": "\n<parameter name=\"heading\">Money: Rates on hold, inflation forecasts rise",
+ "body": "Turkey's central bank held its policy rate at 37 percent for a fourth straight meeting, with IntelliNews noting the expected cut was shelved amid the Iran war flare-up. Deutsche Bank has meanwhile raised its Turkey inflation forecast to 30 percent. For residents, this means continued high borrowing costs and no near-term relief on the lira, which sits at 47.33 to the dollar and 53.86 to the euro today. Budgeting for rent, tuition, and imported goods should assume this rate environment persists for now.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-07-26",
- "date_label": "Sunday, 26 July 2026",
- "generated_at": "2026-07-25T21:15:10+00:00"
+ "date": "2026-07-27",
+ "date_label": "Monday, 27 July 2026",
+ "generated_at": "2026-07-26T21:24:22+00:00"
 }
