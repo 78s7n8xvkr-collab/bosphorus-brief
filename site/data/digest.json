@@ -1,11 +1,28 @@
 {
- "overview": "A regional lull holds: Iran and the US appear to be in a cautious pause rather than active strikes, though the Caspian Sea incident and Iran-Ukraine tensions show how fragile that is. Closer to home, Turkey's economic picture and a NATO deployment dominate practical news, while Washington's asylum overhaul and Montenegro's visa change matter for anyone tracking regional mobility.",
- "title": "The Bosphorus Brief — Tuesday, 28 July 2026",
- "sections": "[{\"heading\": \"Money: Lira Steady, Inflation Forecasts Rising\", \"body\": \"The Central Bank held its policy rate at 37 percent this week, while Deutsche Bank raised its Turkey inflation forecast to 30 percent — a signal that price pressures remain a longer fight than some had hoped. The lira sits at 47.34 to the dollar and 53.92 to the euro; Commerzbank notes tight CBRT funding is offering only marginal support to the currency. Fortune also flags that fuel prices tied to the Iran situation are rippling into daily costs from Turkey to Chile and Nepal — worth watching at the pump and in grocery bills over coming weeks.\"}, {\"heading\": \"Iran-US Standoff: Cautious Pause, Not Peace\", \"body\": \"President Trump said US-Iran talks are underway during a lull in strikes and suggested \\\"something could happen,\\\" though Iran denies direct talks are happening. Al Jazeera reports Qatari and Pakistani mediators are working to restart ceasefire talks amid the fragile pause. Separately, Iran struck a vessel in the Caspian Sea it linked to Ukraine, prompting Kyiv to dismiss Tehran's threats and Iran's foreign minister to call the strike something that \"cannot go unanswered.\" For residents in the wider region, this remains a situation to monitor rather than act on — travel advisories for Iran, Iraq, Syria and Lebanon remain at Level 4.\"}, {\"heading\": \"Turkey's NATO Role and F-35 Politics\", \"body\": \"Turkey will send five F-16s and 76 personnel to Estonia from August through November for NATO's Baltic Air Policing mission, operating out of Ämari Air Base — reported via state-run Anadolu and picked up by pro-government outlets. Separately, Trump was asked about F-35 sales to Turkey and pushed back on any suggestion he'd be told what the US can sell, a comment covered across international and Turkish outlets alike, including in response to Israeli objections. No policy change has been announced; this is a rhetorical moment, not a done deal.\"}, {\"heading\": \"Visas, Asylum, and Legal Security\", \"body\": \"Montenegro will end visa-free entry for Russian and Belarusian citizens from November 1, a move tied to its 2028 EU membership bid — relevant for anyone with Balkan travel plans. In the US, a new federal rule shifts hundreds of thousands of asylum cases into immigration courts and strips a prior interview requirement, which advocacy groups say will speed deportations; the Center for Migration Studies separately condemned the ending of TPS protections for Haitians and Syrians. Munich Airport, meanwhile, opened a new Asylum and Border Management Center. Separately, State Department attention to religious freedom conditions in Egypt continues, covered mainly by US outlets.\"}]",
- "closing": "Stay steady, keep an eye on fuel prices, and check visa rules before booking regional travel — see you tomorrow.",
+ "title": "The Bosphorus Brief — 29 July 2026",
+ "overview": "Turkey and Iraq inked a five-agreement energy and security package in Ankara, with Erdoğan touting a possible 1 million barrels a day of Iraqi oil. Meanwhile Montenegro's decision to end visa-free travel for Turkish citizens lands as a practical planning issue for anyone with Balkan travel plans. On the money side, the lira sits near 47.4/USD with inflation forecasts creeping upward.",
+ "sections": [
+  {
+   "heading": "Turkey-Iraq Energy Deal: What It Means Day-to-Day",
+   "body": "Ankara and Baghdad signed five agreements this week covering energy and security cooperation, following Iraqi PM's visit. Erdoğan said Turkey could receive up to 1 million barrels of oil per day from Iraq, primarily tied to Kirkuk. State media (Anadolu, TRT) frame this as a strategic win for Turkish energy security, while international outlets (Reuters, AP) note the deal is still being formalized rather than fully operational. For residents, the near-term relevance is limited — this is a wholesale energy and diplomatic story, not one that changes pump prices or household bills immediately, but it's worth watching if it eventually eases Turkey's energy import costs."
+  },
+  {
+   "heading": "Montenegro Ends Visa-Free Travel for Turkish Citizens",
+   "body": "Starting November 1, Turkish passport holders will need a visa to enter Montenegro, part of a broader tightening that also affects Russian, Belarusian, Chinese, and Saudi travelers as Podgorica aligns visa policy with its 2028 EU membership bid. Daily Sabah and Hürriyet Daily News covered the announcement alongside opposition-leaning Turkish Minute; framing differs little here, mostly factual. If you hold a Turkish passport and had late-summer or autumn plans for the Adriatic coast, this is the moment to check visa requirements before booking flights or accommodation past November 1."
+  },
+  {
+   "heading": "F-35 Sale to Turkey: A Quiet Diplomatic Thread",
+   "body": "President Trump reportedly dismissed Israeli objections to a potential F-35 sale to Turkey ahead of a White House meeting with Netanyahu. This is a defense-procurement story with no direct bearing on residency or daily life, but it's a signal of shifting alignments in the region worth noting for those following Turkey's international standing."
+  },
+  {
+   "heading": "Lira and Prices: Steady but Watch Inflation",
+   "body": "The lira held around 47.37 to the dollar and 53.9 to the euro. Deutsche Bank raised its Turkey inflation forecast to 30 percent, a reminder that even with a relatively stable exchange rate, day-to-day costs — rent, groceries, tuition — may keep climbing faster than wages adjust. Households on fixed foreign income may find near-term purchasing power holds, but budget for continued domestic price pressure into autumn."
+  }
+ ],
+ "closing": "Wishing everyone a steady day — çay's on us if the lira holds.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-07-28",
- "date_label": "Tuesday, 28 July 2026",
- "generated_at": "2026-07-27T22:32:47+00:00"
+ "date": "2026-07-29",
+ "date_label": "Wednesday, 29 July 2026",
+ "generated_at": "2026-07-28T22:31:48+00:00"
 }
