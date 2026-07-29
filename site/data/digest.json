@@ -1,28 +1,11 @@
 {
- "title": "The Bosphorus Brief — 29 July 2026",
- "overview": "Turkey and Iraq inked a five-agreement energy and security package in Ankara, with Erdoğan touting a possible 1 million barrels a day of Iraqi oil. Meanwhile Montenegro's decision to end visa-free travel for Turkish citizens lands as a practical planning issue for anyone with Balkan travel plans. On the money side, the lira sits near 47.4/USD with inflation forecasts creeping upward.",
- "sections": [
-  {
-   "heading": "Turkey-Iraq Energy Deal: What It Means Day-to-Day",
-   "body": "Ankara and Baghdad signed five agreements this week covering energy and security cooperation, following Iraqi PM's visit. Erdoğan said Turkey could receive up to 1 million barrels of oil per day from Iraq, primarily tied to Kirkuk. State media (Anadolu, TRT) frame this as a strategic win for Turkish energy security, while international outlets (Reuters, AP) note the deal is still being formalized rather than fully operational. For residents, the near-term relevance is limited — this is a wholesale energy and diplomatic story, not one that changes pump prices or household bills immediately, but it's worth watching if it eventually eases Turkey's energy import costs."
-  },
-  {
-   "heading": "Montenegro Ends Visa-Free Travel for Turkish Citizens",
-   "body": "Starting November 1, Turkish passport holders will need a visa to enter Montenegro, part of a broader tightening that also affects Russian, Belarusian, Chinese, and Saudi travelers as Podgorica aligns visa policy with its 2028 EU membership bid. Daily Sabah and Hürriyet Daily News covered the announcement alongside opposition-leaning Turkish Minute; framing differs little here, mostly factual. If you hold a Turkish passport and had late-summer or autumn plans for the Adriatic coast, this is the moment to check visa requirements before booking flights or accommodation past November 1."
-  },
-  {
-   "heading": "F-35 Sale to Turkey: A Quiet Diplomatic Thread",
-   "body": "President Trump reportedly dismissed Israeli objections to a potential F-35 sale to Turkey ahead of a White House meeting with Netanyahu. This is a defense-procurement story with no direct bearing on residency or daily life, but it's a signal of shifting alignments in the region worth noting for those following Turkey's international standing."
-  },
-  {
-   "heading": "Lira and Prices: Steady but Watch Inflation",
-   "body": "The lira held around 47.37 to the dollar and 53.9 to the euro. Deutsche Bank raised its Turkey inflation forecast to 30 percent, a reminder that even with a relatively stable exchange rate, day-to-day costs — rent, groceries, tuition — may keep climbing faster than wages adjust. Households on fixed foreign income may find near-term purchasing power holds, but budget for continued domestic price pressure into autumn."
-  }
- ],
- "closing": "Wishing everyone a steady day — çay's on us if the lira holds.",
+ "title": "The Bosphorus Brief: Oil Deals, a Wildfire, and a Wait for Kavala",
+ "overview": "A regional energy realignment is unfolding as Turkey deepens ties with both Syria and Iraq, even as a wildfire in western Turkey and continuing Iran-Iraq strikes keep safety questions front of mind. On the legal front, the ECHR has finally set a date for its long-awaited Kavala ruling, and Montenegro's visa policy shift is worth noting for anyone with Balkan travel plans.",
+ "sections": "\n<parameter name=\"heading\">Energy Deals: Syria and Iraq",
+ "body": "Turkey's central bank signed a lira deposit account agreement with Syria's central bank, a technical but notable step in normalizing financial ties between the two countries. Separately, Turkey and Iraq signed five agreements, including a proposal for Iraq to supply Turkey with up to one million barrels of oil daily, following the expiration of the old Kirkuk-Ceyhan pipeline pact. For residents, this is mostly background economic news, but it signals warmer official relations with both neighbors — worth watching if it eventually affects fuel prices or cross-border banking access.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-07-29",
- "date_label": "Wednesday, 29 July 2026",
- "generated_at": "2026-07-28T22:31:48+00:00"
+ "date": "2026-07-30",
+ "date_label": "Thursday, 30 July 2026",
+ "generated_at": "2026-07-29T21:25:24+00:00"
 }
