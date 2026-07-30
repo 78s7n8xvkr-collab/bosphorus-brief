@@ -1,11 +1,28 @@
 {
- "title": "The Bosphorus Brief: Oil Deals, a Wildfire, and a Wait for Kavala",
- "overview": "A regional energy realignment is unfolding as Turkey deepens ties with both Syria and Iraq, even as a wildfire in western Turkey and continuing Iran-Iraq strikes keep safety questions front of mind. On the legal front, the ECHR has finally set a date for its long-awaited Kavala ruling, and Montenegro's visa policy shift is worth noting for anyone with Balkan travel plans.",
- "sections": "\n<parameter name=\"heading\">Energy Deals: Syria and Iraq",
- "body": "Turkey's central bank signed a lira deposit account agreement with Syria's central bank, a technical but notable step in normalizing financial ties between the two countries. Separately, Turkey and Iraq signed five agreements, including a proposal for Iraq to supply Turkey with up to one million barrels of oil daily, following the expiration of the old Kirkuk-Ceyhan pipeline pact. For residents, this is mostly background economic news, but it signals warmer official relations with both neighbors — worth watching if it eventually affects fuel prices or cross-border banking access.",
+ "title": "The Bosphorus Brief — Friday, 31 July 2026",
+ "overview": "A quieter day domestically, but the backdrop is unsettled: wildfires along the tourist coasts, renewed US-Iran hostilities that keep regional risk elevated, and continued lira pressure. Residents should watch fire advisories in coastal provinces and keep an eye on exchange rates if managing cross-border finances.",
+ "sections": [
+  {
+   "heading": "Wildfires on the Tourist Coasts",
+   "body": "Turkish authorities are confronting growing wildfires along popular coastal tourist areas, a story also picked up internationally by France 24, which notes similar blazes breaking out elsewhere in Europe (France, Spain). If you're traveling to or living in coastal provinces this month, monitor local municipality and AFAD alerts, keep emergency contacts handy, and expect possible road closures or evacuation notices near affected areas. No casualty figures have been reported yet."
+  },
+  {
+   "heading": "Lira and Inflation Watch",
+   "body": "Turkey's central bank says July's inflation uptick is expected to be temporary, per marketscreener.com, while the BIST 100 closed lower Wednesday (Anadolu Ajansı). Separately, TradingPedia and FXStreet report the lira facing pressure after a Fitch review and from broader bank-sector stress concerns (Commerzbank analysis). Today's rates: USD/TRY 47.43, EUR/TRY 54.17, GBP/TRY 63.17. If you hold TRY savings or send remittances, this is a good week to watch rate movement before large transfers."
+  },
+  {
+   "heading": "Residency and Citizenship Notes",
+   "body": "Malta Haber highlights the three-year marriage requirement for foreign spouses applying for Turkish citizenship — a reminder for those in binational marriages to check their timeline carefully. Separately, Aydın province is reporting a rise in foreigners obtaining ikamet (residence permits), suggesting steady demand in that region. For those considering EU alternatives, Bigpara notes a €300,000 residency-to-citizenship path in parts of Europe. None of this changes existing rules for Türkiye's L2 travel advisory status, which remains unchanged."
+  },
+  {
+   "heading": "Regional Tensions: US-Iran and Ceuta Crossings",
+   "body": "Hostilities between the US and Iran have resumed after a brief pause, with heavy strikes reported and lawmakers now planning to investigate an earlier attack that killed six US troops (Washington Post, NBC, BBC, Sky News). Iran's L4 do-not-travel advisory remains firmly in place, as do L4 advisories for Syria, Iraq, and Lebanon. Separately, Spain has deployed its military to Ceuta after thousands crossed from Morocco, with at least nine deaths reported (AP, Reuters, DW, Washington Post). These are worth noting for anyone with travel plans through the region or family navigating asylum systems in Spain."
+  }
+ ],
+ "closing": "Stay alert to local fire advisories this weekend, and safe travels wherever you're headed.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-07-30",
- "date_label": "Thursday, 30 July 2026",
- "generated_at": "2026-07-29T21:25:24+00:00"
+ "date": "2026-07-31",
+ "date_label": "Friday, 31 July 2026",
+ "generated_at": "2026-07-30T22:33:59+00:00"
 }
