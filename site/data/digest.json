@@ -1,32 +1,28 @@
 {
- "title": "Wildfires, Wind, and a Watchful Weekend",
- "overview": "Saturday's news is dominated by firefighting crews battling wildfires in southwestern Türkiye under difficult windy conditions, alongside continued regional attention on Gaza diplomacy and a tragic migration incident at the Spain-Morocco border. On the practical front, there's steady movement in visa and residency options for those looking at Europe, and Türkiye-Syria banking ties continue to normalize.",
+ "title": "The Bosphorus Brief — Sunday, August 3",
+ "overview": "A quieter Sunday on the domestic front, with the region's real drama unfolding elsewhere: Spain's handling of the Ceuta crossing crisis, Iran-related tensions from cyberattacks to Gulf diplomacy, and steady economic ties deepening between Türkiye, Iraq, and Syria. For residents here, the practical news is mostly good — banking and trade links firming up, a strong bank earnings report, and no major disruptions to daily life.",
  "sections": [
   {
-   "heading": "Wildfires: Winds Complicate Firefighting Effort",
-   "body": "Strong winds are hampering firefighters battling the last major wildfire in southwestern Türkiye, according to Turkish Minute, with international outlets including The Australian and Yahoo also carrying dramatic footage of the fight. Kıbrıs Postası and Hürriyet Daily News both note the winds as the main complicating factor. If you're in or traveling through western Türkiye, check local advisories before heading into forested areas — Ankara's forest entry ban, unrelated to the fires but a reminder of seasonal fire risk, has been extended until October 15."
+   "heading": "Turkey-Iraq Pipeline Deal and Syria Banking Ties",
+   "body": "Iraq is set to sign an extension of its pipeline agreement with Turkey, a deal picked up widely across regional and international outlets, underscoring the energy relationship's continued importance. Separately, Syria's central bank has opened a lira account at Turkey's central bank, a concrete step in rebuilding banking ties between the two countries. Türkiye Today notes exports to Syria are rising even amid ongoing regional tensions — a sign of deepening economic integration that residents involved in cross-border trade or finance may want to watch."
   },
   {
-   "heading": "Visa and Residency Options Widening",
-   "body": "For Turkish citizens seeking easier travel to Europe, a Greek island visa scheme is drawing attention as a simpler alternative to the full Schengen application process (Turkish Minute, France 24). Separately, investment-based residency paths in France are being discussed locally — a €300,000 investment route to residence and eventual citizenship (Ekonomim, Bigpara). On the ikamet front, Aydın has seen a reported rise in foreign residence permit holders, a small but useful signal of where expat communities are growing. Note also: reporting indicates Turkey requires a three-year marriage duration for foreign spouses applying for citizenship."
+   "heading": "Ceuta Border Crisis Tests Europe's Response",
+   "body": "The aftermath of a mass migrant crossing at Spain's Ceuta enclave continues to dominate international coverage, with reports of 67 deaths during the surge. International outlets (Reuters, NPR, BBC, Washington Post) describe migrants being pushed back to Morocco amid conditions of hunger and hostility, while Spain's government faces criticism — including its own complaint about a 'selfish' response from some EU partners. This is a stark reminder of how migration policy across the Mediterranean remains fraught, though it has no direct bearing on residency processes in Türkiye at this time."
   },
   {
-   "heading": "Tragedy at the Ceuta Border",
-   "body": "At least 41 people died after a large group of migrants breached the border into the Spanish territory of Ceuta this week, prompting European concern (ABC7, NPR, Washington Post). Spanish authorities say control has been regained and that tens of thousands who crossed are voluntarily returning (AP, Reuters, WSJ). The EU is also planning a maritime rescue center in Benghazi, Libya, aimed at the wider Mediterranean route. This is a stark reminder of the human cost along Mediterranean migration corridors, though it is geographically distant from Türkiye's own asylum and residency systems."
+   "heading": "Iran Tensions: Cyber, Nuclear, and Regional Alert",
+   "body": "U.S. authorities are investigating whether Iran was behind a cyberattack on water systems across seven American states. Separately, Israel has raised its alert level over renewed Iran-related escalation risks, and reporting from PBS notes continued warnings spanning Hormuz to Kuwait and Gaza. On a calmer note, Radio Free Europe reports a prison hunger strike in Iran ended after authorities agreed to a temporary halt in drug-related executions. None of this changes travel advisories for Türkiye (still Level 2), though Iran, Iraq, Syria, and Lebanon remain Level 4."
   },
   {
-   "heading": "Türkiye-Syria Banking Ties Deepen",
-   "body": "Syria's central bank has opened a lira account at Turkey's central bank, a step covered by IntelliNews and, with a more promotional framing, by pro-government Yeni Safak English and Türkiye Today, which linked it to booming cross-border exports amid regional conflict. For businesses and NGOs operating across the Türkiye-Syria border, this points to gradually normalizing financial channels, though the practical ease of moving money should still be tested case by case."
-  },
-  {
-   "heading": "Rights Note",
-   "body": "An American missionary described to a Christian outlet a two-year imprisonment experience in Turkey; we note this plainly as reported, without independent verification of the case details. Separately, LGBTQ advocacy voices have criticized a cruise ship ban affecting a Turkish port stop. Both are worth watching for any follow-on legal or policy clarity."
+   "heading": "Visas, Residency, and Practical Notes",
+   "body": "For those navigating paperwork: Turkish Minute reports a Greek island visa scheme is offering Turks an easier alternative to the standard Schengen process. Separately, outlets note a 3-year marriage requirement remains in place for foreign spouses seeking Turkish citizenship, and investment-linked residency routes in France (around €300,000) continue to draw interest as a path to EU residence. Aydın has reported a rise in foreigners obtaining ikamet, a small but notable local trend. Yapı Kredi posted strong H1 2026 profits, with shares up 5% — a modestly reassuring economic signal amid the lira's continued position near 47.5 to the dollar."
   }
  ],
- "closing": "Stay safe out there, keep an eye on the wind forecasts, and have a restful weekend.",
+ "closing": "Stay hydrated, keep an eye on the Ankara forest entry ban if you're hiking, and here's to a calm week ahead.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-01",
- "date_label": "Saturday, 01 August 2026",
- "generated_at": "2026-07-31T21:34:53+00:00"
+ "date": "2026-08-02",
+ "date_label": "Sunday, 02 August 2026",
+ "generated_at": "2026-08-01T21:14:50+00:00"
 }
