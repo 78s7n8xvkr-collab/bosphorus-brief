@@ -53,6 +53,7 @@
     tab: "top",
     query: "",
     saved: loadSaved(),
+    votes: null, // set after helpers below
     lastLoad: 0,
   };
 
@@ -74,6 +75,68 @@
   }
   function persistSaved() {
     storageSet("brief.saved", JSON.stringify(state.saved.slice(0, 200)));
+  }
+
+  // ------------------------------------------------------- taste profile --
+  // 👍/👎 votes stay on this device and build per-outlet and per-section
+  // weights that reorder the feed. Nothing is hidden — heavily downvoted
+  // outlets sink and dim, visibly marked, and one tap brings them back.
+  function loadVotes() {
+    try {
+      const v = JSON.parse(storageGet("brief.votes") || "{}");
+      return { stories: v.stories || {}, sources: v.sources || {},
+               cats: v.cats || {} };
+    } catch {
+      return { stories: {}, sources: {}, cats: {} };
+    }
+  }
+  function persistVotes() {
+    if (Object.keys(state.votes.stories).length > 800) {
+      state.votes.stories = {}; // aggregates carry the signal; drop the log
+    }
+    storageSet("brief.votes", JSON.stringify(state.votes));
+  }
+  function clampNum(n, lo, hi) {
+    return Math.max(lo, Math.min(hi, n));
+  }
+  function bumpWeight(map, key, delta) {
+    if (!key || !delta) return;
+    const next = clampNum((map[key] || 0) + delta, -10, 10);
+    if (next === 0) delete map[key];
+    else map[key] = next;
+  }
+  function prefScore(item) {
+    const src = clampNum(state.votes.sources[item.source] || 0, -8, 8);
+    const cat = clampNum(state.votes.cats[item.category] || 0, -8, 8);
+    return src + 0.5 * cat;
+  }
+  function isMuted(item) {
+    return prefScore(item) <= -3;
+  }
+  state.votes = loadVotes();
+
+  function voteFor(item, dir, upBtn, downBtn) {
+    const prev = state.votes.stories[item.id] || 0;
+    const next = prev === dir ? 0 : dir; // tapping again undoes the vote
+    const delta = next - prev;
+    if (next === 0) delete state.votes.stories[item.id];
+    else state.votes.stories[item.id] = next;
+    bumpWeight(state.votes.sources, item.source, delta);
+    bumpWeight(state.votes.cats, item.category, delta);
+    persistVotes();
+    upBtn.classList.toggle("voted", next === 1);
+    downBtn.classList.toggle("voted", next === -1);
+    const cat = CATEGORY_LABELS[item.category] || "this section";
+    if (next === 1) {
+      showNote("More like this — " + item.source + " and " + cat
+        + " stories will rank higher for you. The order settles in on the "
+        + "next refresh.");
+    } else if (next === -1) {
+      showNote("Less like this — " + item.source + " will sit lower in "
+        + "your feed" + (isMuted(item) ? " and is now muted" : "") + ".");
+    } else {
+      showNote("Vote removed.");
+    }
   }
 
   // ---------------------------------------------------------------- theme --
@@ -180,6 +243,15 @@
       list = list.filter((i) =>
         (i.title + " " + (i.summary || "") + " " + i.source).toLowerCase().includes(q));
     }
+    // Taste profile: Top Stories re-ranks around your votes; section tabs
+    // keep their order but sink muted outlets to the end. Saved is yours
+    // and stays untouched.
+    if (state.tab === "top") {
+      list = list.slice().sort((a, b) => prefScore(b) - prefScore(a));
+    } else if (state.tab !== "saved") {
+      list = list.filter((i) => !isMuted(i))
+        .concat(list.filter((i) => isMuted(i)));
+    }
     return list;
   }
 
@@ -231,6 +303,37 @@
     const span = el("span", { class: "share-glyph", "aria-hidden": "true" });
     span.innerHTML = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M8 6.5 12 3l4 3.5"/><path d="M6 11H5a1.5 1.5 0 0 0-1.5 1.5v7A1.5 1.5 0 0 0 5 21h14a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 19 11h-1"/></svg>';
     return span;
+  }
+
+  const THUMB_SVG =
+    '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"{ROT}>'
+    + '<path d="M7 10.6 11.2 4a2 2 0 0 1 1.9 2.4l-.6 3.2h5a1.8 1.8 0 0 1 1.8 2.1l-.9 5.6a2 2 0 0 1-2 1.7H7z"/>'
+    + '<path d="M7 10.6H3.6V19H7z"/></svg>';
+
+  function thumbIcon(down) {
+    const span = el("span", { class: "share-glyph", "aria-hidden": "true" });
+    span.innerHTML = THUMB_SVG.replace(
+      "{ROT}", down ? ' transform="rotate(180)"' : "");
+    return span;
+  }
+
+  function voteButtons(item) {
+    const voted = state.votes.stories[item.id] || 0;
+    const upBtn = el("button", {
+      class: "vote-btn" + (voted === 1 ? " voted" : ""),
+      title: "More like this",
+      "aria-label": "More stories like this",
+      "aria-pressed": String(voted === 1),
+    }, thumbIcon(false));
+    const downBtn = el("button", {
+      class: "vote-btn" + (voted === -1 ? " voted" : ""),
+      title: "Less like this",
+      "aria-label": "Fewer stories like this",
+      "aria-pressed": String(voted === -1),
+    }, thumbIcon(true));
+    upBtn.addEventListener("click", () => voteFor(item, 1, upBtn, downBtn));
+    downBtn.addEventListener("click", () => voteFor(item, -1, upBtn, downBtn));
+    return [upBtn, downBtn];
   }
 
   // Tooltips are hover-only, which phones don't have — chips show their
@@ -333,11 +436,28 @@
   function renderFeed() {
     const list = visibleItems();
     const container = $("#stories");
-    container.replaceChildren(...list.map((item) => el("li", { class: "story" },
+    container.replaceChildren(...list.map((item) => el("li", {
+      class: "story" + (isMuted(item) && state.tab !== "saved"
+        ? " story-muted" : ""),
+    },
       el("div", { class: "story-meta" },
         el("span", { class: "story-source" }, item.source),
         lensChip(item.lens, item.lens_note, item.source) || unratedChip(item.source),
         langChip(item),
+        isMuted(item) && state.tab !== "saved"
+          ? el("span", {
+              class: "muted-flag",
+              role: "button",
+              tabindex: "0",
+              onkeydown: keyActivate,
+              onclick: (ev) => {
+                ev.stopPropagation();
+                showNote("You've downvoted " + item.source + " a few times, "
+                  + "so its stories sit lower and dimmed. A 👍 on any of its "
+                  + "stories lifts it back.");
+              },
+            }, "muted")
+          : null,
         el("span", { class: "story-time" },
           timeAgo(item.published) || "reference"),
         item.blindspot
@@ -367,6 +487,7 @@
           "aria-label": "Save story",
           onclick: () => toggleSaved(item),
         }, isSaved(item.id) ? "★" : "☆"),
+        ...voteButtons(item),
         el("button", {
           class: "share-btn",
           title: "Share this story",
@@ -616,6 +737,16 @@
   });
 
   $("#refresh-btn").addEventListener("click", () => loadAll(true));
+
+  const resetVotes = $("#reset-votes");
+  if (resetVotes) {
+    resetVotes.addEventListener("click", () => {
+      state.votes = { stories: {}, sources: {}, cats: {} };
+      persistVotes();
+      renderFeed();
+      showNote("Taste profile cleared — the feed is back to neutral.");
+    });
+  }
 
   // No `text` field: iOS share targets (Copy especially) keep the text and
   // drop the url when both are present. Title + url shares the link itself.
