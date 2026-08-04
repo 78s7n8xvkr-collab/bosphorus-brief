@@ -1,32 +1,11 @@
 {
- "overview": "Regional attention is split between Gaza diplomacy and the on-again, off-again US-Iran talks, both of which are nudging oil and shipping risk. Closer to home, there's practical news for residents: a new Greek island visa route easing EU travel, a court-ordered fix for Afghan family travel documents in the US, and steady-if-testing lira and inflation figures.",
- "sections": [
-  {
-   "heading": "Gaza Statements and Regional Diplomacy",
-   "body": "Turkey, Egypt and Qatar issued a joint statement condemning Israeli actions in Gaza, covered prominently by pro-government outlets (Milliyet, Hürriyet) and echoed by independent outlet Middle East Eye. Al Jazeera separately examined whether Israel would withdraw from Gaza if Hamas disarms. Coverage across lenses is broadly aligned on the facts here, with framing differences mainly in emphasis rather than substance. Separately, a drone strike on a court in North Darfur reportedly killed at least 35 people, according to a rights group cited by Middle East Eye."
-  },
-  {
-   "heading": "Iran Talks: Signals Crossed",
-   "body": "President Trump said talks with Iran represent a 'last chance' for a nuclear deal and that he had called off a planned strike to allow negotiations to proceed, per FDD, Reuters, and other outlets. But Iran's government said it is in talks with Oman, not directly with Washington, prompting sharp words from Trump, per BBC and The Washington Post. Analysts quoted by BBC describe the threat to oil tankers in the Middle East as the worst since the start of the Iran war, with attacks spreading to alternative shipping routes. For residents, there's no direct impact yet, but it's worth watching fuel and shipping costs, and travel advisories remain unchanged (Iran, Iraq, Syria, Lebanon at Level 4)."
-  },
-  {
-   "heading": "Easier Travel to EU Islands",
-   "body": "Greece's 'door visa' scheme has reportedly boosted Turkish tourist arrivals to EU islands by 25%, offering a simpler alternative to the standard Schengen application process, according to Turkish Minute and France 24. This is good practical news for Turkey-based residents planning short EU trips this season."
-  },
-  {
-   "heading": "Residency and Legal Notes",
-   "body": "In South Cyprus, 40 people without valid residence permits were arrested in an operation that also uncovered an ammunition depot, per Kıbrıs Postası — a reminder that ikamet compliance is being actively enforced regionally. In the US, a court ordered the State Department to process travel documents for families of Afghan refugees named in a pending lawsuit, a small but concrete win for affected families awaiting reunification."
-  },
-  {
-   "heading": "Money and Markets",
-   "body": "The lira held near 47.5 to the dollar and 54.8 to the euro. Bloomberg reports Turkish inflation eased slightly, though rising energy costs are testing the central bank's outlook. Commerzbank, via FXStreet, flags external trade pressures on the lira. Meanwhile, Turkey moved its digital lira project into a live sandbox phase, testing programmable payments among five pilot categories."
-  }
- ],
- "closing": "Stay hydrated and watch local fire advisories if you're near forested areas this week — take care, and see you tomorrow.",
- "title": "The Bosphorus Brief: Easier Island Hops, Watchful Eyes on Iran",
+ "title": "The Bosphorus Brief — 5 August 2026",
+ "overview": "The big domestic story today is a sweeping citizenship review: thousands of naturalizations have been revoked or are under challenge, with an Interior Ministry crackdown on fraudulent applications. Elsewhere, the lira keeps drifting, inflation cooled slightly, and regional tensions around Yemen and Iran continue to simmer without direct impact on Türkiye-based residents yet.",
+ "sections": "\n<parameter name=\"heading\">Citizenship revocations widen",
+ "body": "The Interior Ministry confirmed that 6,134 citizenships have been revoked or rescinded nationwide, part of a broader operation into fraudulent \"expertise\" pathways used to obtain Turkish citizenship. Separately, 72 people were detained this week in a related fraud investigation, with authorities seeking to cancel 687 additional citizenships tied to the same scheme. Coverage is consistent across pro-government (Daily Sabah), independent (Rudaw), and opposition-leaning (Turkish Minute) outlets, with no significant framing divergence — all report the same figures from the ministry. If you obtained citizenship through an investment or \"expertise\" intermediary, it may be worth confirming your file's status with a lawyer, even if you believe your application was legitimate; document requests and paperwork delays are likely as this review continues.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-04",
- "date_label": "Tuesday, 04 August 2026",
- "generated_at": "2026-08-03T21:36:51+00:00"
+ "date": "2026-08-05",
+ "date_label": "Wednesday, 05 August 2026",
+ "generated_at": "2026-08-04T21:45:33+00:00"
 }
