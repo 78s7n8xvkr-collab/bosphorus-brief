@@ -1,11 +1,13 @@
 {
- "title": "The Bosphorus Brief — 5 August 2026",
- "overview": "The big domestic story today is a sweeping citizenship review: thousands of naturalizations have been revoked or are under challenge, with an Interior Ministry crackdown on fraudulent applications. Elsewhere, the lira keeps drifting, inflation cooled slightly, and regional tensions around Yemen and Iran continue to simmer without direct impact on Türkiye-based residents yet.",
- "sections": "\n<parameter name=\"heading\">Citizenship revocations widen",
- "body": "The Interior Ministry confirmed that 6,134 citizenships have been revoked or rescinded nationwide, part of a broader operation into fraudulent \"expertise\" pathways used to obtain Turkish citizenship. Separately, 72 people were detained this week in a related fraud investigation, with authorities seeking to cancel 687 additional citizenships tied to the same scheme. Coverage is consistent across pro-government (Daily Sabah), independent (Rudaw), and opposition-leaning (Turkish Minute) outlets, with no significant framing divergence — all report the same figures from the ministry. If you obtained citizenship through an investment or \"expertise\" intermediary, it may be worth confirming your file's status with a lawyer, even if you believe your application was legitimate; document requests and paperwork delays are likely as this review continues.",
+ "title": "The Bosphorus Brief — 6 August 2026",
+ "overview": "Parliament takes up the \"Terrorism-Free Turkey\" bill just as a large citizenship-revocation drive and a Kurdish amnesty debate both move forward — a busy day for legal-status news. Regionally, Lebanon saw fresh strikes and Ceuta's migrant surge continues to dominate European coverage. The lira held steady against the dollar and euro.",
+ "sections": "\n<parameter name=\"heading\">Money: Lira Holds, Notable Milestone",
+ "heading": "Terror-Free Turkey Bill Heads to Parliament",
+ "body": "USD/TRY sits at 47.56 and EUR/TRY at 54.81, little changed. Analysts continue to flag pressure on the lira from July inflation data and FX rules (Commerzbank via CryptoRank). In other news, combat pilot Özlem İyidilli Karapınar has become the first woman promoted to brigadier general in Turkish Air Force history — reported by both state and opposition-leaning outlets without divergence.",
+ "closing": "Stay grounded, keep your paperwork handy, and have a good Thursday.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-05",
- "date_label": "Wednesday, 05 August 2026",
- "generated_at": "2026-08-04T21:45:33+00:00"
+ "date": "2026-08-06",
+ "date_label": "Thursday, 06 August 2026",
+ "generated_at": "2026-08-05T22:33:49+00:00"
 }
