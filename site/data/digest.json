@@ -1,28 +1,11 @@
 {
- "title": "The Bosphorus Brief: Residency wins, citizenship crackdowns, and a fire at an earthquake site",
- "overview": "Friday brings genuinely useful news for graduates navigating residency, alongside a large-scale citizenship revocation tied to a fraud investigation. Regionally, Erdogan is in Saudi Arabia for talks with MBS and Pakistan's Sharif, with a joint defence agreement expected to be signed today. Keep an eye on the lira, which continues to hold near 47.6 to the dollar amid rate-cut speculation.",
- "sections": [
-  {
-   "heading": "Good news for international graduates",
-   "body": "YÖK (the Higher Education Council) has confirmed that international graduates of Turkish universities can now receive residence permits valid for up to two years after graduation, up from the previous shorter window. This is a meaningful practical change for foreign students weighing job searches or further study in Türkiye, and was confirmed via an official letter circulated by YÖK and picked up by both independent education outlets and pro-government press. If you're a recent or upcoming graduate, this is worth confirming with your university's international office, as implementation details (which universities, which permit categories) are still being clarified."
-  },
-  {
-   "heading": "Citizenship revocations: a large number, a narrower story",
-   "body": "The Interior Ministry has confirmed that 6,134 foreigners have had Turkish citizenship revoked or rescinded, tied to an ongoing property-fraud investigation; separately, 72 people have reportedly been detained with 687 additional revocations sought. Pro-government and state-adjacent outlets frame this as enforcement against fraud; opposition-leaning coverage emphasizes the scale and due-process questions around such a large batch of revocations. For long-term residents, this appears targeted at citizenship-by-investment irregularities rather than routine ikamet holders, but if you acquired citizenship through property investment, it may be worth a quiet check with your immigration lawyer."
-  },
-  {
-   "heading": "A rights case worth tracking",
-   "body": "Turkish Minute reports that an asylum seeker and her 15-month-old baby were jailed after Switzerland returned her to Turkey — a case that sits squarely in the kind of legal-security territory this briefing tracks closely. Separately, Stockholm Center for Freedom notes Turkish law professors are publicly urging domestic courts to apply European Court of Human Rights rulings in Gülen-linked cases. Both stories point to an active conversation about how European rulings intersect with domestic proceedings — worth watching for residents with pending asylum or legal matters that touch cross-border jurisdiction."
-  },
-  {
-   "heading": "Safety note: fire at earthquake housing site",
-   "body": "Al Jazeera reports a fire broke out at a site housing people displaced by the 2023 earthquakes. Details on casualties or displacement numbers were not included in available coverage; if you have contacts in affected housing developments, it's worth checking in directly rather than relying on secondhand reports. No new Turkey-area earthquakes above M4 have been recorded since July 18 (Yeşilyurt, M5.0), so this appears to be a structural/housing incident rather than seismic."
-  }
- ],
- "closing": "Have a steady weekend, and if you're a graduate — go double-check that residence permit timeline with your university.",
+ "title": "The Bosphorus Brief — August 8, 2026",
+ "overview": "A defense pact between Turkey, Saudi Arabia, and Pakistan dominates the region's headlines, framed by Ankara as consistent with NATO commitments. Closer to home, there's genuinely good news for international students: YÖK has confirmed an extended residence permit pathway for foreign graduates. Meanwhile, Turkey's Constitutional Court issued two notable rulings on civil liberties, and the lira remains under mild pressure ahead of expected rate cuts.",
+ "sections": "\n<parameter name=\"heading\">Defense Pact: What It Means Beyond the Headlines",
+ "body": "Turkey, Saudi Arabia, and Pakistan signed a mutual defense agreement this week, with Pakistani officials describing it as a mutual-defense clause — an attack on one treated as an attack on all. Coverage is broad but framing differs: some outlets (including Haber 7) reported friction over whether the pact conflicts with NATO obligations, while Turkish officials and Middle East Eye state it aligns with, rather than replaces, NATO commitments. For residents, this is a diplomatic and defense-policy story rather than one with immediate day-to-day implications — no travel or security changes have followed from it so far.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-07",
- "date_label": "Friday, 07 August 2026",
- "generated_at": "2026-08-07T00:21:59+00:00"
+ "date": "2026-08-08",
+ "date_label": "Saturday, 08 August 2026",
+ "generated_at": "2026-08-07T21:06:59+00:00"
 }
