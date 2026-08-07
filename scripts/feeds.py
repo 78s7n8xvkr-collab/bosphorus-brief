@@ -19,7 +19,7 @@ GOOGLE_NEWS_AR = "https://news.google.com/rss/search?q={q}&hl=ar&gl=EG&ceid=EG:a
 REGION_WORDS = [
     "turkey", "türkiye", "turkish", "syria", "iran", "iraq", "lebanon",
     "egypt", "israel", "jordan", "middle east", "central asia", "caucasus",
-    "azerbaijan", "gulf",
+    "azerbaijan", "gulf", "greece", "greek", "cyprus", "aegean", "balkan",
 ]
 
 
@@ -71,6 +71,11 @@ FEEDS = [
     {"id": "gn-sky", "source": "Google News", "category": "region",
      "weight": 1, "max": 10,
      "url": gn('site:news.sky.com (Turkey OR Türkiye OR Iran OR Syria OR Israel OR Lebanon OR "Middle East") when:3d')},
+    # The other shore: Greece, Cyprus, and the Aegean, where much of the
+    # region's migration and Türkiye-relations news actually happens.
+    {"id": "gn-greece", "source": "Google News", "category": "region",
+     "weight": 1, "max": 8,
+     "url": gn('(Greece OR Cyprus OR Aegean) (Turkey OR Türkiye OR migrant OR refugee OR asylum OR earthquake OR "coast guard" OR border) when:3d')},
 
     # --------------------------------------------- Visas & residency ------
     # The personal-process beat: permits, visas, citizenship for foreigners
@@ -94,6 +99,11 @@ FEEDS = [
     {"id": "gn-afghan-syrian", "source": "Google News", "category": "migration",
      "weight": 3, "max": 10,
      "url": gn('(Afghan OR Afghans OR Syrian OR Syrians) (refugees OR asylum OR deport OR deported OR return OR resettlement) when:7d')},
+    # The human cost, not just the policy: deaths, disappearances,
+    # trafficking, and criminal cases entangled with migration.
+    {"id": "gn-mig-lives", "source": "Google News", "category": "migration",
+     "weight": 2, "max": 10,
+     "url": gn('(migrant OR refugee OR "asylum seeker" OR Afghan OR Syrian) (killed OR killing OR murder OR dead OR drowned OR missing OR shipwreck OR trafficking OR smuggling) when:3d')},
     # infomigrants.net's RSS endpoint 404s; reach it through Google News.
     # Its whole beat is this section, so no region scoping.
     {"id": "gn-infomigrants", "source": "Google News", "category": "migration",
