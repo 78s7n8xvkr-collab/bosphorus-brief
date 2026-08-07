@@ -124,6 +124,12 @@ FEEDS = [
     {"id": "gn-region-safety", "source": "Google News", "category": "safety",
      "weight": 1, "max": 10,
      "url": gn('(Syria OR Iraq OR Iran OR Lebanon) (strike OR attack OR ceasefire OR border) when:2d')},
+    # Governments telling their citizens to leave somewhere in the region —
+    # rare, and the highest-signal safety news there is for people who live
+    # here. August 2026's "consider departing" wave had no query to match.
+    {"id": "gn-departure-advisories", "source": "Google News",
+     "category": "safety", "weight": 3, "max": 8,
+     "url": gn('("State Department" OR embassy OR FCDO OR "foreign office") ("consider departing" OR "leave immediately" OR "authorized departure" OR "security alert" OR evacuate OR evacuation) ("Middle East" OR Turkey OR Türkiye OR Israel OR Iran OR Lebanon OR Gulf OR Egypt OR Jordan) when:3d')},
 
     # ------------------------------------------------- Rights & freedoms --
     # Legal security for foreign residents (deportations, entry bans,
@@ -228,6 +234,8 @@ BOOST_WORDS = [
     "syria", "iran", "ceasefire", "inflation", "central bank", "airport",
     "border", "airspace", "deport", "entry ban", "religious freedom",
     "freedom of belief", "echr", "rights court", "lgbt",
+    "consider departing", "authorized departure", "evacuate", "evacuation",
+    "security alert",
 ]
 
 # ---------------------------------------------------------------------------
