@@ -1,11 +1,12 @@
 {
- "title": "The Bosphorus Brief — August 8, 2026",
- "overview": "A defense pact between Turkey, Saudi Arabia, and Pakistan dominates the region's headlines, framed by Ankara as consistent with NATO commitments. Closer to home, there's genuinely good news for international students: YÖK has confirmed an extended residence permit pathway for foreign graduates. Meanwhile, Turkey's Constitutional Court issued two notable rulings on civil liberties, and the lira remains under mild pressure ahead of expected rate cuts.",
- "sections": "\n<parameter name=\"heading\">Defense Pact: What It Means Beyond the Headlines",
- "body": "Turkey, Saudi Arabia, and Pakistan signed a mutual defense agreement this week, with Pakistani officials describing it as a mutual-defense clause — an attack on one treated as an attack on all. Coverage is broad but framing differs: some outlets (including Haber 7) reported friction over whether the pact conflicts with NATO obligations, while Turkish officials and Middle East Eye state it aligns with, rather than replaces, NATO commitments. For residents, this is a diplomatic and defense-policy story rather than one with immediate day-to-day implications — no travel or security changes have followed from it so far.",
+ "title": "The Bosphorus Brief — 9 August 2026",
+ "overview": "A new defense pact between Türkiye, Saudi Arabia, and Pakistan dominates today's coverage, alongside good news for foreign graduates on residency permits. Regional tensions over the Strait of Hormuz and a drone incident near Bulgaria's border add to a watchful but not alarming backdrop for the region.",
+ "sections": "\n<parameter name=\"body\">The lira sits at 47.71 to the dollar and 55.12 to the euro today. ING Think notes that easing geopolitical tension is helping support Türkiye's disinflation efforts, while JPMorgan has reportedly taken profit on Turkish lira swap positions as bets grow on future rate cuts — a modest signal of market confidence, though not a guarantee of near-term relief at the till.",
+ "heading": "Lira and Rate Watch",
+ "closing": "Stay grounded, keep your paperwork handy, and enjoy the Sunday quiet — more tomorrow.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-08",
- "date_label": "Saturday, 08 August 2026",
- "generated_at": "2026-08-07T21:06:59+00:00"
+ "date": "2026-08-09",
+ "date_label": "Sunday, 09 August 2026",
+ "generated_at": "2026-08-08T21:53:07+00:00"
 }
