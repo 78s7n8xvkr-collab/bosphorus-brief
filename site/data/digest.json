@@ -1,12 +1,28 @@
 {
- "title": "The Bosphorus Brief — 9 August 2026",
- "overview": "A new defense pact between Türkiye, Saudi Arabia, and Pakistan dominates today's coverage, alongside good news for foreign graduates on residency permits. Regional tensions over the Strait of Hormuz and a drone incident near Bulgaria's border add to a watchful but not alarming backdrop for the region.",
- "sections": "\n<parameter name=\"body\">The lira sits at 47.71 to the dollar and 55.12 to the euro today. ING Think notes that easing geopolitical tension is helping support Türkiye's disinflation efforts, while JPMorgan has reportedly taken profit on Turkish lira swap positions as bets grow on future rate cuts — a modest signal of market confidence, though not a guarantee of near-term relief at the till.",
- "heading": "Lira and Rate Watch",
- "closing": "Stay grounded, keep your paperwork handy, and enjoy the Sunday quiet — more tomorrow.",
+ "title": "The Bosphorus Brief — Monday, 10 August 2026",
+ "overview": "A defense pact between Türkiye, Saudi Arabia, and Pakistan dominates headlines alongside Israel's rejection of a US-brokered Gaza plan. Closer to home, Black Sea shipping has resumed after a brief pause, and a small earthquake near Nurdağı is a reminder to keep your emergency basics ready. For residents, the practical stories worth a closer look sit in visas and rights coverage below.",
+ "sections": [
+  {
+   "heading": "Mecca Defense Pact Signed",
+   "body": "Türkiye, Saudi Arabia, and Pakistan formally signed a joint defense agreement in Mecca, described by all three governments as purely defensive and open to other countries joining. Turkish officials, echoed by a formal communications campaign from Ankara's Directorate of Communications, stressed the pact is not directed at Iran or any other state. Opposition-leaning and international outlets are covering the story alongside state media, with no major divergence in framing so far — the emphasis across the board is on regional defense cooperation rather than confrontation. No immediate implications for residents' daily life, but worth watching for any follow-on diplomatic or travel notices."
+  },
+  {
+   "heading": "Gaza Plan Rejected, Straits Reopen",
+   "body": "Israel's Prime Minister Netanyahu rejected a 15-point US plan for Gaza, saying troops will stay until Hamas is disarmed. International outlets (BBC, AP, Sky) and Al Jazeera cover this heavily; Middle East Eye separately reports a Board of Peace envoy saying Israel is not required to withdraw. Closer to home, Türkiye has resumed Black Sea ship transits through the Straits after a brief, unexplained delay — a relief for anyone tracking shipping, energy, or trade routes tied to the Bosphorus and Dardanelles."
+  },
+  {
+   "heading": "Visas, Deportation, and Residency Notes",
+   "body": "Foreign population statistics for Türkiye were released, offering a snapshot of the resident international community — a routine but useful reference. Separately, a well-known Turkish media figure faces deportation proceedings after disclosing his profession on air, and a program audience member without a work permit was detained during filming — both reminders that work-permit compliance is actively enforced, even in casual settings. On a more encouraging note, YÖK has announced possible residence permit extensions for international graduates; details are still emerging, so graduates should watch official channels before assuming eligibility."
+  },
+  {
+   "heading": "Migration and Rights, Briefly",
+   "body": "Spain's migration friction with Italy and a reported €24m smuggling network linking Algeria to Ibiza show migration enforcement tightening across the EU's southern flank — a useful gauge for anyone tracking broader European asylum trends. A Russian family denied asylum in Finland says it fears reprisals over pro-Ukraine activism, a case that echoes standing concerns about asylum decisions affecting vulnerable applicants. In the US, a program pairing immigrants with volunteer legal help highlights the ongoing gap many face in deportation proceedings without counsel."
+  }
+ ],
+ "closing": "Stay hydrated, keep your ikamet documents handy, and have a steady start to the week.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-09",
- "date_label": "Sunday, 09 August 2026",
- "generated_at": "2026-08-08T21:53:07+00:00"
+ "date": "2026-08-10",
+ "date_label": "Monday, 10 August 2026",
+ "generated_at": "2026-08-09T21:56:32+00:00"
 }
