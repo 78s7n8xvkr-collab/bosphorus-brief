@@ -1,28 +1,28 @@
 {
- "title": "The Bosphorus Brief — Monday, 10 August 2026",
- "overview": "A defense pact between Türkiye, Saudi Arabia, and Pakistan dominates headlines alongside Israel's rejection of a US-brokered Gaza plan. Closer to home, Black Sea shipping has resumed after a brief pause, and a small earthquake near Nurdağı is a reminder to keep your emergency basics ready. For residents, the practical stories worth a closer look sit in visas and rights coverage below.",
+ "title": "The Bosphorus Brief — 11 August 2026",
+ "overview": "The big news is parliamentary: Turkey's parliament passed the first law in the Kurdish peace process, suspending prosecutions for some PKK members. Coverage of the vote diverges sharply by outlet lens, so read carefully. Elsewhere, EU-Turkey ties, foreign resident numbers, and a Ras al-Ain return effort in Syria round out a day light on daily-life disruptions.",
  "sections": [
   {
-   "heading": "Mecca Defense Pact Signed",
-   "body": "Türkiye, Saudi Arabia, and Pakistan formally signed a joint defense agreement in Mecca, described by all three governments as purely defensive and open to other countries joining. Turkish officials, echoed by a formal communications campaign from Ankara's Directorate of Communications, stressed the pact is not directed at Iran or any other state. Opposition-leaning and international outlets are covering the story alongside state media, with no major divergence in framing so far — the emphasis across the board is on regional defense cooperation rather than confrontation. No immediate implications for residents' daily life, but worth watching for any follow-on diplomatic or travel notices."
+   "heading": "Kurdish peace process: first law passed",
+   "body": "Parliament approved, 468 votes, a law suspending prosecutions and prison sentences for some PKK members — the first legislative step in a process meant to end four decades of conflict. State-aligned outlets (Anadolu, Yeni Şafak) frame this through official statements calling it the opening of a 'terror-free Turkey.' International (AP, Bloomberg) and independent (Al-Monitor) coverage describes it more neutrally as a pardon-like bill for thousands of militants, while opposition-leaning Turkish Minute gives it straight factual treatment alongside a profile of Abdullah Öcalan. For foreign residents, this is a domestic political milestone rather than something with immediate paperwork implications, but it may ease travel advisories in southeastern provinces over time — worth watching, not acting on yet."
   },
   {
-   "heading": "Gaza Plan Rejected, Straits Reopen",
-   "body": "Israel's Prime Minister Netanyahu rejected a 15-point US plan for Gaza, saying troops will stay until Hamas is disarmed. International outlets (BBC, AP, Sky) and Al Jazeera cover this heavily; Middle East Eye separately reports a Board of Peace envoy saying Israel is not required to withdraw. Closer to home, Türkiye has resumed Black Sea ship transits through the Straits after a brief, unexplained delay — a relief for anyone tracking shipping, energy, or trade routes tied to the Bosphorus and Dardanelles."
+   "heading": "EU relations and residency numbers",
+   "body": "The president said EU customs union and visa liberalization talks serve everyone's interest, a familiar signal but no concrete change yet for visa rules. Separately, TRT Avaz published updated foreign population statistics for Turkey — useful context for anyone tracking how many international residents are here, though no policy shift accompanies it. YÖK also reportedly addressed whether residence permits for international graduates will be extended; those relying on graduate-track permits should confirm details directly with YÖK or their ikamet office rather than secondhand reports."
   },
   {
-   "heading": "Visas, Deportation, and Residency Notes",
-   "body": "Foreign population statistics for Türkiye were released, offering a snapshot of the resident international community — a routine but useful reference. Separately, a well-known Turkish media figure faces deportation proceedings after disclosing his profession on air, and a program audience member without a work permit was detained during filming — both reminders that work-permit compliance is actively enforced, even in casual settings. On a more encouraging note, YÖK has announced possible residence permit extensions for international graduates; details are still emerging, so graduates should watch official channels before assuming eligibility."
+   "heading": "Syria: interrupted return to Ras al-Ain",
+   "body": "An attempt by roughly 2,500 displaced Syrian Kurds to return to Ras al-Ain, a town Turkey and allied forces seized in 2019, was halted Monday after armed groups attacked the first arrivals. Hundreds had already reached the town. This is reported only in opposition-leaning coverage so far; residents with family or interests in northern Syria should treat it as an unfolding, unresolved situation rather than a resolved return."
   },
   {
-   "heading": "Migration and Rights, Briefly",
-   "body": "Spain's migration friction with Italy and a reported €24m smuggling network linking Algeria to Ibiza show migration enforcement tightening across the EU's southern flank — a useful gauge for anyone tracking broader European asylum trends. A Russian family denied asylum in Finland says it fears reprisals over pro-Ukraine activism, a case that echoes standing concerns about asylum decisions affecting vulnerable applicants. In the US, a program pairing immigrants with volunteer legal help highlights the ongoing gap many face in deportation proceedings without counsel."
+   "heading": "Rights note: Armenian Patriarchate case",
+   "body": "Turkey's Armenian Patriarchate publicly backed Catholicos Karekin II and warned that a criminal case against him could harm the Church. Details are thin and appear in only one specialized outlet, so we note it plainly without further characterization — a story worth watching for anyone following religious-community affairs in the region."
   }
  ],
- "closing": "Stay hydrated, keep your ikamet documents handy, and have a steady start to the week.",
+ "closing": "Steady day overall — no new travel or entry disruptions for residents; keep an eye on the YÖK graduate-permit story if it applies to you.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-10",
- "date_label": "Monday, 10 August 2026",
- "generated_at": "2026-08-09T21:56:32+00:00"
+ "date": "2026-08-11",
+ "date_label": "Tuesday, 11 August 2026",
+ "generated_at": "2026-08-10T21:09:35+00:00"
 }
