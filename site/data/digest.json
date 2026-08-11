@@ -1,28 +1,11 @@
 {
- "title": "The Bosphorus Brief — 11 August 2026",
- "overview": "The big news is parliamentary: Turkey's parliament passed the first law in the Kurdish peace process, suspending prosecutions for some PKK members. Coverage of the vote diverges sharply by outlet lens, so read carefully. Elsewhere, EU-Turkey ties, foreign resident numbers, and a Ras al-Ain return effort in Syria round out a day light on daily-life disruptions.",
- "sections": [
-  {
-   "heading": "Kurdish peace process: first law passed",
-   "body": "Parliament approved, 468 votes, a law suspending prosecutions and prison sentences for some PKK members — the first legislative step in a process meant to end four decades of conflict. State-aligned outlets (Anadolu, Yeni Şafak) frame this through official statements calling it the opening of a 'terror-free Turkey.' International (AP, Bloomberg) and independent (Al-Monitor) coverage describes it more neutrally as a pardon-like bill for thousands of militants, while opposition-leaning Turkish Minute gives it straight factual treatment alongside a profile of Abdullah Öcalan. For foreign residents, this is a domestic political milestone rather than something with immediate paperwork implications, but it may ease travel advisories in southeastern provinces over time — worth watching, not acting on yet."
-  },
-  {
-   "heading": "EU relations and residency numbers",
-   "body": "The president said EU customs union and visa liberalization talks serve everyone's interest, a familiar signal but no concrete change yet for visa rules. Separately, TRT Avaz published updated foreign population statistics for Turkey — useful context for anyone tracking how many international residents are here, though no policy shift accompanies it. YÖK also reportedly addressed whether residence permits for international graduates will be extended; those relying on graduate-track permits should confirm details directly with YÖK or their ikamet office rather than secondhand reports."
-  },
-  {
-   "heading": "Syria: interrupted return to Ras al-Ain",
-   "body": "An attempt by roughly 2,500 displaced Syrian Kurds to return to Ras al-Ain, a town Turkey and allied forces seized in 2019, was halted Monday after armed groups attacked the first arrivals. Hundreds had already reached the town. This is reported only in opposition-leaning coverage so far; residents with family or interests in northern Syria should treat it as an unfolding, unresolved situation rather than a resolved return."
-  },
-  {
-   "heading": "Rights note: Armenian Patriarchate case",
-   "body": "Turkey's Armenian Patriarchate publicly backed Catholicos Karekin II and warned that a criminal case against him could harm the Church. Details are thin and appear in only one specialized outlet, so we note it plainly without further characterization — a story worth watching for anyone following religious-community affairs in the region."
-  }
- ],
- "closing": "Steady day overall — no new travel or entry disruptions for residents; keep an eye on the YÖK graduate-permit story if it applies to you.",
+ "title": "Steady Skies, Tense Region",
+ "overview": "Regional security stories dominate today — from the fallout of the US-Iran war to a death sentence for Bashar al-Assad — but daily life in Türkiye stays largely on its usual track: the lira holds near 47.7 to the dollar, and Ankara's diplomatic and legislative machinery keeps moving. Residents should note continuing tension in the wider region, especially around the Red Sea and Gulf, even as Türkiye itself remains calm.",
+ "sections": "\n<parameter name=\"heading\">Regional tensions stay elevated",
+ "body": "The US-Iran war remains the backdrop to much regional news. Houthi forces struck a ship carrying Saudi military equipment in the Red Sea, killing several crew — their first deadly attack since the war began — and Reuters and The Economist report additional missile activity in the Gulf. Multiple international outlets (NYT, AP, NBC, Sky News) report that President Trump left Turkey via an unusual security routine after a summit, citing an Iran-linked threat; Turkish and international coverage both note the story but frame it mainly as a US security matter rather than a Turkey-specific one. For residents, this is a reminder to keep half an eye on regional shipping and travel advisories — Iran, Iraq, Syria, and Lebanon remain at the US State Department's highest advisory level (L4), while Türkiye stays at L2.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-11",
- "date_label": "Tuesday, 11 August 2026",
- "generated_at": "2026-08-10T21:09:35+00:00"
+ "date": "2026-08-12",
+ "date_label": "Wednesday, 12 August 2026",
+ "generated_at": "2026-08-11T21:12:06+00:00"
 }
