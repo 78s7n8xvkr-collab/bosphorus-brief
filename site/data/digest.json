@@ -1,11 +1,28 @@
 {
- "title": "Steady Skies, Tense Region",
- "overview": "Regional security stories dominate today — from the fallout of the US-Iran war to a death sentence for Bashar al-Assad — but daily life in Türkiye stays largely on its usual track: the lira holds near 47.7 to the dollar, and Ankara's diplomatic and legislative machinery keeps moving. Residents should note continuing tension in the wider region, especially around the Red Sea and Gulf, even as Türkiye itself remains calm.",
- "sections": "\n<parameter name=\"heading\">Regional tensions stay elevated",
- "body": "The US-Iran war remains the backdrop to much regional news. Houthi forces struck a ship carrying Saudi military equipment in the Red Sea, killing several crew — their first deadly attack since the war began — and Reuters and The Economist report additional missile activity in the Gulf. Multiple international outlets (NYT, AP, NBC, Sky News) report that President Trump left Turkey via an unusual security routine after a summit, citing an Iran-linked threat; Turkish and international coverage both note the story but frame it mainly as a US security matter rather than a Turkey-specific one. For residents, this is a reminder to keep half an eye on regional shipping and travel advisories — Iran, Iraq, Syria, and Lebanon remain at the US State Department's highest advisory level (L4), while Türkiye stays at L2.",
+ "title": "The Bosphorus Brief — 13 August 2026",
+ "overview": "The dominant international story today is the still-unexplained security scramble around a US presidential flight departure from Turkey, with reporting split between security-threat accounts and questions about who was informed. Closer to home, there's real movement on legal-security issues affecting residents — a German court ruling on deportation risk to Turkey, a Turkish operation against visa-appointment fraud, and continued diplomatic engagement on EU-Turkey ties. A minor F-16 training crash and routine safety notes round out the day.",
+ "sections": [
+  {
+   "heading": "German court weighs deportation risk to Turkey",
+   "body": "A German court has ruled that a standard 'procedure' assurance does not adequately demonstrate that the risk of torture or inhuman treatment has been eliminated in Turkey, a decision reported by Bianet. Separately, a German court granted deportation protection to a PKK figure, per DW. Together these rulings matter directly for foreign residents whose legal status intersects with removal proceedings — they signal that German courts continue to scrutinize case-by-case risk rather than accept blanket guarantees, which could shape future asylum and deportation decisions involving Turkey."
+  },
+  {
+   "heading": "Visa appointment fraud crackdown",
+   "body": "Turkish authorities have ordered the detention of 49 people over the alleged black-market sale of visa appointments, according to Stockholm Center for Freedom and Turkiyetoday. For residents and applicants navigating Turkey's appointment systems, this is a reminder to use official channels only; enforcement actions like this one suggest continued government attention to fraud in the visa process, though no changes to standard procedures have been announced."
+  },
+  {
+   "heading": "Trump's abrupt Turkey departure draws mixed coverage",
+   "body": "Multiple outlets are covering a reportedly hastily arranged, secret flight departure by President Trump from Turkey, with the New York Post and others citing an unnamed shoulder-fired missile threat as the trigger. Turkish Minute, an opposition-leaning outlet, and international wires note that even some traveling staff and Cabinet members were reportedly left behind or uninformed. State-aligned Turkish coverage has been largely quiet on the security-threat framing; international outlets are focused on the unusual secrecy and who knew what, when. No official Turkish government statement on the alleged threat has been reported."
+  },
+  {
+   "heading": "Routine safety and travel notes",
+   "body": "A Turkish Air Force F-16 crashed during a training exercise in Yalova on Wednesday; the pilot ejected safely, per Turkish Minute and Hürriyet Daily News — a routine military incident with no public safety impact. The US State Department's advisory levels for Türkiye remain unchanged at Level 2 (exercise increased caution). No new earthquakes above M4 have struck Turkey since August 9, when a M4.4 was recorded near Nurdağı; seismic activity in the region remains at background levels."
+  }
+ ],
+ "closing": "Stay grounded, keep your paperwork current, and have a steady Thursday.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-12",
- "date_label": "Wednesday, 12 August 2026",
- "generated_at": "2026-08-11T21:12:06+00:00"
+ "date": "2026-08-13",
+ "date_label": "Thursday, 13 August 2026",
+ "generated_at": "2026-08-12T21:11:03+00:00"
 }
