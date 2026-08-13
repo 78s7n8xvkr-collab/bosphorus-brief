@@ -1,28 +1,32 @@
 {
- "title": "The Bosphorus Brief — 13 August 2026",
- "overview": "The dominant international story today is the still-unexplained security scramble around a US presidential flight departure from Turkey, with reporting split between security-threat accounts and questions about who was informed. Closer to home, there's real movement on legal-security issues affecting residents — a German court ruling on deportation risk to Turkey, a Turkish operation against visa-appointment fraud, and continued diplomatic engagement on EU-Turkey ties. A minor F-16 training crash and routine safety notes round out the day.",
+ "title": "The Bosphorus Brief — Friday, 14 August 2026",
+ "overview": "Money matters lead today: the central bank nudged up its inflation forecast even as it signals room to ease funding rates further, and the lira continues to soften past 47.78 to the dollar. Elsewhere, a visa-fraud crackdown and a German court ruling on Kurdish asylum seekers are worth a resident's attention, alongside routine regional and safety notes.",
  "sections": [
   {
-   "heading": "German court weighs deportation risk to Turkey",
-   "body": "A German court has ruled that a standard 'procedure' assurance does not adequately demonstrate that the risk of torture or inhuman treatment has been eliminated in Turkey, a decision reported by Bianet. Separately, a German court granted deportation protection to a PKK figure, per DW. Together these rulings matter directly for foreign residents whose legal status intersects with removal proceedings — they signal that German courts continue to scrutinize case-by-case risk rather than accept blanket guarantees, which could shape future asylum and deportation decisions involving Turkey."
+   "heading": "Money: Inflation Forecast Up, Funding Rate Signaled Lower",
+   "body": "Turkey's central bank raised its 2026 inflation forecast even as it signaled a lower effective funding rate ahead, a combination that sounds contradictory but reflects policymakers trying to ease borrowing costs gradually without reigniting price pressures too fast. Bloomberg and Turkish Minute both flagged the forecast revision as a sign the disinflation path is bumpier than hoped. Meanwhile Commerzbank analysts (via FXStreet) expect further lira depreciation against the dollar, and the exchange rate today sits at USD/TRY 47.78, EUR/TRY 55.11, GBP/TRY 64.52. For residents paid in lira or budgeting rent and school fees, it's worth assuming continued gradual depreciation rather than a sharp swing either way."
   },
   {
-   "heading": "Visa appointment fraud crackdown",
-   "body": "Turkish authorities have ordered the detention of 49 people over the alleged black-market sale of visa appointments, according to Stockholm Center for Freedom and Turkiyetoday. For residents and applicants navigating Turkey's appointment systems, this is a reminder to use official channels only; enforcement actions like this one suggest continued government attention to fraud in the visa process, though no changes to standard procedures have been announced."
+   "heading": "Visa Appointment Black Market: 49 Detained",
+   "body": "Authorities have ordered the detention of 49 people accused of selling visa appointment slots on the black market, an operation covered by both Stockholm Center for Freedom and the pro-government Türkiye Today, which frame it respectively as a crackdown worth scrutiny and a needed enforcement action. For anyone who has struggled to book an appointment through official channels, this is a reminder that scalping schemes exist and that going through unofficial fixers carries real legal risk, not just cost risk."
   },
   {
-   "heading": "Trump's abrupt Turkey departure draws mixed coverage",
-   "body": "Multiple outlets are covering a reportedly hastily arranged, secret flight departure by President Trump from Turkey, with the New York Post and others citing an unnamed shoulder-fired missile threat as the trigger. Turkish Minute, an opposition-leaning outlet, and international wires note that even some traveling staff and Cabinet members were reportedly left behind or uninformed. State-aligned Turkish coverage has been largely quiet on the security-threat framing; international outlets are focused on the unusual secrecy and who knew what, when. No official Turkish government statement on the alleged threat has been reported."
+   "heading": "German Court: Torture Risk Persists for Kurdish Asylum Seeker",
+   "body": "A German court has ruled that Turkey's ongoing peace process has not eliminated the risk of torture for a Kurdish asylum seeker, according to Stockholm Center for Freedom. This is a concrete legal finding, not commentary, and it matters for anyone tracking how European courts are assessing return risk for Kurdish nationals — a standing concern for foreign residents and dual nationals navigating cross-border legal status."
   },
   {
-   "heading": "Routine safety and travel notes",
-   "body": "A Turkish Air Force F-16 crashed during a training exercise in Yalova on Wednesday; the pilot ejected safely, per Turkish Minute and Hürriyet Daily News — a routine military incident with no public safety impact. The US State Department's advisory levels for Türkiye remain unchanged at Level 2 (exercise increased caution). No new earthquakes above M4 have struck Turkey since August 9, when a M4.4 was recorded near Nurdağı; seismic activity in the region remains at background levels."
+   "heading": "EU Ties and Regional Diplomacy",
+   "body": "Erdoğan used meetings with Austria's chancellor and public remarks to push for EU customs union progress and visa liberalization, covered similarly across state media (Anadolu, TRT Afrika) and pro-government Hürriyet. No concrete EU response is reported yet, so residents hoping for eased Schengen travel shouldn't expect near-term change. Separately, Turkey continues encouraging Egypt to join the Mecca agreement framework, part of broader regional diplomatic maneuvering discussed by Middle East Eye alongside Gaza-related statements from Erdoğan and continuing developments in the West Bank reported by the BBC."
+  },
+  {
+   "heading": "Safety Note: Fethiye Boat Fire, Minor Quakes",
+   "body": "A fire aboard an excursion vessel off Fethiye led to the evacuation of 115 people — a reminder to check safety briefings before day trips, though no injuries were reported in the material available. On the seismic front, a M4.4 quake struck near Nurdağı on August 9; this is within Turkey's normal background activity and travel advisories remain unchanged (Türkiye L2)."
   }
  ],
- "closing": "Stay grounded, keep your paperwork current, and have a steady Thursday.",
+ "closing": "Stay dry, keep your ikamet paperwork handy, and have a good weekend.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-13",
- "date_label": "Thursday, 13 August 2026",
- "generated_at": "2026-08-12T21:11:03+00:00"
+ "date": "2026-08-14",
+ "date_label": "Friday, 14 August 2026",
+ "generated_at": "2026-08-13T21:11:11+00:00"
 }
