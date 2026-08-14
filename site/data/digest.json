@@ -1,32 +1,11 @@
 {
- "title": "The Bosphorus Brief — Friday, 14 August 2026",
- "overview": "Money matters lead today: the central bank nudged up its inflation forecast even as it signals room to ease funding rates further, and the lira continues to soften past 47.78 to the dollar. Elsewhere, a visa-fraud crackdown and a German court ruling on Kurdish asylum seekers are worth a resident's attention, alongside routine regional and safety notes.",
- "sections": [
-  {
-   "heading": "Money: Inflation Forecast Up, Funding Rate Signaled Lower",
-   "body": "Turkey's central bank raised its 2026 inflation forecast even as it signaled a lower effective funding rate ahead, a combination that sounds contradictory but reflects policymakers trying to ease borrowing costs gradually without reigniting price pressures too fast. Bloomberg and Turkish Minute both flagged the forecast revision as a sign the disinflation path is bumpier than hoped. Meanwhile Commerzbank analysts (via FXStreet) expect further lira depreciation against the dollar, and the exchange rate today sits at USD/TRY 47.78, EUR/TRY 55.11, GBP/TRY 64.52. For residents paid in lira or budgeting rent and school fees, it's worth assuming continued gradual depreciation rather than a sharp swing either way."
-  },
-  {
-   "heading": "Visa Appointment Black Market: 49 Detained",
-   "body": "Authorities have ordered the detention of 49 people accused of selling visa appointment slots on the black market, an operation covered by both Stockholm Center for Freedom and the pro-government Türkiye Today, which frame it respectively as a crackdown worth scrutiny and a needed enforcement action. For anyone who has struggled to book an appointment through official channels, this is a reminder that scalping schemes exist and that going through unofficial fixers carries real legal risk, not just cost risk."
-  },
-  {
-   "heading": "German Court: Torture Risk Persists for Kurdish Asylum Seeker",
-   "body": "A German court has ruled that Turkey's ongoing peace process has not eliminated the risk of torture for a Kurdish asylum seeker, according to Stockholm Center for Freedom. This is a concrete legal finding, not commentary, and it matters for anyone tracking how European courts are assessing return risk for Kurdish nationals — a standing concern for foreign residents and dual nationals navigating cross-border legal status."
-  },
-  {
-   "heading": "EU Ties and Regional Diplomacy",
-   "body": "Erdoğan used meetings with Austria's chancellor and public remarks to push for EU customs union progress and visa liberalization, covered similarly across state media (Anadolu, TRT Afrika) and pro-government Hürriyet. No concrete EU response is reported yet, so residents hoping for eased Schengen travel shouldn't expect near-term change. Separately, Turkey continues encouraging Egypt to join the Mecca agreement framework, part of broader regional diplomatic maneuvering discussed by Middle East Eye alongside Gaza-related statements from Erdoğan and continuing developments in the West Bank reported by the BBC."
-  },
-  {
-   "heading": "Safety Note: Fethiye Boat Fire, Minor Quakes",
-   "body": "A fire aboard an excursion vessel off Fethiye led to the evacuation of 115 people — a reminder to check safety briefings before day trips, though no injuries were reported in the material available. On the seismic front, a M4.4 quake struck near Nurdağı on August 9; this is within Turkey's normal background activity and travel advisories remain unchanged (Türkiye L2)."
-  }
- ],
- "closing": "Stay dry, keep your ikamet paperwork handy, and have a good weekend.",
+ "title": "The Bosphorus Brief — Saturday, 15 August 2026",
+ "overview": "A quieter weekend on the ground in Türkiye, but two threads worth your attention: a UN rebuke of juvenile justice reforms, and a black-market visa appointment bust that's a useful reminder to book only through official channels. Regionally, Hormuz tensions and Black Sea shipping disruptions continue to ripple into energy and currency markets.",
+ "sections": "\n<parameter name=\"heading\">Visa appointments: stick to official channels",
+ "body": "Turkish authorities have ordered the detention of 49 people over the alleged sale of visa appointment slots on the black market, according to Turkish Minute and Türkiye Today. If you or family members are booking appointments for residency or visa processes, use only the official government portals (e-devlet, the Foreigners' Directorate site) — third-party sellers offering \"guaranteed\" or faster slots are the target of this crackdown, not a legitimate shortcut.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-14",
- "date_label": "Friday, 14 August 2026",
- "generated_at": "2026-08-13T21:11:11+00:00"
+ "date": "2026-08-15",
+ "date_label": "Saturday, 15 August 2026",
+ "generated_at": "2026-08-14T21:47:36+00:00"
 }
