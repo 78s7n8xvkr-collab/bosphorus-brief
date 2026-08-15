@@ -1,11 +1,28 @@
 {
- "title": "The Bosphorus Brief — Saturday, 15 August 2026",
- "overview": "A quieter weekend on the ground in Türkiye, but two threads worth your attention: a UN rebuke of juvenile justice reforms, and a black-market visa appointment bust that's a useful reminder to book only through official channels. Regionally, Hormuz tensions and Black Sea shipping disruptions continue to ripple into energy and currency markets.",
- "sections": "\n<parameter name=\"heading\">Visa appointments: stick to official channels",
- "body": "Turkish authorities have ordered the detention of 49 people over the alleged sale of visa appointment slots on the black market, according to Turkish Minute and Türkiye Today. If you or family members are booking appointments for residency or visa processes, use only the official government portals (e-devlet, the Foreigners' Directorate site) — third-party sellers offering \"guaranteed\" or faster slots are the target of this crackdown, not a legitimate shortcut.",
+ "title": "The Bosphorus Brief — Sunday, 16 August 2026",
+ "overview": "Regional tensions dominate the weekend, with strikes in southern Lebanon and a disputed pilot-detention claim between Iran and Qatar drawing heavy coverage. Closer to home, a visa black-market case in Turkey and a lira forecast update are the practical items worth your attention. Nothing here changes day-to-day life in Türkiye directly, but it's worth watching how regional friction affects travel and money.",
+ "sections": [
+  {
+   "heading": "Lebanon strikes and the Iran-Qatar pilot dispute",
+   "body": "Israeli strikes on southern Lebanon killed eleven people on Saturday, according to Lebanese authorities; Israel's military said it targeted 'Hezbollah terror infrastructure' in response to earlier action against its soldiers. Iran's foreign ministry condemned the strikes, per Tasnim news agency. Separately, Qatar has denied Iranian claims that it captured three Iranian pilots after downing two fighter jets at the start of the US-Iran war — international outlets (BBC) report the denial straightforwardly, while state media in the region (Al Jazeera) is carrying Iran's version alongside it. For residents in Türkiye, this remains a story to watch rather than act on: there's no indication of direct impact on travel through Turkish airspace or borders, but those with plans routing through Lebanon, Iran, or Qatar should monitor official advisories, especially given Lebanon and Iran both sit at US Travel Advisory Level 4."
+  },
+  {
+   "heading": "Visa appointment black market — a reminder on paperwork channels",
+   "body": "Turkish courts have jailed 37 people over an alleged scheme selling visa appointment slots on the black market, according to Turkish Minute. It's a useful reminder for anyone navigating ikamet renewals or visa appointments to use only official government channels (e-ikamet, embassy portals) and to be wary of anyone offering to 'speed up' appointments for a fee. No further detail yet on which visa categories were affected or sentencing terms."
+  },
+  {
+   "heading": "Lira and inflation outlook",
+   "body": "Turkey's Central Bank nudged up its 2026 inflation forecast, per Finimize and Bloomberg, while Commerzbank projects further lira depreciation against the dollar. Today's rates: USD/TRY 47.88, EUR/TRY 55.37, GBP/TRY 64.8. For residents budgeting in lira, this points to continued gradual depreciation rather than any sudden shift — worth factoring into rent negotiations or fixed-income planning, but not cause for alarm."
+  },
+  {
+   "heading": "Rights and legal-status watch",
+   "body": "A few items worth tracking quietly: Rudaw reports that a North Rhine-Westphalia administration official criticized Germany's stance on Yazidi deportations as a 'bystander' position — a story appearing so far only in independent Kurdish-focused coverage. Separately, International Christian Concern reports a Baptist pastor was released from detention in Syria. And RFI carries comments from a descendant of Armenian Genocide survivors on political barriers to recognition — a recurring, sensitive topic with no new developments to report beyond the individual's remarks."
+  }
+ ],
+ "closing": "Steady weekend overall — keep an eye on Lebanon-related travel advisories and treat any 'visa appointment helper' offers with real caution.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-15",
- "date_label": "Saturday, 15 August 2026",
- "generated_at": "2026-08-14T21:47:36+00:00"
+ "date": "2026-08-16",
+ "date_label": "Sunday, 16 August 2026",
+ "generated_at": "2026-08-15T21:42:46+00:00"
 }
