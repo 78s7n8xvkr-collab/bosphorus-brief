@@ -1,28 +1,28 @@
 {
- "title": "The Bosphorus Brief — Sunday, 16 August 2026",
- "overview": "Regional tensions dominate the weekend, with strikes in southern Lebanon and a disputed pilot-detention claim between Iran and Qatar drawing heavy coverage. Closer to home, a visa black-market case in Turkey and a lira forecast update are the practical items worth your attention. Nothing here changes day-to-day life in Türkiye directly, but it's worth watching how regional friction affects travel and money.",
+ "title": "The Bosphorus Brief — 17 August 2026",
+ "overview": "Regional diplomacy dominates today, with a new Turkey-Saudi-Pakistan defense pact drawing attention and Gaza mediation efforts continuing despite Israel's earlier rejection of the Trump plan. Closer to home, there's meaningful movement on visas, asylum, and court statistics that matter directly to foreign residents. Lebanon tensions and a weakening lira round out a fairly dense Monday.",
  "sections": [
   {
-   "heading": "Lebanon strikes and the Iran-Qatar pilot dispute",
-   "body": "Israeli strikes on southern Lebanon killed eleven people on Saturday, according to Lebanese authorities; Israel's military said it targeted 'Hezbollah terror infrastructure' in response to earlier action against its soldiers. Iran's foreign ministry condemned the strikes, per Tasnim news agency. Separately, Qatar has denied Iranian claims that it captured three Iranian pilots after downing two fighter jets at the start of the US-Iran war — international outlets (BBC) report the denial straightforwardly, while state media in the region (Al Jazeera) is carrying Iran's version alongside it. For residents in Türkiye, this remains a story to watch rather than act on: there's no indication of direct impact on travel through Turkish airspace or borders, but those with plans routing through Lebanon, Iran, or Qatar should monitor official advisories, especially given Lebanon and Iran both sit at US Travel Advisory Level 4."
+   "heading": "Turkey-Saudi-Pakistan Pact and Gaza Diplomacy",
+   "body": "Erdoğan floated the idea of Egypt joining the new Turkey-Saudi Arabia-Pakistan defense agreement, which President Trump publicly welcomed as a sign the 'Mideast is coming together.' Separately, Türkiye joined seven other countries in condemning Israel's rejection of the Trump Gaza plan, a story carried by state media (TRT World, Anadolu) and independent outlet Middle East Eye alike. In a notable diplomatic move, Trump envoy Jared Kushner met directly with a Hamas leader to push the peace plan forward — a rare encounter reported by BBC and Al Jazeera. None of this changes daily life in Türkiye directly, but it's worth watching as a barometer of regional stability."
   },
   {
-   "heading": "Visa appointment black market — a reminder on paperwork channels",
-   "body": "Turkish courts have jailed 37 people over an alleged scheme selling visa appointment slots on the black market, according to Turkish Minute. It's a useful reminder for anyone navigating ikamet renewals or visa appointments to use only official government channels (e-ikamet, embassy portals) and to be wary of anyone offering to 'speed up' appointments for a fee. No further detail yet on which visa categories were affected or sentencing terms."
+   "heading": "Visas, Residency, and Court Backlogs — What Matters for Foreigners",
+   "body": "Turkish authorities jailed 37 people over an alleged black-market scheme selling visa appointment slots — a reminder to book directly through official channels only. Erdoğan renewed calls for the EU to advance customs union and visa liberalization talks, a longstanding ask with no immediate timeline. Separately, both Cumhuriyet and sol.org.tr report that Turkey accounts for roughly 40% of all pending cases before the European Court of Human Rights — a striking figure that underscores how central Turkish legal cases are to that court's docket, though it doesn't indicate outcomes. In Germany, authorities are tightening reviews of Syrian asylum protections and revoking status in more cases, a shift Syrian residents in Europe should watch closely."
   },
   {
-   "heading": "Lira and inflation outlook",
-   "body": "Turkey's Central Bank nudged up its 2026 inflation forecast, per Finimize and Bloomberg, while Commerzbank projects further lira depreciation against the dollar. Today's rates: USD/TRY 47.88, EUR/TRY 55.37, GBP/TRY 64.8. For residents budgeting in lira, this points to continued gradual depreciation rather than any sudden shift — worth factoring into rent negotiations or fixed-income planning, but not cause for alarm."
+   "heading": "Migration Routes: Ceuta Crossings Continue",
+   "body": "Moroccan security forces arrested nearly 300 migrants attempting to reach Spain's Ceuta enclave over the weekend, per widely-syndicated wire coverage; separate reports put more localized arrest figures at 111. CBC spoke with some Moroccan migrants who described desperation to avoid return. This is a longstanding route unrelated to Türkiye directly, but relevant for readers tracking regional migration policy trends, including Europe's broader tightening posture reflected in the German Syrian asylum story above."
   },
   {
-   "heading": "Rights and legal-status watch",
-   "body": "A few items worth tracking quietly: Rudaw reports that a North Rhine-Westphalia administration official criticized Germany's stance on Yazidi deportations as a 'bystander' position — a story appearing so far only in independent Kurdish-focused coverage. Separately, International Christian Concern reports a Baptist pastor was released from detention in Syria. And RFI carries comments from a descendant of Armenian Genocide survivors on political barriers to recognition — a recurring, sensitive topic with no new developments to report beyond the individual's remarks."
+   "heading": "Lebanon Tensions and Practical Notes",
+   "body": "Erdoğan called Israeli strikes on Lebanon a 'serious concern' for Türkiye, as Bloomberg and Al Jazeera report Israel continuing strikes with a US-Iran ceasefire due to lapse; a US official told the Jerusalem Post that Hezbollah disarmament remains central to any lasting security arrangement. Lebanon remains a Level 4 (do not travel) US advisory zone. On the ground in Türkiye, the lira continues to soften (USD/TRY 47.89, EUR/TRY 55.38) and Commerzbank analysts expect further depreciation — worth factoring into budgeting or fixed-rate contracts. Türkiye's own travel advisory remains steady at Level 2, and no significant new earthquake activity has been recorded beyond the modest M4.4 near Nurdağı on August 9."
   }
  ],
- "closing": "Steady weekend overall — keep an eye on Lebanon-related travel advisories and treat any 'visa appointment helper' offers with real caution.",
+ "closing": "Stay practical, keep an eye on the lira, and have a good week ahead.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-16",
- "date_label": "Sunday, 16 August 2026",
- "generated_at": "2026-08-15T21:42:46+00:00"
+ "date": "2026-08-17",
+ "date_label": "Monday, 17 August 2026",
+ "generated_at": "2026-08-16T21:41:39+00:00"
 }
