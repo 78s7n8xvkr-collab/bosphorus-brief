@@ -1,28 +1,12 @@
 {
- "title": "The Bosphorus Brief — Saturday, 22 August 2026",
- "overview": "The dominant story today is Ankara's move to seek an international arrest warrant for Israeli PM Netanyahu, tied to both the Gaza flotilla case and a sharp exchange over an Israeli strike on a Syrian air base near the Turkish border. None of this changes daily life directly, but it's worth understanding the layers. Meanwhile, quieter but more consequential news for residents continues in the residency and rights space.",
- "sections": [
-  {
-   "heading": "Turkey-Israel tensions escalate, rhetorically",
-   "body": "Turkey is pursuing an Interpol notice and what several outlets call a genocide-related arrest warrant for Netanyahu, linked to the 2010 Gaza flotilla case; Reuters, i24NEWS, and Hürriyet Daily News confirm the Interpol angle, while state media (Al Jazeera, The New Arab) and international outlets (France 24, NYT) frame it as a genocide warrant tied to Gaza. Netanyahu responded by calling Erdoğan an 'antisemitic dictator.' Separately, Israel struck a Syrian air base near the Turkish border, accusing Ankara of building a military presence there — a claim Turkey rejects. Turkey's opposition leader Özgür Özel said domestic political rivalries would be set aside on this issue. For residents: this is a diplomatic and rhetorical escalation, not a security event affecting daily movement, but it's worth watching regional coverage for tone — state-aligned outlets emphasize Israeli aggression and legal justice, while international coverage focuses on the diplomatic rupture itself."
-  },
-  {
-   "heading": "Residency numbers and services holding steady",
-   "body": "Foreign residence permits in Aydın rose 6% over the past two years, a modest but steady sign of continued foreign settlement outside the major cities. Separately, the YİMER 157 migration helpline marked its 11th anniversary, reporting 27.7 million calls answered and roughly 15,000 foreigners assisted in emergency situations over eleven years — a useful reminder that the line remains a functioning resource for residents needing guidance in Turkish or English."
-  },
-  {
-   "heading": "Rights and legal cases to watch",
-   "body": "In Turkey, the Gabriel Surname case has moved to the Constitutional Court, a legal battle over official recognition of a family's Syriac heritage — a case with implications for how minority identity is documented in civil records. Elsewhere, Reporters Without Borders flagged concerns about Chinese media influence narrowing space for Uyghur voices in Turkey. Abroad, a Bloomberg Law report on an Iranian national caught in prolonged limbo under US deportation policy, and continued fallout from deportation flights to Equatorial Guinea after migrants resisted removal to Liberia, underline how deportation and asylum policy elsewhere continues to draw scrutiny — a useful backdrop for any resident tracking how states handle non-citizens' legal status generally."
-  },
-  {
-   "heading": "Money and everyday numbers",
-   "body": "USD/TRY sits at 48.04, EUR/TRY at 56.12, and GBP/TRY at 65.5 — steady enough for routine budgeting this week. Oil prices are climbing on regional supply concerns, which may filter into fuel and transport costs domestically in coming weeks. A minor M4.3 earthquake near Ilgaz on 21 August was felt but caused no reported damage; it's a normal seismic reminder rather than a cause for concern."
-  }
- ],
- "closing": "Stay grounded, keep your paperwork current, and have a calm weekend.",
+ "title": "The Bosphorus Brief — Sunday, 23 August 2026",
+ "overview": "The weekend's dominant story is the sharp war of words between Ankara and Israel, layered over an already tense regional picture from Lebanon to Sudan. For residents here, none of this changes daily life directly yet, but it's worth watching how far the rhetoric travels. Closer to home, a fatal mine collapse near Ankara and a reminder earthquake shook the north-central region are more immediate.",
+ "sections": "\n<parameter name=\"body\">Coverage of Israel's actions diverges sharply by outlet lens: state media (Al Jazeera) and independent outlets (Middle East Eye, BBC) are giving sustained attention to West Bank settlement expansion, continued strikes in Lebanon and Gaza, and the UK/Canada/Australia call for a criminal probe into the 2024 killing of World Central Kitchen aid workers. These stories have not appeared prominently in Turkish domestic coverage, which is more focused on the Netanyahu dispute directly. Elsewhere, Iran has permitted some Iraqi oil tankers through Hormuz after Iraq pledged its territory won't be used for attacks on other states, and Sudan's Kordofan region has seen over 200,000 newly displaced — a humanitarian situation drawing far less regional coverage than the Israel-related stories.",
+ "heading": "Regional picture: uneven coverage, real humanitarian stakes",
+ "closing": "Stay grounded, keep an eye on official channels for anything affecting your paperwork or plans, and have a peaceful Sunday.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-22",
- "date_label": "Saturday, 22 August 2026",
- "generated_at": "2026-08-21T21:45:50+00:00"
+ "date": "2026-08-23",
+ "date_label": "Sunday, 23 August 2026",
+ "generated_at": "2026-08-22T21:02:58+00:00"
 }
