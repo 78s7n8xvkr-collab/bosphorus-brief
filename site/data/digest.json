@@ -1,12 +1,11 @@
 {
- "title": "The Bosphorus Brief — Sunday, 23 August 2026",
- "overview": "The weekend's dominant story is the sharp war of words between Ankara and Israel, layered over an already tense regional picture from Lebanon to Sudan. For residents here, none of this changes daily life directly yet, but it's worth watching how far the rhetoric travels. Closer to home, a fatal mine collapse near Ankara and a reminder earthquake shook the north-central region are more immediate.",
- "sections": "\n<parameter name=\"body\">Coverage of Israel's actions diverges sharply by outlet lens: state media (Al Jazeera) and independent outlets (Middle East Eye, BBC) are giving sustained attention to West Bank settlement expansion, continued strikes in Lebanon and Gaza, and the UK/Canada/Australia call for a criminal probe into the 2024 killing of World Central Kitchen aid workers. These stories have not appeared prominently in Turkish domestic coverage, which is more focused on the Netanyahu dispute directly. Elsewhere, Iran has permitted some Iraqi oil tankers through Hormuz after Iraq pledged its territory won't be used for attacks on other states, and Sudan's Kordofan region has seen over 200,000 newly displaced — a humanitarian situation drawing far less regional coverage than the Israel-related stories.",
- "heading": "Regional picture: uneven coverage, real humanitarian stakes",
- "closing": "Stay grounded, keep an eye on official channels for anything affecting your paperwork or plans, and have a peaceful Sunday.",
+ "title": "The Bosphorus Brief — 24 August 2026",
+ "overview": "The weekend's biggest story is the diplomatic aftershock from an Israeli strike in Syria, with Turkey-Israel tensions now a running theme across the region. On the home front, the central bank's rate decision and a forest fire near Ankara are the practical items to watch, alongside quieter but important developments on residency rules and a free-speech case getting international attention.",
+ "sections": "\n<parameter name=\"body\">Israel says diplomatic backchannels with Turkey remain open following an Israeli strike inside Syria, even as commentary from Le Monde, Ynetnews, and The Media Line describes a deepening rivalry between Ankara and Israel playing out on Syrian territory. Coverage diverges by lens: Daily Sabah and state media frame this as Turkey maintaining stability and influence in Syria, while international outlets like the Financial Times focus on the risk of a wider clash and Washington's efforts to mediate. Separately, a US envoy walked back comments on the Golan Heights after they appeared to contradict the White House position — a reminder that US-Israel-Syria-Turkey dynamics remain fluid. For residents, there's no immediate safety concern, but it's worth watching if you have travel plans near the Syrian border.",
+ "heading": "Turkey-Israel tensions center on Syria",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-23",
- "date_label": "Sunday, 23 August 2026",
- "generated_at": "2026-08-22T21:02:58+00:00"
+ "date": "2026-08-24",
+ "date_label": "Monday, 24 August 2026",
+ "generated_at": "2026-08-23T21:43:12+00:00"
 }
