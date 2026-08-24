@@ -1,11 +1,11 @@
 {
- "title": "The Bosphorus Brief — 24 August 2026",
- "overview": "The weekend's biggest story is the diplomatic aftershock from an Israeli strike in Syria, with Turkey-Israel tensions now a running theme across the region. On the home front, the central bank's rate decision and a forest fire near Ankara are the practical items to watch, alongside quieter but important developments on residency rules and a free-speech case getting international attention.",
- "sections": "\n<parameter name=\"body\">Israel says diplomatic backchannels with Turkey remain open following an Israeli strike inside Syria, even as commentary from Le Monde, Ynetnews, and The Media Line describes a deepening rivalry between Ankara and Israel playing out on Syrian territory. Coverage diverges by lens: Daily Sabah and state media frame this as Turkey maintaining stability and influence in Syria, while international outlets like the Financial Times focus on the risk of a wider clash and Washington's efforts to mediate. Separately, a US envoy walked back comments on the Golan Heights after they appeared to contradict the White House position — a reminder that US-Israel-Syria-Turkey dynamics remain fluid. For residents, there's no immediate safety concern, but it's worth watching if you have travel plans near the Syrian border.",
- "heading": "Turkey-Israel tensions center on Syria",
+ "title": "The Bosphorus Brief — 25 August 2026",
+ "overview": "A quiet news day carries two heavy items: the European Court of Human Rights is set to announce its decision in the long-running Kavala case, and new US sanctions on Iran are already rippling into conversations about Turkey's economy and region. Meanwhile, the lira holds steady and everyday residency and border news continues in the background.",
+ "sections": "\n<parameter name=\"heading\">ECtHR and the Kavala Case",
+ "body": "The European Court of Human Rights is expected to announce its decision on the Kavala case today, a matter followed closely by both international outlets (BBC, DW, Euronews) and independent Turkish press (Medyascope, agos.com.tr). This is a case with implications for how Turkey's courts and rights protections are viewed abroad, and it sits alongside a separate story this week: five opposition mayors were sentenced to prison terms of up to 23 years, a decision opposition-leaning and international outlets describe as politically charged, while pro-government coverage has been largely silent on the framing. For foreign residents, these cases don't carry direct legal consequences, but they're worth watching as indicators of the broader rule-of-law climate.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-24",
- "date_label": "Monday, 24 August 2026",
- "generated_at": "2026-08-23T21:43:12+00:00"
+ "date": "2026-08-25",
+ "date_label": "Tuesday, 25 August 2026",
+ "generated_at": "2026-08-24T21:50:58+00:00"
 }
