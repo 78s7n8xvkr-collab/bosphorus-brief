@@ -1,11 +1,11 @@
 {
- "title": "The Bosphorus Brief — 25 August 2026",
- "overview": "A quiet news day carries two heavy items: the European Court of Human Rights is set to announce its decision in the long-running Kavala case, and new US sanctions on Iran are already rippling into conversations about Turkey's economy and region. Meanwhile, the lira holds steady and everyday residency and border news continues in the background.",
- "sections": "\n<parameter name=\"heading\">ECtHR and the Kavala Case",
- "body": "The European Court of Human Rights is expected to announce its decision on the Kavala case today, a matter followed closely by both international outlets (BBC, DW, Euronews) and independent Turkish press (Medyascope, agos.com.tr). This is a case with implications for how Turkey's courts and rights protections are viewed abroad, and it sits alongside a separate story this week: five opposition mayors were sentenced to prison terms of up to 23 years, a decision opposition-leaning and international outlets describe as politically charged, while pro-government coverage has been largely silent on the framing. For foreign residents, these cases don't carry direct legal consequences, but they're worth watching as indicators of the broader rule-of-law climate.",
+ "title": "The Bosphorus Brief — 26 August 2026",
+ "overview": "The big legal story today is the European Court of Human Rights' Grand Chamber ruling on Osman Kavala, ordering his immediate release. Regionally, the Strait of Hormuz situation appears to be easing, and Turkey's central bank is resuming a key monetary tool. Locally, expect minor seismic activity to continue and lira rates to hold fairly steady.",
+ "sections": "\n<parameter name=\"body\">The ECtHR Grand Chamber issued a second, firmer ruling on Osman Kavala's case, convicting Turkey on five counts and declaring his original conviction \"null and void.\" The court has ordered his immediate release. Independent outlets (Medyascope, Bianet, T24) and international coverage (Euronews, BBC, DW) framed this as a significant legal rebuke, while Amnesty International and the Media and Law Studies Association called for swift compliance. No pro-government outlet coverage of the ruling appeared in today's material — a gap worth noting for residents tracking how this story is discussed across the media landscape. For foreign residents, this case is a bellwether for how Turkey's courts and government respond to binding international human rights rulings; there is no indication yet of Ankara's next move, and we'll follow this closely.",
+ "heading": "ECtHR Orders Kavala's Release",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-25",
- "date_label": "Tuesday, 25 August 2026",
- "generated_at": "2026-08-24T21:50:58+00:00"
+ "date": "2026-08-26",
+ "date_label": "Wednesday, 26 August 2026",
+ "generated_at": "2026-08-25T21:50:41+00:00"
 }
