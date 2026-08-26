@@ -1,11 +1,11 @@
 {
- "title": "The Bosphorus Brief — 26 August 2026",
- "overview": "The big legal story today is the European Court of Human Rights' Grand Chamber ruling on Osman Kavala, ordering his immediate release. Regionally, the Strait of Hormuz situation appears to be easing, and Turkey's central bank is resuming a key monetary tool. Locally, expect minor seismic activity to continue and lira rates to hold fairly steady.",
- "sections": "\n<parameter name=\"body\">The ECtHR Grand Chamber issued a second, firmer ruling on Osman Kavala's case, convicting Turkey on five counts and declaring his original conviction \"null and void.\" The court has ordered his immediate release. Independent outlets (Medyascope, Bianet, T24) and international coverage (Euronews, BBC, DW) framed this as a significant legal rebuke, while Amnesty International and the Media and Law Studies Association called for swift compliance. No pro-government outlet coverage of the ruling appeared in today's material — a gap worth noting for residents tracking how this story is discussed across the media landscape. For foreign residents, this case is a bellwether for how Turkey's courts and government respond to binding international human rights rulings; there is no indication yet of Ankara's next move, and we'll follow this closely.",
- "heading": "ECtHR Orders Kavala's Release",
+ "title": "The Bosphorus Brief — 27 August 2026",
+ "overview": "A quieter news day for daily life in Türkiye, dominated by financial and sporting headlines rather than policy shifts. The lira eased slightly as the central bank loosened overnight rates, while regional tensions and a fresh US immigration crackdown continue to ripple outward. A human rights review of the long-running Osman Kavala case and a report on Syrian refugees' safety concerns deserve attention alongside the lighter news.",
+ "sections": "\n<parameter name=\"heading\">Money: Lira Steadies as Central Bank Eases",
+ "body": "The Central Bank cut overnight interest rates by 300 basis points and resumed repo auctions, a technical move aimed at smoothing liquidity. USD/TRY sits at 48.11, EUR/TRY at 56.14, and GBP/TRY at 65.63 — all broadly stable. For residents managing rent, tuition, or salary conversions, this is a normal adjustment rather than a signal of turmoil; Daily Sabah and Zawya both frame it as routine monetary management.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-26",
- "date_label": "Wednesday, 26 August 2026",
- "generated_at": "2026-08-25T21:50:41+00:00"
+ "date": "2026-08-27",
+ "date_label": "Thursday, 27 August 2026",
+ "generated_at": "2026-08-26T23:49:42+00:00"
 }
