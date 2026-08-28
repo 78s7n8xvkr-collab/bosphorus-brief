@@ -1,11 +1,11 @@
 {
- "title": "The Bosphorus Brief — 27 August 2026",
- "overview": "A quieter news day for daily life in Türkiye, dominated by financial and sporting headlines rather than policy shifts. The lira eased slightly as the central bank loosened overnight rates, while regional tensions and a fresh US immigration crackdown continue to ripple outward. A human rights review of the long-running Osman Kavala case and a report on Syrian refugees' safety concerns deserve attention alongside the lighter news.",
- "sections": "\n<parameter name=\"heading\">Money: Lira Steadies as Central Bank Eases",
- "body": "The Central Bank cut overnight interest rates by 300 basis points and resumed repo auctions, a technical move aimed at smoothing liquidity. USD/TRY sits at 48.11, EUR/TRY at 56.14, and GBP/TRY at 65.63 — all broadly stable. For residents managing rent, tuition, or salary conversions, this is a normal adjustment rather than a signal of turmoil; Daily Sabah and Zawya both frame it as routine monetary management.",
+ "title": "The Bosphorus Brief — 28 August 2026",
+ "overview": "A quiet news day for daily-life matters, but a busy one for legal and rights watchers: the European Court of Human Rights delivered a fresh Kavala ruling, Ankara eased visa rules for Syrian diplomats, and the lira's slow slide continues. Regional safety news is mostly steady, though the Iran-related conflict coverage keeps rumbling in the background.",
+ "sections": "\n<parameter name=\"heading\">ECHR and Kavala: another ruling, same standoff",
+ "body": "Jurist.org reports the European Court of Human Rights has again found that Türkiye violated Osman Kavala's rights to free speech and assembly. Separately, Nordic Monitor (opposition-leaning) describes friction between the ECHR and Türkiye's own Constitutional Court over which body has final say in such cases, noting pushback from a Turkish judge. For foreign residents, the practical takeaway is limited but worth noting: this is part of a longer pattern of tension between domestic and European judicial oversight that shapes how civil-liberty cases are ultimately resolved here.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-27",
- "date_label": "Thursday, 27 August 2026",
- "generated_at": "2026-08-26T23:49:42+00:00"
+ "date": "2026-08-28",
+ "date_label": "Friday, 28 August 2026",
+ "generated_at": "2026-08-28T05:31:11+00:00"
 }
