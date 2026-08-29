@@ -1,11 +1,28 @@
 {
- "title": "The Bosphorus Brief — 28 August 2026",
- "overview": "A quiet news day for daily-life matters, but a busy one for legal and rights watchers: the European Court of Human Rights delivered a fresh Kavala ruling, Ankara eased visa rules for Syrian diplomats, and the lira's slow slide continues. Regional safety news is mostly steady, though the Iran-related conflict coverage keeps rumbling in the background.",
- "sections": "\n<parameter name=\"heading\">ECHR and Kavala: another ruling, same standoff",
- "body": "Jurist.org reports the European Court of Human Rights has again found that Türkiye violated Osman Kavala's rights to free speech and assembly. Separately, Nordic Monitor (opposition-leaning) describes friction between the ECHR and Türkiye's own Constitutional Court over which body has final say in such cases, noting pushback from a Turkish judge. For foreign residents, the practical takeaway is limited but worth noting: this is part of a longer pattern of tension between domestic and European judicial oversight that shapes how civil-liberty cases are ultimately resolved here.",
+ "title": "The Bosphorus Brief — Saturday, 29 August 2026",
+ "overview": "A quieter weekend on the paperwork front, with one concrete easing for Syrian officials and a busy sports calendar dominating headlines. Regional watchers should note continuing rights and migration stories from Spain to Syria, while Türkiye's economic indicators hold steady.",
+ "sections": [
+  {
+   "heading": "Visa-Free Travel for Syrian Diplomats",
+   "body": "Türkiye has waived visa requirements for holders of Syrian diplomatic passports, a move reported by both pro-government and independent outlets as a sign of continued normalization between the two governments. This is specifically for diplomatic passport holders, not the general Syrian public, so it does not change residency or entry rules for ordinary Syrian nationals living in or transiting through Türkiye. Separately, a related report notes Syria has made its first payment via Visa card, another small marker of the country's gradual reintegration into normal financial systems."
+  },
+  {
+   "heading": "Rights and Detention Watch",
+   "body": "The European Court of Human Rights has ruled against Türkiye over the lengthy pretrial detention of eight individuals, a decision flagged by opposition-leaning press. This fits a pattern the court has addressed before regarding detention length and due process. Separately, commentary pieces this week have focused on rhetoric affecting Alawite communities in Syria, with one report noting backlash after remarks by a former presidential aide were seen as targeting the group. We note these as separate developments in two different countries, without drawing conclusions beyond what outlets report."
+  },
+  {
+   "heading": "Migration Pressures Beyond Türkiye",
+   "body": "Spain has formally asked the EU for help processing roughly 5,000 migrants who arrived in Ceuta, amid unrest reported locally — coverage appearing across state, international, and unlabeled outlets. While this is a Spanish and EU matter, it's a reminder that migration management remains a live issue across the Mediterranean basin, relevant context for anyone tracking regional asylum and transit policy discussions that occasionally touch Türkiye."
+  },
+  {
+   "heading": "Money and Ground Conditions",
+   "body": "The lira sits at 48.23 to the dollar and 55.99 to the euro; Commerzbank analysts flag that inflation expectations continue to outpace Central Bank forecasts, worth watching for budgeting purposes. Türkiye's high-tech production value passed $28 billion in 2025, per state media. On safety, a cluster of M4+ earthquakes continues across Türkiye's usual fault zones (Çelikhan, Ilgaz, Nurdağı) — all modest magnitude, no advisory changes, though older debris from prior quakes has drawn renewed concern in one report. Travel advisory levels are unchanged: Türkiye remains Level 2."
+  }
+ ],
+ "closing": "Wishing everyone a calm weekend — and good luck to the national teams in volleyball and basketball tonight.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-28",
- "date_label": "Friday, 28 August 2026",
- "generated_at": "2026-08-28T05:31:11+00:00"
+ "date": "2026-08-29",
+ "date_label": "Saturday, 29 August 2026",
+ "generated_at": "2026-08-29T02:20:39+00:00"
 }
