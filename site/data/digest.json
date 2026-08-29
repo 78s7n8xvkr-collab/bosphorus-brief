@@ -1,28 +1,11 @@
 {
- "title": "The Bosphorus Brief — Saturday, 29 August 2026",
- "overview": "A quieter weekend on the paperwork front, with one concrete easing for Syrian officials and a busy sports calendar dominating headlines. Regional watchers should note continuing rights and migration stories from Spain to Syria, while Türkiye's economic indicators hold steady.",
- "sections": [
-  {
-   "heading": "Visa-Free Travel for Syrian Diplomats",
-   "body": "Türkiye has waived visa requirements for holders of Syrian diplomatic passports, a move reported by both pro-government and independent outlets as a sign of continued normalization between the two governments. This is specifically for diplomatic passport holders, not the general Syrian public, so it does not change residency or entry rules for ordinary Syrian nationals living in or transiting through Türkiye. Separately, a related report notes Syria has made its first payment via Visa card, another small marker of the country's gradual reintegration into normal financial systems."
-  },
-  {
-   "heading": "Rights and Detention Watch",
-   "body": "The European Court of Human Rights has ruled against Türkiye over the lengthy pretrial detention of eight individuals, a decision flagged by opposition-leaning press. This fits a pattern the court has addressed before regarding detention length and due process. Separately, commentary pieces this week have focused on rhetoric affecting Alawite communities in Syria, with one report noting backlash after remarks by a former presidential aide were seen as targeting the group. We note these as separate developments in two different countries, without drawing conclusions beyond what outlets report."
-  },
-  {
-   "heading": "Migration Pressures Beyond Türkiye",
-   "body": "Spain has formally asked the EU for help processing roughly 5,000 migrants who arrived in Ceuta, amid unrest reported locally — coverage appearing across state, international, and unlabeled outlets. While this is a Spanish and EU matter, it's a reminder that migration management remains a live issue across the Mediterranean basin, relevant context for anyone tracking regional asylum and transit policy discussions that occasionally touch Türkiye."
-  },
-  {
-   "heading": "Money and Ground Conditions",
-   "body": "The lira sits at 48.23 to the dollar and 55.99 to the euro; Commerzbank analysts flag that inflation expectations continue to outpace Central Bank forecasts, worth watching for budgeting purposes. Türkiye's high-tech production value passed $28 billion in 2025, per state media. On safety, a cluster of M4+ earthquakes continues across Türkiye's usual fault zones (Çelikhan, Ilgaz, Nurdağı) — all modest magnitude, no advisory changes, though older debris from prior quakes has drawn renewed concern in one report. Travel advisory levels are unchanged: Türkiye remains Level 2."
-  }
- ],
- "closing": "Wishing everyone a calm weekend — and good luck to the national teams in volleyball and basketball tonight.",
+ "title": "The Bosphorus Brief — Sunday, 30 August",
+ "overview": "A quiet Sunday for daily life, but the diplomatic weather is shifting: Turkey summoned Ukraine's ambassador over Black Sea ship attacks, and Erdoğan heads into a Bishkek meeting with Putin this week. Visa news is mostly good for Syrian nationals, while Europe's migration debate keeps intensifying elsewhere.",
+ "sections": "\n<parameter name=\"heading\">Black Sea tensions rise, Erdoğan-Putin meeting ahead",
+ "body": "Turkey summoned Ukraine's ambassador Saturday after attacks this week on a Turkish vessel and a second ship sent to tow it in the Black Sea. Coverage is broad across state, opposition-leaning, and international outlets, suggesting the incident is being taken seriously on all sides, though details of responsibility remain limited to the Foreign Ministry's account. Separately, Erdoğan and Putin are set to meet September 1 in Bishkek on the sidelines of the SCO summit, with Ukraine and Black Sea security on the agenda. For residents, no immediate travel or shipping disruption is reported, but it's worth watching if Black Sea maritime routes see further incidents.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-29",
- "date_label": "Saturday, 29 August 2026",
- "generated_at": "2026-08-29T02:20:39+00:00"
+ "date": "2026-08-30",
+ "date_label": "Sunday, 30 August 2026",
+ "generated_at": "2026-08-29T21:51:01+00:00"
 }
