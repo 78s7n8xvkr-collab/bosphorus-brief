@@ -1,11 +1,32 @@
 {
- "title": "The Bosphorus Brief — Sunday, 30 August",
- "overview": "A quiet Sunday for daily life, but the diplomatic weather is shifting: Turkey summoned Ukraine's ambassador over Black Sea ship attacks, and Erdoğan heads into a Bishkek meeting with Putin this week. Visa news is mostly good for Syrian nationals, while Europe's migration debate keeps intensifying elsewhere.",
- "sections": "\n<parameter name=\"heading\">Black Sea tensions rise, Erdoğan-Putin meeting ahead",
- "body": "Turkey summoned Ukraine's ambassador Saturday after attacks this week on a Turkish vessel and a second ship sent to tow it in the Black Sea. Coverage is broad across state, opposition-leaning, and international outlets, suggesting the incident is being taken seriously on all sides, though details of responsibility remain limited to the Foreign Ministry's account. Separately, Erdoğan and Putin are set to meet September 1 in Bishkek on the sidelines of the SCO summit, with Ukraine and Black Sea security on the agenda. For residents, no immediate travel or shipping disruption is reported, but it's worth watching if Black Sea maritime routes see further incidents.",
+ "title": "The Bosphorus Brief — Monday, 31 August 2026",
+ "overview": "A tense regional backdrop today, with a fresh US strike on Iran and rising Black Sea friction, though none of it changes daily realities for residents in Türkiye. Diplomacy is busy — a new defence-pact meeting in Istanbul, Syria-Libya ties restored — while at home, legal and media stories continue to draw a sharp line between opposition-leaning and state-aligned coverage.",
+ "sections": [
+  {
+   "heading": "Istanbul hosts first Mecca Pact meeting",
+   "body": "The first trilateral meeting under the defence pact linking Türkiye, Saudi Arabia and Pakistan takes place in Istanbul today, per the Turkish Foreign Ministry. It's a diplomatic story rather than a security one for residents, but it underscores Istanbul's growing role as a venue for regional coordination — expect tightened protocol and traffic around meeting venues, as is routine for high-level visits."
+  },
+  {
+   "heading": "US strike on Iran, and what it means for travel",
+   "body": "US forces struck Iran's Larak Island on Saturday, the first such attack in weeks; Iranian state media reported casualties and the IRGC has vowed a response. State media (Al Jazeera) and independent outlets (Middle East Eye) both carried the story with similar facts, though Iranian state broadcasters frame it as unprovoked aggression. For residents, this is a reminder that Iran remains a US Level 4 (Do Not Travel) advisory, alongside Syria, Iraq, and Lebanon — plan any regional travel accordingly. Türkiye itself remains Level 2, unaffected directly."
+  },
+  {
+   "heading": "Black Sea friction and Erdoğan-Putin talks",
+   "body": "Türkiye summoned Ukraine's ambassador after a Turkish vessel and a tow ship were attacked in the Black Sea last week. Separately, Erdoğan and Putin are expected to meet in Bishkek, with Ukraine and Black Sea shipping safety on the agenda. Residents involved in shipping, logistics, or Black Sea coastal travel should watch for updated maritime advisories in coming days."
+  },
+  {
+   "heading": "Legal and civil-liberty notes at home",
+   "body": "A İstanbul court ordered the seizure and sales ban of a book by jailed İstanbul mayor Ekrem İmamoğlu — reported by opposition-leaning outlets, with no coverage yet in state-aligned media. Separately, 81 people were jailed in an investigation targeting a religious group, with a former minister summoned for questioning. Both are covered only in opposition-leaning press so far; residents should note these as ongoing legal proceedings rather than settled facts, and we'll follow for any due-process or foreign-national angles."
+  },
+  {
+   "heading": "Practical notes: rates, quakes, and a search in Nepal",
+   "body": "USD/TRY sits at 48.25, EUR/TRY at 56.0 — steady enough for routine budgeting. Minor earthquakes (M4.2–4.4) near Çelikhan and Ilgaz this month are within Türkiye's normal seismic background; no unusual activity flagged. Separately, a Turkish-Russian tour guide is reported missing in Nepal's severe floods, which have killed over 600 — a sobering reminder for anyone with travel or family ties to South Asia this season."
+  }
+ ],
+ "closing": "Stay safe out there, and take care with any Black Sea or Iran-adjacent travel plans this week.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-08-30",
- "date_label": "Sunday, 30 August 2026",
- "generated_at": "2026-08-29T21:51:01+00:00"
+ "date": "2026-08-31",
+ "date_label": "Monday, 31 August 2026",
+ "generated_at": "2026-08-30T21:34:19+00:00"
 }
