@@ -1,28 +1,32 @@
 {
- "title": "The Bosphorus Brief — Sunday, 6 September 2026",
- "overview": "A quiet Sunday for daily life in Türkiye, overshadowed regionally by a sharp escalation between the US and Iran near the Strait of Hormuz. At home, the big talking point is volleyball — Turkey's national women's team plays Italy in the European Championship final — while inflation, a US bank sanction, and a big infrastructure privatization plan are the more consequential items for residents.",
+ "title": "Champions, Calm Waters, and Steady Numbers",
+ "overview": "A celebratory Monday: Türkiye's women's volleyball team, the \"Sultans of the Net,\" defended their European title with a five-set win over Italy, dominating headlines across nearly every outlet. Meanwhile, regional tensions around the Strait of Hormuz and Iran's announced \"exclusion zone\" bear watching for anyone with travel or shipping ties to the Gulf, though there's no direct impact on daily life in Türkiye yet. On the practical side, inflation continues to cool, ikamet numbers were published for at least one province, and the US has confirmed a resumption of visa services in Turkey.",
  "sections": [
   {
-   "heading": "Iran-US tensions: a safety note, not a Türkiye emergency",
-   "body": "US forces struck three Iranian oil tankers after Iran fired on a US aircraft carrier and reportedly attacked vessels near the Strait of Hormuz; Iran is threatening further strikes. The US Embassy in Bahrain has issued a heightened vigilance alert. None of this directly affects Türkiye, which remains at Travel Advisory Level 2, but residents with travel plans to the Gulf or maritime routes through the Black Sea (where Türkiye has proposed a new safe-passage initiative for grain shipments) should watch for disruption to flights and shipping in the coming days."
+   "heading": "Sultans of the Net Take Europe Again",
+   "body": "Türkiye's women's volleyball team beat Italy 3-2 in a five-set thriller to retain their European championship, a result covered warmly across the spectrum — from state media (Anadolu Ajansı) to pro-government outlets (Milliyet, Hürriyet, Türkiye Today) to opposition-leaning Cumhuriyet and independent Bianet. It's a rare story with no divergence in framing: everyone's celebrating together, which says something pleasant about shared national moments cutting across otherwise polarized media."
   },
   {
-   "heading": "US sanctions a Turkish bank over Iran ties",
-   "body": "Washington sanctioned a Turkish bank for alleged Iran-related dealings, but US envoy Tom Barrack was quick to stress Türkiye itself is not a target, a message echoed by Turkish Minute and i24NEWS. Separately, US visa services in Turkey are reported to be resuming after an earlier dispute — worth confirming with your local consulate if you have an appointment pending, as details on scope and timing are still thin."
+   "heading": "Visas and Residency: Practical Notes",
+   "body": "The US has confirmed visa services will resume in Turkey following an earlier dispute, welcome news for anyone with pending applications or family visits planned. Separately, Gümüşhane province released updated figures on foreign residence permit holders, part of routine regional reporting; residents elsewhere should expect similar local disclosures. Fragomen also flagged new minimum salary changes, which can affect work-permit thresholds — worth checking if your permit or employer sponsorship depends on salary minimums."
   },
   {
-   "heading": "Money: inflation eases, but relief is modest",
-   "body": "Turkey's annual inflation cooled to 31.5% in August, and the central bank has added 16 tons of gold to reserves — both mildly reassuring signs. Still, AGBI notes the rate of decline leaves little room for an interest-rate cut soon, so borrowing costs and loan terms are unlikely to ease quickly. The lira sits at 48.42 to the dollar. Ankara has also revived a plan to sell 30-year operating rights on Istanbul's Bosphorus bridges and highways — a large privatization that could eventually affect tolls for daily commuters, though no timeline has been set."
+   "heading": "Gulf Tensions: Watch, Don't Worry Yet",
+   "body": "Iran says it will announce a new 'exclusion zone' near the Strait of Hormuz, and separately claims a strike on a US ship there, which Washington denies. There's no confirmed escalation affecting Turkish waters or air corridors, and Türkiye's own US travel advisory remains unchanged at Level 2. Still, anyone with travel plans through the Gulf region (Iran, Iraq, Syria, Lebanon remain Level 4) should monitor official advisories rather than headlines alone."
   },
   {
-   "heading": "Legal and rights notes worth tracking",
-   "body": "A former Turkish judge has taken a legal challenge over Turkey's official inflation statistics to the European Court of Human Rights — a case worth watching given how consumer price data shapes wage and rent negotiations for residents. Elsewhere, Kurdistan24 reports that five European countries are drafting plans for offshore migrant return centers, a policy direction that may be relevant to residents with pending EU asylum or relocation cases."
+   "heading": "Money: Inflation Eases, Growth Outlook Trimmed",
+   "body": "August inflation cooled to 31.5%, continuing a gradual downward trend, though analysts at AGBI note it's still too high for an interest rate cut soon. The central bank added 16 tons of gold to reserves, a modest confidence signal. Separately, Turkey's 2027 growth outlook was revised down slightly as authorities balance price stability against expansion — nothing dramatic, but a reminder that budgeting for the year ahead should stay conservative. Exchange rates held steady: USD/TRY 48.42, EUR/TRY 56.24, GBP/TRY 65.47."
+  },
+  {
+   "heading": "Faith and Community Notes",
+   "body": "Quietly, this week's rights coverage was gentle: the Armenian Patriarch prayed for restored Turkish-Armenian ties, and worshippers gathered for the annual service at Akdamar Island's historic church — both covered plainly by pro-government outlets. No major court rulings or residency-related legal actions were reported today affecting foreign residents specifically."
   }
  ],
- "closing": "Enjoy the volleyball final if you're watching — and safe travels this week, especially anyone routed through the Gulf.",
+ "closing": "Enjoy the volleyball glow — and maybe a çay to celebrate.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-09-06",
- "date_label": "Sunday, 06 September 2026",
- "generated_at": "2026-09-05T21:26:04+00:00"
+ "date": "2026-09-07",
+ "date_label": "Monday, 07 September 2026",
+ "generated_at": "2026-09-06T21:30:58+00:00"
 }
