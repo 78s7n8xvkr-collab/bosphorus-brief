@@ -1,32 +1,11 @@
 {
- "title": "The Bosphorus Brief: Regional Tensions Rise, Local Life Steadies",
- "overview": "A tense day regionally, with Houthi attacks on Saudi Arabia and renewed strains in southern Lebanon pushing oil prices toward $100. Closer to home, a wind-driven wildfire displaced hundreds in Turkey, while lira policy and record foreign-resident numbers offer a steadier counter-note for those living here long-term.",
- "sections": [
-  {
-   "heading": "Wildfire Displaces Hundreds — What Residents Should Know",
-   "body": "A wind-fueled wildfire in Turkey has forced hundreds from their homes as firefighters work to contain the flames, according to international wire coverage. No containment timeline has been given yet. Residents in affected regions should monitor local municipality (belediye) alerts and AFAD channels for evacuation or air-quality guidance; this is being treated as a serious but managed situation, not a widespread emergency."
-  },
-  {
-   "heading": "Houthi Attacks on Saudi Arabia Ripple Into Markets and Diplomacy",
-   "body": "Houthi strikes on four Saudi cities injured 73 people and sparked fires at energy facilities, per Reuters and BBC reporting; Iran International's coverage aligns closely with international wires on the facts. Turkey's state media (TRT Haber) reported Ankara's condemnation of the attacks. Oil prices are nearing $100 amid these strikes and separate reports of renewed U.S.-Iran tensions — a detail worth watching for anyone budgeting around fuel and transport costs in the coming weeks. Separately, fighting in southern Lebanon is straining the U.S.-backed ceasefire there, with the UN chief renewing calls for Israeli withdrawal."
-  },
-  {
-   "heading": "Foreign Residents: Record Numbers, Salary Rules, and a Kavala Question Left Open",
-   "body": "Nordic Monitor reports official data showing Turkey's foreign resident population is set to hit an all-time high — a trend borne out in local figures too, such as Gümüşhane's newly announced resident-permit count. Separately, Fragomen flags new minimum salary threshold changes relevant to work-permit applicants; those renewing or applying soon should check updated figures before filing. On the legal side, a new analysis in Opinio Juris examines what the Kavala v. Türkiye (No. 2) ECHR ruling left unresolved regarding Article 3 protections in politically sensitive detention cases — a nuanced but important read for those tracking rule-of-law developments."
-  },
-  {
-   "heading": "Lira Policy and Trade: Steady Hands at the Central Bank",
-   "body": "Daily Sabah reports the government's new medium-term program (MTP) will continue policies favoring the lira, with USD/TRY holding at 48.46 today. Meanwhile, steel billet imports rose 27.6% in the first seven months of 2026, and Turkey is pursuing a Black Sea shipping deal to protect grain trade routes amid regional attacks — both signs officials are managing economic exposure to the wider conflict even as instability continues nearby."
-  },
-  {
-   "heading": "Culture Note: A Rare Broadcast Moment",
-   "body": "Al-Monitor reports that a first television interview with Syrian Kurdish leader Mazloum Abdi (referred to regionally as 'Kobane') drew three million views within 24 hours in Turkey — a striking indicator of public interest in Syrian Kurdish political developments, reported here without further commentary on its implications."
-  }
- ],
- "closing": "Stay weather-aware if you're near the wildfire zones, and as always, keep half an eye on fuel prices this week — çay's still on us.",
+ "title": "The Bosphorus Brief — Thursday, 10 September 2026",
+ "overview": "Regional tensions dominate today, with oil crossing $100 a barrel after fresh Iran-linked tanker strikes and Iran's referral to the UN Security Council. Closer to home, a volunteer firefighter died battling a wildfire in Turkey, and the lira continues its slow, steady repricing. None of this changes daily life dramatically for residents, but it's worth watching fuel and grocery prices in the coming weeks.",
+ "sections": "\n<parameter name=\"heading\">Middle East tensions push oil past $100",
+ "body": "Brent crude topped $100 a barrel for the first time since July after the US struck five Iranian tankers and Iran responded with what Foreign Policy called its largest attack on global shipping since the war began. Separately, the UN Security Council has referred Iran for nuclear non-compliance; Tehran blames US and Israeli strikes for disrupting inspections. President Trump said the conflict \"will end immediately\" after US midterms but ruled out renewed negotiations for now. Turkey's finance minister said Ankara has \"taken note\" of related US sanctions announcements — no specific measures affecting residents have been announced. For those in Türkiye, this is mainly a story to watch for its effect on fuel prices and regional flight routings rather than an immediate safety concern.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-09-09",
- "date_label": "Wednesday, 09 September 2026",
- "generated_at": "2026-09-08T21:57:27+00:00"
+ "date": "2026-09-10",
+ "date_label": "Thursday, 10 September 2026",
+ "generated_at": "2026-09-09T21:48:30+00:00"
 }
