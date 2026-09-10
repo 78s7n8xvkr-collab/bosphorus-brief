@@ -1,11 +1,11 @@
 {
- "title": "The Bosphorus Brief — Thursday, 10 September 2026",
- "overview": "Regional tensions dominate today, with oil crossing $100 a barrel after fresh Iran-linked tanker strikes and Iran's referral to the UN Security Council. Closer to home, a volunteer firefighter died battling a wildfire in Turkey, and the lira continues its slow, steady repricing. None of this changes daily life dramatically for residents, but it's worth watching fuel and grocery prices in the coming weeks.",
- "sections": "\n<parameter name=\"heading\">Middle East tensions push oil past $100",
- "body": "Brent crude topped $100 a barrel for the first time since July after the US struck five Iranian tankers and Iran responded with what Foreign Policy called its largest attack on global shipping since the war began. Separately, the UN Security Council has referred Iran for nuclear non-compliance; Tehran blames US and Israeli strikes for disrupting inspections. President Trump said the conflict \"will end immediately\" after US midterms but ruled out renewed negotiations for now. Turkey's finance minister said Ankara has \"taken note\" of related US sanctions announcements — no specific measures affecting residents have been announced. For those in Türkiye, this is mainly a story to watch for its effect on fuel prices and regional flight routings rather than an immediate safety concern.",
+ "title": "Steady Rates, Familiar Debates",
+ "overview": "A quiet news day on the ground in Türkiye: the central bank held its course, the lira stayed stable, and the big political story was less about policy than about optics in Ankara. Regionally, tensions simmer in the Gulf and Red Sea, but nothing directly disrupts travel or daily life here today.",
+ "sections": "\n<parameter name=\"heading\">Central Bank Holds at 37% — Again",
+ "body": "The Central Bank kept its policy rate at 37% for a fifth consecutive meeting, matching analyst expectations. Bloomberg and ING both note the bank is balancing disinflation progress against oil-price risk, with most observers now pointing to October as the likely start of gradual easing. For residents, this means loan and mortgage costs stay high for now, but the lira held steady today at 48.51/USD and 56.44/EUR — no sudden swings to plan around. Separately, a report in Gazete Oksijen found the iPhone 17 (referred to as \"iPhone Duo\") costs 137% more in Turkey than in the US, a reminder that imported electronics carry a heavy import-tax premium here.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-09-10",
- "date_label": "Thursday, 10 September 2026",
- "generated_at": "2026-09-09T21:48:30+00:00"
+ "date": "2026-09-11",
+ "date_label": "Friday, 11 September 2026",
+ "generated_at": "2026-09-10T21:44:05+00:00"
 }
