@@ -1,11 +1,11 @@
 {
- "title": "Steady Rates, Familiar Debates",
- "overview": "A quiet news day on the ground in Türkiye: the central bank held its course, the lira stayed stable, and the big political story was less about policy than about optics in Ankara. Regionally, tensions simmer in the Gulf and Red Sea, but nothing directly disrupts travel or daily life here today.",
- "sections": "\n<parameter name=\"heading\">Central Bank Holds at 37% — Again",
- "body": "The Central Bank kept its policy rate at 37% for a fifth consecutive meeting, matching analyst expectations. Bloomberg and ING both note the bank is balancing disinflation progress against oil-price risk, with most observers now pointing to October as the likely start of gradual easing. For residents, this means loan and mortgage costs stay high for now, but the lira held steady today at 48.51/USD and 56.44/EUR — no sudden swings to plan around. Separately, a report in Gazete Oksijen found the iPhone 17 (referred to as \"iPhone Duo\") costs 137% more in Turkey than in the US, a reminder that imported electronics carry a heavy import-tax premium here.",
+ "title": "The Bosphorus Brief — Saturday, 12 September 2026",
+ "overview": "A regionally quiet but legally consequential Saturday: courts and rights cases touching foreign residents dominate the substantive news, while the Central Bank held rates steady for a fifth straight meeting. Elsewhere in the wider region, tensions around Lebanon, Yemen's Red Sea corridor, and an Iraq-launched drone strike on a Saudi pipeline are worth watching for travel and shipping knock-on effects, though none currently touch Türkiye directly.",
+ "sections": "\n<parameter name=\"heading\">Legal security: Kavala retrial request, and a 25-year prison case",
+ "body": "Osman Kavala has requested a retrial following a ruling from the European Court of Human Rights, a case closely watched by residents concerned with rule-of-law consistency in Türkiye (Independent Türkçe, DW). Separately, bianet reports that journalist and writer Erdal Süsem remains imprisoned after 25 years despite European court rulings in his favor — a stark reminder that ECtHR decisions do not always translate quickly into domestic outcomes. Neither case has immediate procedural implications for foreign residents, but both are useful barometers of how domestic courts respond to European rulings.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-09-11",
- "date_label": "Friday, 11 September 2026",
- "generated_at": "2026-09-10T21:44:05+00:00"
+ "date": "2026-09-12",
+ "date_label": "Saturday, 12 September 2026",
+ "generated_at": "2026-09-11T21:49:14+00:00"
 }
