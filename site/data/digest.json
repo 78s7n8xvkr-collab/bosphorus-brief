@@ -1,11 +1,28 @@
 {
- "title": "The Bosphorus Brief — Saturday, 12 September 2026",
- "overview": "A regionally quiet but legally consequential Saturday: courts and rights cases touching foreign residents dominate the substantive news, while the Central Bank held rates steady for a fifth straight meeting. Elsewhere in the wider region, tensions around Lebanon, Yemen's Red Sea corridor, and an Iraq-launched drone strike on a Saudi pipeline are worth watching for travel and shipping knock-on effects, though none currently touch Türkiye directly.",
- "sections": "\n<parameter name=\"heading\">Legal security: Kavala retrial request, and a 25-year prison case",
- "body": "Osman Kavala has requested a retrial following a ruling from the European Court of Human Rights, a case closely watched by residents concerned with rule-of-law consistency in Türkiye (Independent Türkçe, DW). Separately, bianet reports that journalist and writer Erdal Süsem remains imprisoned after 25 years despite European court rulings in his favor — a stark reminder that ECtHR decisions do not always translate quickly into domestic outcomes. Neither case has immediate procedural implications for foreign residents, but both are useful barometers of how domestic courts respond to European rulings.",
+ "title": "The Bosphorus Brief — 13 September 2026",
+ "overview": "Regional security tensions dominate the weekend, with a drone strike from Iraqi territory shutting a major Saudi pipeline and drawing statements from Ankara, Tehran, and Baghdad. At home, a fresh round of X account restrictions targeting LGBTQ users and a retrial request from Osman Kavala keep civil-liberty questions in view, while the Central Bank held rates steady for a fifth straight meeting.",
+ "sections": [
+  {
+   "heading": "Saudi Pipeline Attack Ripples Through the Region",
+   "body": "Saudi Arabia shut a key east-west oil pipeline after a drone attack launched from Iraqi territory near the Iranian border. Iraq has removed a military commander and opened an investigation; outlets across the spectrum (BBC, AP, DW) confirm the Iraqi origin, while Iran International reports Tehran insists it is 'not at war' with Riyadh ahead of talks in Oman. Türkiye's foreign ministry condemned the strikes, and separate phone calls took place between Turkish, Iranian, and Iraqi officials. For residents, this is a story to watch rather than act on: no direct travel disruption yet, but oil-price and regional-stability effects are worth monitoring, especially with Iraq and Iran already at US Travel Advisory Level 4."
+  },
+  {
+   "heading": "X Restrictions and Kavala's ECtHR Case",
+   "body": "Turkish authorities have blocked a fresh batch of LGBTQ-linked X accounts, days after President Erdoğan's remarks describing the community in derogatory terms — reported by malaymail.com and CP24. Separately, Osman Kavala has formally requested a retrial following a European Court of Human Rights decision, a case long watched by international rights observers as a marker of Türkiye's legal environment for civil society. Both stories touch directly on the standing question of freedom of belief and expression protections; we'll continue tracking any court response to Kavala's request."
+  },
+  {
+   "heading": "Central Bank Holds at 37%, Lira Steady",
+   "body": "The Central Bank kept its policy rate at 37% for a fifth consecutive meeting, with markets (ING via FX Street, Finimize) now pricing in an October cut. USD/TRY sits at 48.6, EUR/TRY at 56.39. For residents managing salaries, rent, or savings in lira, the message is: no near-term rate relief, but an easing cycle looks likely within weeks — worth factoring into any big purchases or transfers this month."
+  },
+  {
+   "heading": "Migration Notes: Kazakhstan Readmission Deal and Palestinian Workers",
+   "body": "Türkiye signed a readmission agreement with Kazakhstan, part of a broader push including a proposed TÜRKPOL joint law-enforcement body for Turkic states — relevant background for anyone tracking regional migration cooperation. Separately, Son Dakika reports Palestinian workers in Türkiye facing harsh conditions tied to permit issues, a reminder that work-to-residence permit transitions remain a common friction point; turkiyetoday.com also flags a specific paperwork error that can derail permit conversions, worth a careful read for anyone mid-process."
+  }
+ ],
+ "closing": "Stay steady, keep your paperwork tidy, and we'll see you tomorrow.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-09-12",
- "date_label": "Saturday, 12 September 2026",
- "generated_at": "2026-09-11T21:49:14+00:00"
+ "date": "2026-09-13",
+ "date_label": "Sunday, 13 September 2026",
+ "generated_at": "2026-09-13T01:14:09+00:00"
 }
