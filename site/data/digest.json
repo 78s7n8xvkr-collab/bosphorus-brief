@@ -1,28 +1,28 @@
 {
- "title": "The Bosphorus Brief — 13 September 2026",
- "overview": "Regional security tensions dominate the weekend, with a drone strike from Iraqi territory shutting a major Saudi pipeline and drawing statements from Ankara, Tehran, and Baghdad. At home, a fresh round of X account restrictions targeting LGBTQ users and a retrial request from Osman Kavala keep civil-liberty questions in view, while the Central Bank held rates steady for a fifth straight meeting.",
+ "overview": "Monday's biggest domestic story is a nationwide sweep of raids on LGBTQ+ venues and activists, drawing wide international coverage and questions about civil liberties ahead of elections. Meanwhile the Central Bank held its policy rate steady for a fifth straight meeting, and regional tensions — from Syria to the Poland-Ukraine border — continue to simmer.",
  "sections": [
   {
-   "heading": "Saudi Pipeline Attack Ripples Through the Region",
-   "body": "Saudi Arabia shut a key east-west oil pipeline after a drone attack launched from Iraqi territory near the Iranian border. Iraq has removed a military commander and opened an investigation; outlets across the spectrum (BBC, AP, DW) confirm the Iraqi origin, while Iran International reports Tehran insists it is 'not at war' with Riyadh ahead of talks in Oman. Türkiye's foreign ministry condemned the strikes, and separate phone calls took place between Turkish, Iranian, and Iraqi officials. For residents, this is a story to watch rather than act on: no direct travel disruption yet, but oil-price and regional-stability effects are worth monitoring, especially with Iraq and Iran already at US Travel Advisory Level 4."
+   "heading": "Nationwide LGBTQ+ Raids Draw International Scrutiny",
+   "body": "Turkish authorities detained at least 162 people over the weekend in coordinated raids on gay bars and the homes of LGBTQ+ activists across the country, according to Haaretz, CNN, Reuters, and other international outlets. NDTV frames the timing as tied to upcoming elections, while domestic Turkish coverage of the raids was notably thin. For foreign residents connected to LGBTQ+ organizations or venues, this is worth watching closely: international outlets are treating it as a civil-liberties story, while it has received little visibility in Turkish-language state or pro-government press. No details yet on charges or expected legal process for those detained."
   },
   {
-   "heading": "X Restrictions and Kavala's ECtHR Case",
-   "body": "Turkish authorities have blocked a fresh batch of LGBTQ-linked X accounts, days after President Erdoğan's remarks describing the community in derogatory terms — reported by malaymail.com and CP24. Separately, Osman Kavala has formally requested a retrial following a European Court of Human Rights decision, a case long watched by international rights observers as a marker of Türkiye's legal environment for civil society. Both stories touch directly on the standing question of freedom of belief and expression protections; we'll continue tracking any court response to Kavala's request."
+   "heading": "Kavala Seeks Retrial After ECtHR Ruling",
+   "body": "Osman Kavala has formally requested a retrial following a European Court of Human Rights decision, per Independent Türkçe. This is a standing case worth tracking for anyone following how Turkish courts respond to ECtHR rulings — a signal of how much weight European human-rights decisions carry domestically, which matters for any resident whose legal status or case might eventually intersect with European courts."
   },
   {
-   "heading": "Central Bank Holds at 37%, Lira Steady",
-   "body": "The Central Bank kept its policy rate at 37% for a fifth consecutive meeting, with markets (ING via FX Street, Finimize) now pricing in an October cut. USD/TRY sits at 48.6, EUR/TRY at 56.39. For residents managing salaries, rent, or savings in lira, the message is: no near-term rate relief, but an easing cycle looks likely within weeks — worth factoring into any big purchases or transfers this month."
+   "heading": "Central Bank Holds Rate at 37%, Eyes October Cut",
+   "body": "The Central Bank kept its policy rate at 37% for a fifth consecutive meeting, with markets increasingly expecting an easing move in October, according to BiGGo Finance and Finimize. The lira sits at roughly 48.6 to the dollar and 56.4 to the euro today. For residents budgeting in lira — rent, tuition, salary conversion — the message is: no relief yet, but the rate conversation is shifting toward eventual cuts. Worth watching how markets price this in over the next few weeks."
   },
   {
-   "heading": "Migration Notes: Kazakhstan Readmission Deal and Palestinian Workers",
-   "body": "Türkiye signed a readmission agreement with Kazakhstan, part of a broader push including a proposed TÜRKPOL joint law-enforcement body for Turkic states — relevant background for anyone tracking regional migration cooperation. Separately, Son Dakika reports Palestinian workers in Türkiye facing harsh conditions tied to permit issues, a reminder that work-to-residence permit transitions remain a common friction point; turkiyetoday.com also flags a specific paperwork error that can derail permit conversions, worth a careful read for anyone mid-process."
+   "heading": "Regional Tensions: Syria, Israel, and the Ukraine Border",
+   "body": "A Syrian child was killed near Damascus when a roadside object exploded, a reminder of ongoing instability just across Turkey's southern border. Separately, Turkish officials accused Israel of seeking to destabilize Syria, a claim covered by regional outlets alghad.tv and Sky News Arabia but not yet picked up widely elsewhere. Further north, Poland and Ukraine accused Russia of escalation after strikes near their shared border, with Western officials reportedly nearby at the time — a story still developing. None of this changes travel guidance for Türkiye itself (currently US Level 2), but it underscores a genuinely unsettled neighborhood this autumn."
   }
  ],
- "closing": "Stay steady, keep your paperwork tidy, and we'll see you tomorrow.",
+ "closing": "Stay safe, keep your paperwork handy, and we'll have more tomorrow.",
+ "title": "The Bosphorus Brief: Raids, Rates, and a Restless Region",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-09-13",
- "date_label": "Sunday, 13 September 2026",
- "generated_at": "2026-09-13T01:14:09+00:00"
+ "date": "2026-09-14",
+ "date_label": "Monday, 14 September 2026",
+ "generated_at": "2026-09-13T22:31:10+00:00"
 }
