@@ -1,28 +1,28 @@
 {
- "overview": "Monday's biggest domestic story is a nationwide sweep of raids on LGBTQ+ venues and activists, drawing wide international coverage and questions about civil liberties ahead of elections. Meanwhile the Central Bank held its policy rate steady for a fifth straight meeting, and regional tensions — from Syria to the Poland-Ukraine border — continue to simmer.",
+ "title": "The Bosphorus Brief — 15 September 2026",
+ "overview": "The dominant story today is a wide-scale crackdown on LGBTQ+ groups and HIV support organizations across Turkey, drawing sharp EU concern and split domestic coverage. Beyond that, a migrant boat tragedy near Greece and steady economic data round out a day light on immediate resident-facing paperwork news, though rights and mobility remain the throughline.",
  "sections": [
   {
-   "heading": "Nationwide LGBTQ+ Raids Draw International Scrutiny",
-   "body": "Turkish authorities detained at least 162 people over the weekend in coordinated raids on gay bars and the homes of LGBTQ+ activists across the country, according to Haaretz, CNN, Reuters, and other international outlets. NDTV frames the timing as tied to upcoming elections, while domestic Turkish coverage of the raids was notably thin. For foreign residents connected to LGBTQ+ organizations or venues, this is worth watching closely: international outlets are treating it as a civil-liberties story, while it has received little visibility in Turkish-language state or pro-government press. No details yet on charges or expected legal process for those detained."
+   "heading": "LGBTQ+ Crackdown Draws EU Concern",
+   "body": "Turkish authorities have arrested dozens linked to LGBTQ+ and HIV support groups, raided rights organizations' offices, and blocked associated websites and social accounts, according to AP, i24NEWS, and GO Magazine. The EU said it is 'concerned,' and an EU rapporteur on Turkey described the operations as pulling the country down 'a dark path' (Bianet). Coverage diverges by lens: state media (Al Jazeera, Anadolu-adjacent framing) has reported the raids with minimal comment, while opposition-leaning and international outlets (Turkish Minute, France24, AP) emphasize the scale of arrests and the pressure on civil society groups. For foreign residents connected to affected organizations, colleagues, or programs, this is worth monitoring closely, including any downstream effects on NGO registrations or partner visas."
   },
   {
-   "heading": "Kavala Seeks Retrial After ECtHR Ruling",
-   "body": "Osman Kavala has formally requested a retrial following a European Court of Human Rights decision, per Independent Türkçe. This is a standing case worth tracking for anyone following how Turkish courts respond to ECtHR rulings — a signal of how much weight European human-rights decisions carry domestically, which matters for any resident whose legal status or case might eventually intersect with European courts."
+   "heading": "Migrant Boat Tragedy Near Greece",
+   "body": "At least one person died and 25 remain missing after a migrant boat sank near a Greek island, reported by Anadolu, Euronews, and InfoMigrants. This adds to a difficult year for Aegean crossings and is a reminder for anyone with family or contacts attempting sea routes that conditions remain dangerous as autumn weather sets in."
   },
   {
-   "heading": "Central Bank Holds Rate at 37%, Eyes October Cut",
-   "body": "The Central Bank kept its policy rate at 37% for a fifth consecutive meeting, with markets increasingly expecting an easing move in October, according to BiGGo Finance and Finimize. The lira sits at roughly 48.6 to the dollar and 56.4 to the euro today. For residents budgeting in lira — rent, tuition, salary conversion — the message is: no relief yet, but the rate conversation is shifting toward eventual cuts. Worth watching how markets price this in over the next few weeks."
+   "heading": "Money and Rates",
+   "body": "The Turkish Central Bank held its policy rate steady at 37% for a fifth straight meeting, with markets now expecting an October cut (BiggO, Turkish Minute). Lira deposit rates have meanwhile slipped to their lowest since 2023 (Hürriyet Daily News), a signal worth watching for anyone holding TRY savings. The exchange rate sits at USD/TRY 48.61, EUR/TRY 56.38 — a further note of the lira's gradual depreciation this year. Separately, Turkey reported USD 13.1 billion in foreign direct investment amid shifting global portfolio strategies."
   },
   {
-   "heading": "Regional Tensions: Syria, Israel, and the Ukraine Border",
-   "body": "A Syrian child was killed near Damascus when a roadside object exploded, a reminder of ongoing instability just across Turkey's southern border. Separately, Turkish officials accused Israel of seeking to destabilize Syria, a claim covered by regional outlets alghad.tv and Sky News Arabia but not yet picked up widely elsewhere. Further north, Poland and Ukraine accused Russia of escalation after strikes near their shared border, with Western officials reportedly nearby at the time — a story still developing. None of this changes travel guidance for Türkiye itself (currently US Level 2), but it underscores a genuinely unsettled neighborhood this autumn."
+   "heading": "Regional Safety Notes",
+   "body": "Houthi forces attacked Saudi Arabia as Gulf-Iran talks were postponed, and a pipeline attack could affect global oil supply, though US energy officials expect resumption soon (Middle East Eye, Japan Times). None of this directly affects Turkey travel, but it's part of a tense regional backdrop. No new M4+ earthquakes were recorded near Turkey since early September; the most recent was a M4.1 near Sulakyurt on September 3. Travel advisory levels remain unchanged: Türkiye at L2, with neighboring Syria, Iraq, Iran, and Lebanon all at L4."
   }
  ],
- "closing": "Stay safe, keep your paperwork handy, and we'll have more tomorrow.",
- "title": "The Bosphorus Brief: Raids, Rates, and a Restless Region",
+ "closing": "Stay steady, keep an eye on the LGBTQ+ rights story as it develops, and have a good Tuesday.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-09-14",
- "date_label": "Monday, 14 September 2026",
- "generated_at": "2026-09-13T22:31:10+00:00"
+ "date": "2026-09-15",
+ "date_label": "Tuesday, 15 September 2026",
+ "generated_at": "2026-09-14T23:15:22+00:00"
 }
