@@ -1,28 +1,11 @@
 {
- "title": "The Bosphorus Brief: LGBT crackdown, lira slide, and a rights court date to watch",
- "overview": "Saturday brings a heavier-than-usual mix of civil liberties news alongside market jitters. International outlets are giving sustained attention to raids on bars and NGOs in Turkey, while the lira touched a fresh low. For long-term residents, the practical throughline is: watch your bank/exchange exposure, and if you're connected to advocacy or civil-society spaces, stay informed on the legal landscape.",
- "sections": [
-  {
-   "heading": "LGBT Crackdown Draws International Attention",
-   "body": "The Washington Post and PRX's The World report that Turkish authorities raided bars, NGOs, and detained activists and journalists in an LGBTQ+-focused crackdown, drawing condemnation and protests abroad. This coverage is concentrated in international outlets; state and pro-government Turkish media have not featured it prominently in today's material. For foreign residents involved in civil society or nightlife venues, it's worth knowing the legal environment around assembly and NGO registration remains unsettled — plan gatherings and paperwork conservatively for now."
-  },
-  {
-   "heading": "Rights Cases to Watch: Council of Europe and Religious Freedom Panels",
-   "body": "Kurdistan24 reports the Council of Europe will review Türkiye's 'Right to Hope' cases in December — a marker for anyone tracking due-process and detention issues here. Separately, in Washington, missionary Andrew Brunson has been appointed to the U.S. Commission on International Religious Freedom, and persecution.org notes tightening U.S. refugee pathways are leaving some persecuted Christians with fewer safe routes. None of this changes ikamet or visa rules today, but it's part of a broader freedom-of-belief conversation worth following if you work in faith-based or humanitarian sectors."
-  },
-  {
-   "heading": "Lira Hits New Low, Bank License Revoked",
-   "body": "The Turkish lira touched a new all-time low amid what UA.News and The Arab Weekly describe as a fund liquidity crisis, prompting authorities to move to shore up markets. USD/TRY sits at 48.73, EUR/TRY at 55.97. Separately, Turkey revoked the operating license of Iran's Mellat Bank, tied to U.S. sanctions measures — a reminder that international financial pressure can affect banking access with little warning. If you hold lira savings or run a business with cross-border payments, this is a good week to review your currency exposure and banking relationships."
-  },
-  {
-   "heading": "Residency Notes: TRNC and Practical Ikamet Issues",
-   "body": "In Northern Cyprus (TRNC), a residence permit is now required for indefinite stays — worth flagging for anyone splitting time between mainland Türkiye and the TRNC. Meanwhile, a Russian resident's account in gazetemru.com highlights ongoing friction in the residence permit process, and Sözcü reports a wave of Russian buyers moving into Mersin's property market. Nothing regulatory has shifted overnight, but these pieces together suggest permit offices in several cities may be busier than usual this autumn."
-  }
- ],
- "closing": "Keep half an eye on the lira and stay patient at the nüfus müdürlüğü — see you tomorrow.",
+ "title": "The Bosphorus Brief — 20 September 2026",
+ "overview": "A quieter weekend on the domestic front, but three threads matter for residents: a financial regulator shake-up involving an Iranian bank, renewed regional missile exchanges keeping travel advisories elevated, and continued scrutiny of Turkey's rights record in Strasbourg and Washington. The lira also touched a fresh low, worth noting for anyone budgeting in TRY.",
+ "sections": "\n<parameter name=\"heading\">Bank Mellat License Pulled",
+ "body": "Turkey's banking regulator (BDDK) revoked the operating license of Iran's Bank Mellat, published in Saturday's Official Gazette. The bank has faced Western sanctions for years, and the move follows US sanctions imposed two weeks ago on a Turkish bank over alleged ties to it. Coverage was broadly aligned across pro-government, opposition-leaning, and international outlets, with no major framing divergence. For residents, this is unlikely to affect everyday banking, but it signals continued pressure on financial institutions with Iran links — worth watching if you do business or send remittances involving Iranian entities.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-09-19",
- "date_label": "Saturday, 19 September 2026",
- "generated_at": "2026-09-18T22:42:24+00:00"
+ "date": "2026-09-20",
+ "date_label": "Sunday, 20 September 2026",
+ "generated_at": "2026-09-19T23:17:06+00:00"
 }
