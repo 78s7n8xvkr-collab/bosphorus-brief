@@ -1,32 +1,28 @@
 {
- "title": "The Bosphorus Brief — 25 September 2026",
- "overview": "A shaky earth and a shaky lira share the news cycle today. Two moderate earthquakes near Şanlıurfa closed schools but caused no major damage, while the OECD trimmed Turkey's growth outlook and flagged stubborn inflation. On the diplomatic front, Erdoğan pressed Washington on F-35 access, and a UN walkout during Netanyahu's speech drew sharply divergent coverage across outlets.",
+ "title": "The Bosphorus Brief — Saturday, 26 September 2026",
+ "overview": "A quieter weekend news day dominated by football (Turkey's 0-1 loss to France) sits alongside more consequential developments for residents: a lira-relevant dip in central bank reserves, tightening visa rules in Montenegro, and steady residency enforcement at home. Regional tensions around Iran and the Pakistan-Afghanistan border continue, though neither directly touches daily life in Türkiye.",
  "sections": [
   {
-   "heading": "Earthquakes in the Southeast — Schools Closed, No Major Damage Reported",
-   "body": "Şanlıurfa province felt a magnitude 5.4 quake on Thursday, with a related M5.1 tremor near Hilvan also reported by EMSC and USGS. Local authorities closed schools as a precaution while damage assessments continue. There is no indication of casualties in the coverage reviewed. Residents in the region should expect aftershocks are possible and should follow provincial governor's office guidance on school and building safety; this is a normal precaution, not a sign of worsening conditions."
+   "heading": "Money: Reserves Slip, Inflation Outlook Unchanged",
+   "body": "Turkey's central bank reserves fell by $4.3 billion amid what opposition-leaning Turkish Minute describes as fund market turmoil. Separately, the OECD projects Turkish inflation will stay elevated for longer than earlier hoped. For residents budgeting in lira, today's rates are USD/TRY 48.89, EUR/TRY 55.65, and GBP/TRY 64.64 — worth checking before any large transfers or rent renewals this week. The central bank also revoked the operating license of e-money firm Papel Elektronik Para; anyone using that service for transfers or bill payments should confirm alternative arrangements promptly."
   },
   {
-   "heading": "Lira and Prices: OECD Turns More Cautious",
-   "body": "The OECD has cut its Turkish growth forecast to the lowest since 2020 and now expects inflation to stay elevated longer, citing regional tensions including the Iran situation and rising prices. The lira sits at 48.86 to the dollar and 55.69 to the euro today. For residents budgeting in lira — rent, tuition, imported goods — this points to continued pressure rather than a sudden shift; no emergency measures have been announced."
+   "heading": "Residency and Visas: Enforcement and New Restrictions",
+   "body": "Nationwide inspections led to the arrest of six people found without valid ikamet, a reminder that spot checks continue and permits should be kept current and on hand. In Cyprus, one case highlighted a person left 1,390 days without residence permission — a stark example of how backlogs can drag on; those with pending or lapsed applications should follow up with authorities rather than let cases go quiet. Abroad, Montenegro is moving to end visa-free travel for Turkish, Russian, and Belarusian passport holders, which would affect Turkish citizens' travel plans there once implemented. Separately, North Macedonia's citizenship applications are reportedly taking years to process — useful context for anyone pursuing dual citizenship in the region."
   },
   {
-   "heading": "F-35 Talks and the Iran Border Squeeze",
-   "body": "President Erdoğan said he is 'confident' Turkey will regain access to the US F-35 program, describing Trump as showing 'positive willingness' toward concrete next steps; both pro-government and international outlets covered the remarks similarly. Separately, US sanctions on Iran are creating long queues at the Turkey-Iran border, with truckers and traders uncertain whether the squeeze is easing or continuing — worth watching for anyone with cross-border business or family ties to Iran."
+   "heading": "Rights Watch: A Deportation Concern Flagged",
+   "body": "Hana Human Rights Organization has warned of an imminent deportation threat facing one of its members in Turkey; details remain limited, but it's the kind of case we'll continue to track as more information becomes available. Elsewhere, Germany is deporting a Turkish man involved in a fatal speed-racing case, illustrating how criminal proceedings abroad can intersect with residency status for Turkish nationals in Europe."
   },
   {
-   "heading": "Deportation and Residency Cases to Watch",
-   "body": "Hana Human Rights Organization has raised concern over an imminent deportation threat facing one of its members in Turkey; details remain limited but it's a case worth following given our standing focus on foreign residents' legal security. Separately, in Germany, a Turkish national is facing deportation proceedings tied to a fatal street-racing case, an example of how criminal cases can intersect with residency status abroad. In Cyprus, one report describes a person who has gone 1,390 days without a residence permit decision — a reminder that ikamet backlogs remain a real burden for some applicants."
-  },
-  {
-   "heading": "UN Speech Fallout: Divergent Framing",
-   "body": "Delegates walked out before Netanyahu's UN General Assembly speech, in which he called critics 'moral cowards' and accused them of antisemitism. State-aligned Al Jazeera and international outlets like the BBC covered the walkout itself fairly similarly, but independent Middle East Eye emphasized the 'near-empty hall' and Hamas's sharp rejection of the speech as 'rife with lies' — a useful reminder to read across sources on this story."
+   "heading": "Safety and Travel Notes",
+   "body": "No new earthquakes above M4 have struck Türkiye since the M5.3 near Hilvan on September 24; seismic activity remains within the normal range for the region. US travel advisories are unchanged: Türkiye remains Level 2. Regionally, tensions continue over Iran's proposal to reopen the Strait of Hormuz and a Pakistan-Afghanistan border clash with disputed casualty figures — worth monitoring if your travel or work touches those areas, though there's no indication of spillover into Türkiye itself."
   }
  ],
- "closing": "Stay dry, stay steady, and check on neighbors near Şanlıurfa if you're in the area — see you tomorrow.",
+ "closing": "Stay dry, keep your paperwork handy, and enjoy the weekend — çay's on us.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-09-25",
- "date_label": "Friday, 25 September 2026",
- "generated_at": "2026-09-24T22:36:52+00:00"
+ "date": "2026-09-26",
+ "date_label": "Saturday, 26 September 2026",
+ "generated_at": "2026-09-25T22:34:43+00:00"
 }
