@@ -1,31 +1,32 @@
 {
- "title": "The Bosphorus Brief — 27 September 2026",
- "overview": "A quiet Sunday for domestic Turkish news, overshadowed by the regional standoff over Iran and the Strait of Hormuz. Closer to home, a court ruling on undocumented workers' rights and a fresh reminder to keep ikamet paperwork current are the practical stories worth your attention today.",
+ "title": "The Bosphorus Brief — 28 September 2026",
+ "overview": "A quieter Monday on the ground, though the diplomatic backdrop is noisy: a report of Israeli preparations for a possible ICC case against President Erdoğan is drawing attention, alongside a ruling-party resignation and steady progress on domestic and regional visa questions. For residents, the practical items today are travel and paperwork related — a possible Turkey-Saudi visa waiver, Montenegro tightening its own rules, and a reminder that ikamet checks continue nationwide.",
  "sections": [
   {
-   "heading": "Iran-US Standoff: Watch, Don't Worry Yet",
-   "body": "Trump has rejected a new Iranian proposal to reopen the Strait of Hormuz, part of an ongoing back-and-forth reported across state media, international, and independent outlets alike. WSJ and CNBC report Trump expects renewed bombing after the US midterms, while Iran says it is awaiting a mediated response. For residents in Türkiye, there's no direct disruption yet — Türkiye's own US travel advisory sits steady at Level 2 — but it's worth watching shipping and oil-price effects if the situation escalates, given regional economic ties."
+   "heading": "ICC Report and Political Reshuffle",
+   "body": "Turkish Minute, citing Israeli broadcaster i24NEWS, reports that Prime Minister Netanyahu has ordered preparation of a possible ICC case against President Erdoğan over alleged treatment of Kurds and claims Ankara funds Hamas; the story is also carried by Middle East Eye and i24NEWS itself, all independent-leaning outlets, with no matching coverage yet in state or pro-government Turkish press. Separately, the ruling AK Party's deputy chair stepped down amid share-trading allegations, reported by ABC News, Bloomberg, and Hürriyet Daily News — worth watching for any market or governance ripple, though nothing so far touches residency or daily administration."
   },
   {
-   "heading": "Legal Win for Undocumented Workers",
-   "body": "An appeals court has ruled that a worker employed without formal registration can still file a service ascertainment lawsuit — a legal route to establish work history and back social security contributions even without a proper contract. This matters for foreign residents working informally: it confirms that lack of paperwork on an employer's part doesn't erase your right to pursue recognition of time worked, which can affect pensions and benefits later."
+   "heading": "Visa and Travel Notes for Residents",
+   "body": "Turkey and Saudi Arabia are reportedly discussing a visa-free travel arrangement (tovima.com), which would ease movement for dual-based residents and business travelers if finalized. In the other direction, Montenegro says it will end visa-free entry for Turkish citizens from November 1, part of a broader move affecting Russia and Belarus as well — plan ahead if you hold a Turkish passport and travel there. Domestically, nationwide inspections in Kıbrıs (Cyprus) turned up six people without valid ikamet, a routine reminder to keep residence paperwork current."
   },
   {
-   "heading": "Ikamet Checks Continue",
-   "body": "Nationwide inspections in Cyprus/Kıbrıs turned up six people without valid residence permits, who were arrested. A routine but useful reminder: keep ikamet renewals current and carry your documents, especially as authorities continue periodic checks. Separately, Montenegro has announced it will end visa-free travel arrangements with Türkiye, Russia and Belarus — a development worth noting if you hold Turkish citizenship and travel that way, though no timeline was given."
+   "heading": "Terror-Free Turkey Talks Continue",
+   "body": "The 'Terror-Free Turkey' steering committee holds its second meeting Tuesday, according to NTV Haber and Anadolu Ajansı. No major policy details have emerged yet; we'll flag any outcomes affecting civil liberties or security policy as they're confirmed."
   },
   {
-   "heading": "Economy and Diplomacy Notes",
-   "body": "The Turkish lira sits at roughly 48.9 to the dollar and 55.8 to the euro. The OECD forecasts Turkish inflation will stay elevated for longer than earlier hoped, and the central bank's reserves dropped $4.3 billion amid what opposition-leaning outlets describe as fund market turmoil — worth watching if you hold TRY savings. On the diplomatic front, Erdoğan reiterated a message of national stability, and Foreign Minister Fidan addressed the UN General Assembly, with state media emphasizing Türkiye's stance on Palestine and its push for dialogue over conflict."
+   "heading": "Money and Prices",
+   "body": "The lira sits at 48.91 to the dollar and 55.74 to the euro. Turkey's central bank reserves fell $4.3 billion amid what Turkish Minute describes as fund market turmoil, and the OECD projects inflation staying elevated for longer, per Finimize — both worth factoring into budgeting for the months ahead."
   },
   {
-   "heading": "Quiet on the Seismic Front"
+   "heading": "Safety and Seismic Watch",
+   "body": "No new strong quakes near Türkiye since the M5.3 recorded September 24 near Hilvan; activity remains within the normal seasonal pattern. Travel advisories are unchanged: Türkiye at Level 2, with neighboring Syria, Iraq, Iran, and Lebanon at Level 4 — a good moment to double-check any regional travel plans against current guidance."
   }
  ],
- "closing": "Stay dry, keep your paperwork handy, and here's to a calm week ahead — çayınız sıcak olsun.",
+ "closing": "Stay grounded, keep your paperwork close, and have a steady week ahead.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-09-27",
- "date_label": "Sunday, 27 September 2026",
- "generated_at": "2026-09-26T23:01:24+00:00"
+ "date": "2026-09-28",
+ "date_label": "Monday, 28 September 2026",
+ "generated_at": "2026-09-27T22:24:34+00:00"
 }
