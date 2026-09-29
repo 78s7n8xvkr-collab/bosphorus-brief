@@ -1,32 +1,32 @@
 {
- "title": "The Bosphorus Brief — 29 September 2026",
- "overview": "A quieter news day on the paperwork front, though a comedian's conviction and Montenegro's visa move deserve attention. Football dominated headlines after Italy's 4-1 win over Türkiye, and money news brought a softer lira outlook. Nothing in today's material affects entry rules for most foreign residents, but a few items are worth noting for planning.",
+ "title": "The Bosphorus Brief — 30 September 2026",
+ "overview": "A quiet news day for daily life in Türkiye is anchored by one significant legal story: the ECtHR's latest mass ruling against Ankara over post-coup terrorism convictions. Elsewhere, an Iranian airliner's seizure at Istanbul Airport made headlines, Montenegro moved to end visa-free travel for Turkish citizens, and the lira continues to soften.",
  "sections": [
   {
-   "heading": "Free Expression: Comedian Convicted",
-   "body": "A comedian has been convicted in Türkiye for 'insulting' President Erdoğan during a live show, a case reported by DW and Le Monde. This falls under Türkiye's long-standing insult laws (Article 299), which have periodically ensnared entertainers, journalists, and ordinary citizens alike. No sentencing detail was given in today's coverage. For residents, this is a reminder that public and recorded commentary on political figures carries legal risk under current statutes, regardless of nationality."
+   "heading": "ECtHR Deals Turkey Another Major Rebuke",
+   "body": "The European Court of Human Rights has found violations in 947 more cases tied to post-coup terrorism convictions, adding to a long series of rulings against Ankara on this issue. For foreign residents and dual nationals with any connection to these prosecutions, the rulings reinforce that credible international review of due-process concerns continues, though they do not by themselves change individual case outcomes. Coverage of this story so far comes primarily from opposition-leaning Turkish Minute; watch for whether state-aligned outlets address the ruling in coming days."
   },
   {
-   "heading": "Visa-Free Travel: Montenegro Ends Deal",
-   "body": "Montenegro will end visa-free travel for Turkish citizens starting November 1, according to Türkiye Today and Caspian Post, part of a broader move affecting Russia and Belarus as well. This affects Turkish passport holders' travel to Montenegro, not foreign residents in Türkiye directly — but those holding Turkish nationality alongside residency elsewhere should check requirements before booking Balkan trips this winter. Separately, tovima.com reports Türkiye and Saudi Arabia are discussing a visa-free arrangement, though no signed agreement was confirmed."
+   "heading": "Iranian Airliner Grounded Over Debt at Istanbul Airport",
+   "body": "A Caspian Airlines Boeing 737 was pulled from departure at Istanbul Airport after passengers had already boarded, reportedly over an unpaid debt of roughly €3 million. Passengers were ordered off before takeoff. International outlets (Euronews) and opposition-leaning Turkish Minute both covered the seizure with similar factual detail; no political framing has emerged. For travelers on Iranian carriers through Istanbul, it's a reminder that commercial disputes can occasionally disrupt flights with little warning — worth building buffer time into connections."
   },
   {
-   "heading": "UK Resettlement Routes Reopen",
-   "body": "The UK will restart an asylum resettlement scheme prioritizing Afghan women and girls and Palestinian refugees, Home Secretary Shabana Mahmood announced, per Yahoo, The Jerusalem Post, and the IRC. This is a UK-specific program and does not alter procedures in Türkiye, but it may be relevant to residents assisting family members abroad who fall into these categories."
+   "heading": "Montenegro to End Visa-Free Travel for Turkish Citizens",
+   "body": "Starting November 1, Montenegro will end visa-free entry for Turkish passport holders, part of a wider move affecting Russia and Belarus as well. Pro-government Türkiye Today and regional outlet Caspian Post both confirm the change. Turkish citizens with travel, property, or business plans in Montenegro should check visa requirements well ahead of the deadline; this does not affect foreign residents in Türkiye holding other passports."
   },
   {
-   "heading": "Money: Lira and Reserves",
-   "body": "The EBRD has trimmed its 2026 growth forecast for Türkiye to 3 percent, and Turkish Minute reports central bank reserves fell $4.3 billion amid recent fund market turbulence. USD/TRY sits at 48.95, EUR/TRY at 55.73. Nothing alarming for daily budgeting, but worth watching if you're timing larger transfers or lira conversions this month."
+   "heading": "Lira and Reserves Under Continued Pressure",
+   "body": "The Turkish lira remains soft, trading near 49.0 to the dollar and 55.7 to the euro, while the central bank's reserves fell by $4.3 billion amid what turkishminute.com describes as ongoing fund turmoil. A second individual has reportedly been arrested in a fraud scandal linked to a lira \"signatory.\" For residents budgeting in foreign currency or transferring funds, the trend is worth watching, though no acute disruption is reported today."
   },
   {
-   "heading": "Football Fallout",
-   "body": "Türkiye's national team suffered a heavy 4-1 defeat to Italy in the Nations League, prompting head coach Montella to say the team 'deserved to be booed.' Coverage spans state, pro-government, and international outlets with little divergence in framing — largely a sporting story, though it dominated Tuesday's front pages here."
+   "heading": "Steady Ground: Earthquakes and Travel Levels Unchanged",
+   "body": "Recent M4+ tremors near Hilvan and Saimbeyli in the past week are consistent with Türkiye's normal seismic background and have not prompted new advisories. The US State Department's travel levels for the region remain unchanged, with Türkiye at Level 2 and neighboring Syria, Iraq, Iran, and Lebanon at Level 4. No new safety concerns for residents have emerged today."
   }
  ],
- "closing": "Stay dry out there — and safe travels if you're crossing borders this week.",
+ "closing": "Steady as she goes — see you tomorrow with more.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-09-29",
- "date_label": "Tuesday, 29 September 2026",
- "generated_at": "2026-09-28T23:25:24+00:00"
+ "date": "2026-09-30",
+ "date_label": "Wednesday, 30 September 2026",
+ "generated_at": "2026-09-29T23:04:13+00:00"
 }
