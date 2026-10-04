@@ -1,32 +1,28 @@
 {
- "title": "The Bosphorus Brief — October 4, 2026",
- "overview": "A quiet Sunday on the ground in Türkiye, though regional tensions and a domestic political storm over a fund crisis dominate headlines. Residents will find practical news on residency processing and currency stability more relevant than the geopolitics playing out around the country's borders.",
+ "title": "The Bosphorus Brief — Monday, 5 October 2026",
+ "overview": "A cluster of earthquakes near Adana was the day's main physical event, though no injuries were reported. Otherwise it was a quieter news day, with steady developments on residence permit procedures for students and continuing updates from the northern Cyprus ferry disaster investigation.",
  "sections": [
   {
-   "heading": "Residency: Fingerprinting Comes to Campus",
-   "body": "Good news for international students in Eskişehir: Anadolu University hosted a visit from the Provincial Migration Authority, allowing students to give fingerprints for residence permits without traveling to the Migration office directly. Habertürk confirms this on-campus processing model is being used elsewhere too. If you're a student elsewhere in Türkiye, it's worth asking your international office whether a similar arrangement exists before booking a trip across town for an appointment."
+   "heading": "Earthquakes near Adana: no injuries, but worth noting",
+   "body": "Five shallow earthquakes shook southern Turkey on Sunday, with USGS recording magnitudes up to M5.0 near Feke and Saimbeyli in Adana province — close to the epicenter of the deadly 2023 quakes. Tremors were felt as far as northern Syria. Turkish disaster authorities and Syrian officials both confirmed no injuries or structural damage. For residents in the Adana/Feke area, this is a reminder to keep emergency kits ready, but there is no indication of elevated risk beyond normal seismic activity in the region."
   },
   {
-   "heading": "Fund Crisis Draws Political Fire",
-   "body": "Nationalist MHP leader Devlet Bahçeli described the country's ongoing investment fund turmoil as a 'purification process,' per BBC, Serbestiyet, and NTV Haber. No new regulatory detail accompanied the remark. Separately, Turkey's financial regulators extended the lower margin trading requirement through October 30 (Investing.com) — a technical measure, but one that signals authorities are still managing volatility in equity markets. Residents with brokerage accounts should expect continued caution rather than resolution in the near term."
+   "heading": "Residence permits: processing comes to campus",
+   "body": "Eskişehir's Provincial Migration Authority Directorate visited Anadolu University to handle residence permit procedures for international students directly on campus, including fingerprinting, without requiring a trip to the migration office. This follows a broader pattern of migration authorities streamlining paperwork for students at partner universities — a practical convenience worth checking for those enrolled elsewhere, as similar arrangements may exist at other institutions."
   },
   {
-   "heading": "Headscarf Bans in Azerbaijan: A Notable Silence",
-   "body": "Turkish Minute (opposition-leaning) reports that Ankara has not publicly addressed new Azerbaijani school dress rules restricting headscarves, despite President Erdoğan's own criticism of headscarf bans at the UN General Assembly weeks earlier. This is a freedom-of-belief story worth watching: so far it has only surfaced in opposition-leaning coverage, with no response yet from state or pro-government outlets. No policy change affects residents in Türkiye directly, but it's a telling gap in messaging consistency on an issue Ankara has previously raised internationally."
+   "heading": "Northern Cyprus ferry disaster: toll climbs to 19",
+   "body": "The death toll from the late-August ferry disaster off northern Cyprus has risen to 19 after another body was recovered over the weekend; nine people remain missing. The update came from the office of TRNC prime minister Ünal Üstel. Both opposition-leaning and pro-government outlets reported the same toll without divergence in framing, suggesting the facts here are not in dispute — the story remains one of ongoing recovery efforts rather than new developments in cause or accountability."
   },
   {
-   "heading": "Money and Markets: Lira Holds Steady",
-   "body": "USD/TRY sits at 49.13, EUR/TRY at 55.29 — broadly in line with recent weeks, offering no fresh shocks for budgeting or remittances. The central bank's policy rate trajectory (tracked via Statista back to 2002) remains the backdrop for continued inflation-watching; no rate decision was reported today."
-  },
-  {
-   "heading": "Safety Note: Regional Conflict, Not Local",
-   "body": "Multiple outlets covered intensifying rhetoric around Iran and Lebanon, plus a flydubai incident involving an alleged attempted hijacking on an Israel-bound flight. None of this touches Türkiye directly — the US travel advisory keeps Türkiye at a steady Level 2, the same as Egypt, while Syria, Iraq, Iran, and Lebanon remain Level 4. If you have travel plans into neighboring countries this month, check current advisories before booking, but day-to-day life in Türkiye is unaffected."
+   "heading": "One case flagged in our rights watch",
+   "body": "A Kurdish journalist described alleged mistreatment during a Turkish detention to a Jerusalem Post reporter — the kind of individual account we flag under standing priorities on legal security for residents, without drawing conclusions beyond what was reported. We'll continue watching for any official response or follow-up."
   }
  ],
- "closing": "Stay dry if the Bosphorus wind picks up tonight — and as always, we'll keep watching the paperwork so you don't have to.",
+ "closing": "Stay safe out there, and if you're near Adana, a little extra care this week costs nothing.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-10-04",
- "date_label": "Sunday, 04 October 2026",
- "generated_at": "2026-10-03T23:12:23+00:00"
+ "date": "2026-10-05",
+ "date_label": "Monday, 05 October 2026",
+ "generated_at": "2026-10-04T23:20:38+00:00"
 }
