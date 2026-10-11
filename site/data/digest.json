@@ -1,11 +1,32 @@
 {
- "title": "The Bosphorus Brief — October 11, 2026",
- "overview": "A missile attack on Riyadh's airport dominates regional coverage today, with ripple effects for anyone transiting the Gulf. Closer to home, a new under-15 social media law takes effect November 1, and the lira holds steady as the central bank signals confidence on inflation.",
- "sections": "\n<parameter name=\"heading\">Riyadh Airport Attack: What Travelers Need to Know",
- "body": "A missile strike on Riyadh's airport late Saturday killed 12 and injured over 300, according to Saudi aviation authorities, Reuters, and the BBC. Houthi forces had reportedly warned of a strike on the facility days earlier. International outlets (Reuters, NBC, Sky News) frame this as the deadliest attack on Saudi soil in over a decade, with US officials reportedly weighing a response against Houthi positions. If you have layovers or travel plans through Riyadh, check with your airline directly — flight disruptions are likely in the near term. This is a developing story; we'll follow confirmed details only, not speculation about next steps.",
+ "title": "The Bosphorus Brief — Monday, 12 October 2026",
+ "overview": "Regional tensions dominate today, with Houthi strikes on Riyadh's airport and a deadly Sudan air strike drawing wide condemnation, including a joint statement from Turkey, Egypt, Pakistan and Saudi Arabia. Closer to home, a UK decision to revoke Syrian refugee status and an EFF report on pressure facing LGBTQ+ organizations in Türkiye are worth a resident's attention. Markets stayed steady, with the lira holding near 49.3 to the dollar.",
+ "sections": [
+  {
+   "heading": "Gulf tensions escalate, Turkey joins regional response",
+   "body": "Riyadh's King Khalid airport was hit by a second Houthi strike in as many days, following a Saturday attack that killed 12 and injured roughly 300 — the deadliest in Saudi Arabia since 2015. Washington and Riyadh blame Yemen's Houthi movement, which has since claimed responsibility and says it also targeted oil facilities. Turkey, Egypt, Pakistan and Saudi Arabia issued a joint statement condemning the attacks, and Ankara separately condemned the strikes 'in the strongest terms.' Separately, a Sudanese gold mine near the Egyptian border was hit by an air strike that killed at least 72 people. For residents with travel plans, Saudi Arabia is not currently on the US advisory watch list used here, but it's worth monitoring airport status before transiting Riyadh."
+  },
+  {
+   "heading": "UK moves to revoke Syrian refugee status",
+   "body": "Britain's Home Office has begun revoking refugee status granted to Syrians, with at least one case — a surgeon facing possible deportation — drawing coverage from The Guardian and legal analysts questioning whether removals to Syria are lawful under current conditions. This follows a broader pattern of governments reassessing Syrian refugee protections as the situation in Syria evolves; residents or family members in the UK with Syrian refugee status should watch for formal notices and seek legal advice rather than acting on media reports alone."
+  },
+  {
+   "heading": "LGBTQ+ organizations under pressure in Türkiye",
+   "body": "The Electronic Frontier Foundation reports that a crackdown on LGBTQ+ organizations in Türkiye is threatening freedom of expression and association, part of a broader pattern the group has tracked over recent months. Separately, International Christian Concern notes that Armenian prisoners held in Azerbaijan report restrictions on religious practice. Both are presented here as described by rights-focused outlets, without further comment on motive; residents involved in civil society or religious communities should stay informed on how these developments might affect registration, funding, or assembly."
+  },
+  {
+   "heading": "Migrant boat tragedy off Djibouti",
+   "body": "At least 139 people, including 15 children, died when a migrant boat capsized off Djibouti — among the deadliest such incidents this year, covered widely across international outlets including the BBC, The Guardian, and The New York Times. It's a sobering reminder of the risks on migration routes through the region, relevant context for anyone working in humanitarian or refugee-support capacities locally."
+  },
+  {
+   "heading": "Markets and everyday numbers",
+   "body": "The lira held steady at 49.33 to the dollar and 55.28 to the euro. Turkey's central bank says disinflation is proceeding and a recent funding squeeze has been contained, per Arab Weekly reporting. Square billet steel prices in Turkey rose $30/tonne in September. No new seismic activity above M4.2 was recorded near Türkiye itself this week, with recent tremors concentrated near Feke and offshore Greece."
+  }
+ ],
+ "closing": "Stay safe out there, and as always, double-check any paperwork deadlines directly with official sources.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-10-11",
- "date_label": "Sunday, 11 October 2026",
- "generated_at": "2026-10-10T23:42:20+00:00"
+ "date": "2026-10-12",
+ "date_label": "Monday, 12 October 2026",
+ "generated_at": "2026-10-11T22:11:04+00:00"
 }
