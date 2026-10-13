@@ -1,32 +1,28 @@
 {
- "title": "The Bosphorus Brief — 13 October 2026",
- "overview": "Regional tension is dominating headlines today, with Houthi attacks on Saudi airports prompting flight suspensions and a security alert from the US Embassy in Riyadh. Closer to home, the PKK's withdrawal from more camps in northern Iraq marks a steady step in the peace process with Turkey, while rights groups renew pressure over internet censorship. None of today's news changes day-to-day realities for residents in Türkiye, but it's worth tracking travel plans through the Gulf.",
+ "title": "The Bosphorus Brief — 14 October 2026",
+ "overview": "The day's most consequential news for residents is judicial, not geopolitical: an Istanbul court again declined to act on the European Court of Human Rights' Kavala ruling, a pattern European judges elsewhere criticized directly. Regional tension around Yemen and Saudi Arabia continues, but so far has not translated into new travel restrictions in Türkiye. On the money side, the lira held steady and fund-crisis investors got a repayment timeline.",
  "sections": [
   {
-   "heading": "Gulf Airspace Disruption — Check Before You Fly",
-   "body": "Houthi attacks on Riyadh's international airport and another facility killed 13 people, prompting a 'serious response' vow from Saudi officials and a third-day security alert renewal from the US Embassy there. Etihad and Qatar Airways have suspended flights to some Saudi cities, and Riyadh has halted some airport operations. If you have layovers or travel planned through Gulf hubs in the coming days, build in extra buffer time and check airline status pages directly, as the situation is moving quickly. Separately, a Hezbollah ordnance explosion near the Lebanon border killed one and injured 24; this is reported consistently across state, independent, and international outlets without major framing differences."
+   "heading": "Kavala case: ECHR ruling still not applied",
+   "body": "An Istanbul court rejected Osman Kavala's request for release and retrial, despite a European Court of Human Rights ruling calling for exactly that. Independent outlets Bianet and Medyascope both describe the decision plainly as non-compliance with the ECHR; international outlets Euronews and DW covered it the same way, with no divergence in framing across lenses this time. Separately, European judges criticized Turkish courts for what they called rubber-stamping of prison visit recordings in related proceedings. For foreign residents, the case remains the clearest live marker of how domestic courts weigh Strasbourg rulings — worth watching if you have any pending ECHR-linked matter."
   },
   {
-   "heading": "Türkiye–PKK Process Moves Forward",
-   "body": "PKK militants have pulled out of four more camps in northern Iraq, continuing the peace process with Turkey — pro-government outlet Yeni Şafak frames this as a new phase in the 'Türkiye Without Terrorism' initiative, while international coverage treats it as a concrete, verifiable step rather than a political milestone. Foreign Minister Fidan reiterated that Turkey will not strike another country's territory, a statement worth noting given regional tensions elsewhere. For residents, there's no immediate change to daily life, but continued de-escalation in the southeast is generally positive for regional stability and travel conditions."
+   "heading": "Fund crisis repayments get a timeline",
+   "body": "President Erdoğan said repayments of up to 1 million lira (about $20,000) to investors caught in Turkey's fund crisis will begin this month, once parliament passes the governing legislation. If you or someone you know had money tied up in affected funds, watch for the legislation's passage before expecting disbursement — no exact date has been set yet."
   },
   {
-   "heading": "Internet Censorship Under Renewed Scrutiny",
-   "body": "Human Rights Watch has called on Turkish authorities to end internet censorship, a story also picked up by opposition-leaning outlet Turkish Minute. This sits alongside a separate report from AsiaNews on property and naming disputes affecting Christian communities in Turkey. These are standing civil-liberty concerns worth monitoring for anyone relying on open access to information or navigating minority community status; no new legal action was reported today beyond the renewed calls for reform."
+   "heading": "Greece extradition pressure, Azerbaijan headscarf dispute",
+   "body": "Turkey is pressing Greece to extradite individuals linked to the Gülen movement, a recurring diplomatic request covered by opposition-leaning outlets. Separately, Azerbaijan's ruling party publicly accused the AKP of stoking division over Baku's school headscarf ban — a rare public rebuke between the two governments, reported mainly by opposition-leaning and independent outlets. Neither story changes anything procedurally for residents today, but both are useful context for the region's shifting diplomatic tone."
   },
   {
-   "heading": "Economy and Practical Notes",
-   "body": "The IMF has lowered its 2026 growth forecast for Türkiye, a detail worth watching if you're budgeting in lira — USD/TRY sits at 49.36 today, EUR/TRY at 55.14. Oil prices are climbing on supply-risk concerns tied to the wider regional conflict, which could eventually filter into fuel and transport costs locally. On a lighter note, Milliyet confirms clocks are not expected to shift this winter, so no change to your daily schedule there."
-  },
-  {
-   "heading": "Safety and Travel Advisories",
-   "body": "No new seismic activity of concern near Türkiye itself — the most recent M4+ quakes were clustered near Feke earlier this month and across the Greek islands, both within normal background activity. Travel advisory levels remain unchanged: Türkiye at L2, Greece and Cyprus at L1. Keep an eye on Gulf-region advisories given the unfolding Houthi-Saudi situation, though no advisory changes have been issued for Türkiye as a result."
+   "heading": "Yemen-Saudi exchange continues; no new travel guidance",
+   "body": "The Saudi-led coalition struck a fuel depot near Sanaa; Houthi missiles aimed at Riyadh were intercepted, with Saudi authorities reporting minor injuries from debris. Oil prices rose on the news. Separately, Trump suggested Turkey is already providing some support in the Yemen conflict. None of this has altered US travel advisory levels — Türkiye remains Level 2, and the Gulf-adjacent countries show no new changes — but it's part of why oil and lira-watchers are paying closer attention this week."
   }
  ],
- "closing": "Stay safe, double-check your flight status if traveling through the Gulf, and we'll keep tracking the PKK withdrawal process as it develops.",
+ "closing": "Stay dry out there, and as always, keep your ikamet paperwork a photo away on your phone — just in case.",
  "method": "ai",
  "model": "claude-sonnet-5",
- "date": "2026-10-13",
- "date_label": "Tuesday, 13 October 2026",
- "generated_at": "2026-10-13T02:09:07+00:00"
+ "date": "2026-10-14",
+ "date_label": "Wednesday, 14 October 2026",
+ "generated_at": "2026-10-13T22:58:25+00:00"
 }
