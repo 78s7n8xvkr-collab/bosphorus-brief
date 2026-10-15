@@ -1,32 +1,40 @@
 {
- "title": "The Bosphorus Brief — 15 October 2026",
- "overview": "Istanbul woke up to flooded streets and school closures after torrential rain, a sober reminder to keep an eye on weather alerts this week. On the legal and rights front, the Kavala case, new internet censorship concerns, and an ECHR privacy ruling all moved in parallel, while Ankara pressed ahead with EU visa-waiver groundwork. Regionally, tensions in the Strait of Hormuz and Red Sea are pushing oil prices up, worth watching if you budget in lira.",
+ "title": "This morning's headlines",
+ "overview": "An automated roundup of the most recent stories across the Brief's sources. The çay didn't quite brew this time — the AI editor hit a temporary snag and will try again on the next hourly refresh. Nothing for you to do.",
  "sections": [
   {
-   "heading": "Istanbul Flooding Closes Schools",
-   "body": "Severe flooding hit Istanbul this week, forcing school closures across parts of the city and, per Turkish Minute, resulting in the death of a boy by electrocution. Daily Sabah and Arabic-language outlets also covered the disruption. If you're in Istanbul, check with your district office or school before heading out, avoid underpasses and low-lying roads, and keep phones charged in case of further alerts."
+   "heading": "Türkiye",
+   "body": "Türkiye Sigorta Genel Müdürü Taha Çakmak istifa etti (NTV Haber) · Turkey’s $20 billion fund scandal sparks media crackdown as questions mount over Erdogan’s inner circle (Nordic Monitor) · Syria arrests Mihrac Ural, ex-Assad militia head also wanted by Turkey - Al-Monitor (Al-Monitor)"
   },
   {
-   "heading": "Legal Cases Affecting Foreign and Local Residents",
-   "body": "Osman Kavala's request for release and retrial was rejected despite an earlier ECHR ruling in his favor — covered across international, opposition-leaning, and independent outlets, with no coverage found in state-aligned media. Separately, the European Court of Human Rights found Turkey violated a jailed former judge's privacy by recording family visits, a ruling relevant to anyone tracking how Turkish courts handle detention conditions. Rights groups, including Jurist.org and Human Rights Watch, also flagged what they describe as expanded use of legal tools to broaden internet censorship. The ECLJ separately reported on declining religious freedom conditions. None of these stories appeared in state or pro-government coverage this cycle."
+   "heading": "Around the region",
+   "body": "Houthi missile attack on Yemeni presidential palace kills two, minister says (BBC) · White House prepares plans to use 'mother of all bombs' on Iran, says official (Middle East Eye)"
   },
   {
-   "heading": "EU Visa-Waiver Talks Advance",
-   "body": "Türkiye has taken what pro-government outlets call a first concrete step toward EU visa liberalization, with new data protection legislation drafted as part of the push — reported by both pro-government and opposition-leaning outlets. This has been a long-running process; today's news suggests renewed momentum, but no resident should expect quick changes to entry rules. Worth tracking if you have family or colleagues who travel frequently between Türkiye and EU states."
+   "heading": "Visas & residency",
+   "body": "Türkiye'yi vizesiz kabul eden ülkede sistem değişti: 1 Kasım'da zorunlu olacak (Sözcü Gazetesi) · Türkiye takes first step toward EU visa waiver as talks with Commission near (Türkiye Today) · Turkey drafts data protection reforms in renewed push for EU visa-free travel (Turkish Minute)"
   },
   {
-   "heading": "Regional Tensions and Oil Prices",
-   "body": "A container ship sank in the Strait of Hormuz after being hit by a projectile this week; all 21 crew were evacuated safely, per Singapore authorities. Iran-backed Houthi forces reportedly struck an Aramco facility in Saudi Arabia, and oil prices are climbing on supply concerns. None of this directly threatens travel in Türkiye, but it's feeding into currency and energy price movements — USD/TRY sits at 49.38 today. Travel advisories for Iran, Iraq, Syria, and Lebanon remain at the highest level (L4); Türkiye remains L2."
+   "heading": "Migration & asylum",
+   "body": "Ten Challenges to Syrian Refugee Returns (Refugees International)"
   },
   {
-   "heading": "A Find Worth Smiling About",
-   "body": "On a lighter note, archaeologists have identified what may be the world's oldest known shipwreck off the Turkish coast, with clay storage jars traced to early workshops in the Jordan Valley. It's a nice reminder of how layered this region's history is, even on a heavy news week."
+   "heading": "Rights & freedoms",
+   "body": "ECtHR finds Turkey violated rights of 26 people jailed over alleged Gülen links (Stockholm Center for Freedom) · ECHR found rights violation: Osman Kavala's retrial request rejected (Gazete Oksijen) · Byzantine Mosaics in Turkey Portray Eden’s Rivers as Classical River Deities (The Media Line)"
+  },
+  {
+   "heading": "Safety",
+   "body": "Three dead as Istanbul sees heaviest rainfall in 80 years (Naharnet) · Weak mag. 2.5 earthquake - Kastamonu, 37 km east of Bartin, Bartin, Turkey, on Thursday, Oct 15, 2026, at 10:54 pm (Istanbul time) (Volcano Discovery) · US reportedly considering using ‘mother of all bombs’ as part of new strike plans against Iran (14 News)"
+  },
+  {
+   "heading": "Money",
+   "body": "ETH to TRY: Ethereum Price in Turkish Lira (CoinGecko)"
   }
  ],
- "closing": "Stay dry, stay informed, and we'll see you tomorrow.",
- "method": "ai",
- "model": "claude-sonnet-5",
- "date": "2026-10-15",
- "date_label": "Thursday, 15 October 2026",
- "generated_at": "2026-10-14T22:26:20+00:00"
+ "closing": "Full stories in the feed below.",
+ "method": "headlines",
+ "reason": "error",
+ "date": "2026-10-16",
+ "date_label": "Friday, 16 October 2026",
+ "generated_at": "2026-10-15T22:32:00+00:00"
 }
